@@ -1,43 +1,43 @@
 [
     {
         "id":1,
-        "img_src":"images/i1.jpg"
+        "img_src":"i1.jpg"
     },
     {
         "id":2,
-        "img_src":"images/i8.jpg"
+        "img_src":"i8.jpg"
     },
     {
         "id":3,
-        "img_src":"images/i9.jpg"
+        "img_src":"i9.jpg"
     },
     {
         "id":4,
-        "img_src":"images/i4.jpg"
+        "img_src":"i4.jpg"
     },
     {
         "id":5,
-        "img_src":"images/i11.jpg"
+        "img_src":"i11.jpg"
     },
     {
         "id":6,
-        "img_src":"images/i6.jpeg"
+        "img_src":"i6.jpeg"
     },
     {
         "id":7,
-        "img_src":"images/i7.jpeg"
+        "img_src":"i7.jpeg"
     },
     {
         "id":8,
-        "img_src":"images/i2.jpg"
+        "img_src":"i2.jpg"
     },
     {
         "id":9,
-        "img_src":"images/i3.jpeg"
+        "img_src":"i3.jpeg"
     },
     {
         "id":10,
-        "img_src":"images/i10.jpg"
+        "img_src":"i10.jpg"
     }
 
 ]
