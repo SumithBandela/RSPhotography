@@ -53,9 +53,9 @@ function App() {
 
             {/* Social Media Icons Section */}
             <div className="d-none d-lg-flex social-icons">
-              <a className="bi bi-facebook mx-2 fs-4" href='#'></a>
-              <a className="bi bi-instagram mx-2 fs-4" href='https://www.instagram.com/rs_officialphotography' target='_blank' rel="noopener noreferrer"></a>
-              <a className="bi bi-youtube mx-2 fs-4 " href='https://youtube.com/@rsphotographyyy' target='_blank' rel="noopener noreferrer"></a>
+              <a className="bi bi-facebook mx-2 fs-4 " href='#'></a>
+              <a className="bi bi-instagram mx-2 fs-4 text-dark" href='https://www.instagram.com/rs_officialphotography' target='_blank' rel="noopener noreferrer"></a>
+              <a className="bi bi-youtube mx-2 fs-4 text-danger" href='https://youtube.com/@rsphotographyyy' target='_blank' rel="noopener noreferrer"></a>
             </div>
           </div>
         </header>

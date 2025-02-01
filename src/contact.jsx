@@ -57,10 +57,10 @@ export function Contact() {
           <p className="text-muted">Sunday: Closed</p>
 
           <h4 className="text-dark mb-3">Contact Number</h4>
-          <p className="text-muted">+91 123 456 7890</p>
+          <p className="text-muted">+91 970 599 7571</p>
 
           <h4 className="text-dark mb-3">Email</h4>
-          <p className="text-muted">contact@rashmistudios.com</p>
+          <p className="text-muted">contactrsphoto@gmail.com</p>
         </div>
       </div>
     </div>

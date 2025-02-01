@@ -52,9 +52,9 @@ export function Home() {
               </div>
               <div className="card-body">
                 <p className="fw-bold">15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
-                <p>Mon-Sun: 09:00 AM - 18:00 PM</p>
-                <p>Phone: +91 123 456 7890</p>
-                <p>Email: info@rashmistudios.com</p>
+                <p>Mon-Sun: 09:00 AM - 07:00 PM</p>
+                <p>Phone: +91 970 599 7571</p>
+                <p>Email: contactrsphoto@gmail.com</p>
               </div>
             </div>
           </div>
@@ -97,11 +97,11 @@ export function Home() {
       <footer className="text-center py-3 mt-5 bg-dark text-white">
         <p>&copy; 2025 Rashmi Studio's | All Rights Reserved</p>
         <div className="social-icons">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="bi bi-facebook text-white mx-2 fs-3"></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="bi bi-facebook text-white mx-2 fs-3 "></a>
           <a href="https://www.instagram.com/rs_officialphotography" target="_blank" rel="noopener noreferrer" className="bi bi-instagram text-white mx-2 fs-3"></a>
-          <a href="https://youtube.com/@rsphotographyyy" target="_blank" rel="noopener noreferrer" className="bi bi-youtube text-danger mx-2 fs-3"></a>
+          <a href="https://youtube.com/@rsphotographyyy" target="_blank" rel="noopener noreferrer" className="bi bi-youtube text-white mx-2 fs-3"></a>
         </div>
-        <p>Email: info@rashmistudios.com | Phone: +91 123 456 7890</p>
+        <p>Email: contactrsphoto@gmail.com | Phone: +91 970 599 7571</p>
       </footer>
     </div>
   );
