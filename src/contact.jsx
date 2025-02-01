@@ -53,8 +53,7 @@ export function Contact() {
           <p className="text-muted">15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
           
           <h4 className="text-dark mb-3">Working Hours</h4>
-          <p className="text-muted">Monday to Saturday: 09:00 AM - 18:00 PM</p>
-          <p className="text-muted">Sunday: Closed</p>
+          <p className="text-muted">Monday to Sunday: 09:00 AM - 07:00 PM</p>
 
           <h4 className="text-dark mb-3">Contact Number</h4>
           <p className="text-muted">+91 970 599 7571</p>
