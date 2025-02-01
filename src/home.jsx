@@ -97,9 +97,9 @@ export function Home() {
       <footer className="text-center py-3 mt-5 bg-dark text-white">
         <p>&copy; 2025 Rashmi Studio's | All Rights Reserved</p>
         <div className="social-icons">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="bi bi-facebook text-white mx-2 fs-3 "></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="bi bi-facebook text-primary mx-2 fs-3 "></a>
           <a href="https://www.instagram.com/rs_officialphotography" target="_blank" rel="noopener noreferrer" className="bi bi-instagram text-white mx-2 fs-3"></a>
-          <a href="https://youtube.com/@rsphotographyyy" target="_blank" rel="noopener noreferrer" className="bi bi-youtube text-white mx-2 fs-3"></a>
+          <a href="https://youtube.com/@rsphotographyyy" target="_blank" rel="noopener noreferrer" className="bi bi-youtube text-danger mx-2 fs-3"></a>
         </div>
         <p>Email: contactrsphoto@gmail.com | Phone: +91 970 599 7571</p>
       </footer>
