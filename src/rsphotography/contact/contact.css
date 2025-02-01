@@ -1,0 +1,103 @@
+/* Contact Page Styling */
+.card {
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #0056b3;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  resize: none;
+}
+
+button[type="submit"] {
+  width: 200px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #0056b3;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #004085;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.text-dark {
+  color: #343a40;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+  
+  .form-control, textarea {
+    padding: 10px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
