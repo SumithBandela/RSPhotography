@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
-import { Home } from './rsphotography/home/home';
-import { About } from './rsphotography/about/about';
-import { Contact } from './rsphotography/contact/contact';
+import { HashRouter as BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import { Home } from './home';
+import { About } from './about';
+import { Contact } from './contact';
+import { NotFound } from './not-found';
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
         <section>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path='*' element={<NotFound/>}/>
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />

@@ -1,0 +1,132 @@
+/* Overall Container */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* Title */
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Lead Description */
+.description {
+  font-size: 20px;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Philosophy Section */
+.philosophy {
+  font-size: 20px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 20px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+/* Services Section */
+.services-section {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #007bff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Conclusion Section */
+.conclusion {
+  max-width: 800px;
+  margin: 50px auto;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.conclusion strong {
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .description,
+  .philosophy {
+    font-size: 18px;
+  }
+
+  .services-section {
+    padding: 20px;
+  }
+
+  .service-title {
+    font-size: 28px;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    padding: 15px;
+  }
+
+  .service-heading {
+    font-size: 18px;
+  }
+}
