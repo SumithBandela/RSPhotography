@@ -26,7 +26,7 @@ export function Home() {
             <p className="lead">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
           </div>
           <div className="col-md-6 col-sm-12 text-center">
-            <img src="images/logo.jpeg" alt="Studio" className="img-fluid rounded hero-image" />
+            <img src="https://raw.githubusercontent.com/sumithbandela/RSPhotography/main/public/images/logo.jpeg" alt="Studio" className="img-fluid rounded hero-image" />
           </div>
         </div>
 
