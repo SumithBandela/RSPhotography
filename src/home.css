@@ -1,60 +1,24 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Changed font style */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container-fluid {
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Hero Section Styling */
-.hero-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
 .hero-section h1 {
+  font-family: 'Lobster', cursive; /* Changed font style */
   font-size: 3rem;
   font-weight: 700;
   color: #333;
 }
 
 .hero-section p {
+  font-family: 'Open Sans', sans-serif; /* Changed font style */
   color: #555;
 }
 
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Image Collection Styling */
-.image-collection .card-img-top {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px;
-}
-
-.image-collection .card-img-top:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* About Section Styling */
-.about-section .card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .about-section h3 {
+  font-family: 'Merriweather', serif; /* Changed font style */
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
@@ -62,73 +26,14 @@ body {
 }
 
 .about-section p {
+  font-family: 'Open Sans', sans-serif; /* Changed font style */
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
 }
 
-.about-section ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  color: #555;
-}
-
-.about-section .card p {
-  margin-bottom: 10px;
-}
-
-/* Footer Styling */
-footer {
-  background-color: #343a40;
-  color: white;
-  padding: 20px 0;
-}
-
-footer .social-icons {
-  margin: 10px 0;
-}
-
-footer .social-icons a {
-  font-size: 30px;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-footer .social-icons a:hover {
-  color: #ff6347;
-}
-
 footer p {
+  font-family: 'Roboto', sans-serif; /* Changed font style */
   font-size: 14px;
   margin-top: 10px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-section h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-image img {
-    max-width: 300px;
-  }
-
-  .about-section ul {
-    padding-left: 15px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-
-  .hero-image img {
-    max-width: 200px;
-  }
 }

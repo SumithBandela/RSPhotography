@@ -5,6 +5,7 @@ import { Home } from './home';
 import { About } from './about';
 import { Contact } from './contact';
 import { NotFound } from './not-found';
+import { QrGenerator } from './qr-generator';
 
 function App() {
   return (
@@ -48,6 +49,11 @@ function App() {
                     Contact
                   </Link>
                 </li>
+                <li>
+                <Link className="nav-link" to="/qr">
+                    QrGenerator
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -68,6 +74,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="qr" element={<QrGenerator/>}/>
           </Routes>
         </section>
       </BrowserRouter>
