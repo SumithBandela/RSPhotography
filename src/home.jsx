@@ -1,8 +1,7 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
-import { Carousel} from "./carousel";
-import "./home.css";
-
+import { useEffect, useState } from "react";
+import './home.css'
+import { Carousel } from "./carousel";
 export function Home() {
   const [images, setImage] = useState([]);
 
@@ -30,9 +29,18 @@ export function Home() {
           </div>
         </div>
 
+        <div>
+              <Carousel/>
+         </div>
         {/* Image Collection Section */}
         <div className="image-collection p-3">
-          <Carousel />
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
+            {images.map(image => (
+              <div key={image.id} className="col">
+                <img src={image.img_src} className="creative-img" alt="studio" />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Contact and Google Map Section */}
@@ -81,7 +89,7 @@ export function Home() {
                 <li>Product Photography - Showcase your products with perfect lighting and angles.</li>
               </ul>
             </div>
-
+            
             {/* Why Choose Us Section */}
             <div className="mt-4">
               <h4 className="mb-3" style={{ fontFamily: 'Arial, sans-serif' }}>Why Choose Us?</h4>
