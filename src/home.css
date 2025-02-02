@@ -36,8 +36,42 @@ footer p {
   font-family: 'Roboto', sans-serif; /* Changed font style */
   font-size: 14px;
   margin-top: 10px;
-<<<<<<< HEAD
 }
-=======
+
+/* Remove card background, make images more creative */
+.creative-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Make sure the images cover the area properly */
+  border-radius: 15px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect on hover */
+  cursor: pointer; /* Show a pointer on hover */
 }
->>>>>>> 5baac20d4f68fbf718f4f6f63ab48c5ce376054c
+
+/* Hover effect */
+.creative-img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Make image container responsive */
+.image-collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Adds space between images */
+  justify-content: center; /* Center the images */
+}
+
+/* Adjust card layout for responsiveness */
+@media (max-width: 768px) {
+  .creative-img {
+    border-radius: 10px; /* Slightly smaller border radius on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .creative-img {
+    width: 100%; /* Make sure the images take up full width on mobile */
+  }
+}
