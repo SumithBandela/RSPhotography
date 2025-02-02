@@ -28,7 +28,7 @@ export function Contact() {
         <form onSubmit={formik.handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="form-label text-dark">Full Name</label>
-            <input type="text" className="form-control" id="name" name="name" placeholder="Enter your name" onChange={formik.handleChange} required/>
+            <input type="text" className="form-control w-100" id="name" name="name" placeholder="Enter your name" onChange={formik.handleChange} required/>
           </div>
           <div className="mb-4">
             <label htmlFor="email" className="form-label text-dark">Email Address</label>
