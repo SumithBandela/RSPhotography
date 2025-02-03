@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RSPhotography/static/css/main.17eba8cd.css",
-    "main.js": "/RSPhotography/static/js/main.a1894c08.js",
+    "main.js": "/RSPhotography/static/js/main.fc5682bf.js",
     "static/js/488.b289253c.chunk.js": "/RSPhotography/static/js/488.b289253c.chunk.js",
     "static/media/Logoblack-phone.jpg": "/RSPhotography/static/media/Logoblack-phone.0abd032f9d7b90c560db.jpg",
     "static/media/Logoblack.jpeg": "/RSPhotography/static/media/Logoblack.bbc7eb5dcec10d6c30a5.jpeg",
@@ -9,11 +9,11 @@
     "static/media/bootstrap-icons.woff2?": "/RSPhotography/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/RSPhotography/index.html",
     "main.17eba8cd.css.map": "/RSPhotography/static/css/main.17eba8cd.css.map",
-    "main.a1894c08.js.map": "/RSPhotography/static/js/main.a1894c08.js.map",
+    "main.fc5682bf.js.map": "/RSPhotography/static/js/main.fc5682bf.js.map",
     "488.b289253c.chunk.js.map": "/RSPhotography/static/js/488.b289253c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17eba8cd.css",
-    "static/js/main.a1894c08.js"
+    "static/js/main.fc5682bf.js"
   ]
 }
