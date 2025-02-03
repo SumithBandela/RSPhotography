@@ -1,0 +1,46 @@
+.quote-calc .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.quote-calc h1 {
+    text-align: center;
+}
+
+.quote-calc .form-group {
+    margin-bottom: 15px;
+}
+
+.quote-calc label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.quote-calc input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.quote-calc input[type="text"], 
+.quote-calc input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.quote-calc button:hover {
+    background-color: #0056b3;
+}
+
+.quote-calc .result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #007BFF;
+}

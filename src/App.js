@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import { HashRouter as BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import { Home } from './home';
@@ -6,75 +6,58 @@ import { About } from './about';
 import { Contact } from './contact';
 import { NotFound } from './not-found';
 import { QrGenerator } from './qr-generator';
+import {QuoteCalc} from './quote-calc';
+
+// Import React Bootstrap components
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="container-fluid">
       <BrowserRouter>
-        <header className="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-          <div className="container">
+        <Navbar collapseOnSelect expand="lg" bg="white" variant="light" sticky="top" className="shadow-sm">
+          <Container>
             {/* Logo Section */}
-            <div className="navbar-brand">
-              <Link to='/home'><img src="images/header-logo.png" width="100" alt="Rashmi Studio's Logo" /></Link>
-            </div>
+            <Navbar.Brand as={Link} to="/home">
+              <img src="images/header-logo.png" width="100" alt="Rashmi Studio's Logo" />
+            </Navbar.Brand>
 
             {/* Navbar Toggle for Mobile */}
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
+            <Navbar.Toggle aria-controls="navbar-nav" />
 
             {/* Navbar Links Section */}
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/home">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/about">
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/contact">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                <Link className="nav-link" to="/qr">
-                    QrGenerator
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Social Media Icons Section */}
-            <div className="d-none d-lg-flex social-icons">
-              <a className="bi bi-facebook mx-2 fs-4 " href='#'></a>
-              <a className="bi bi-instagram mx-2 fs-4 text-dark" href='https://www.instagram.com/rs_officialphotography' target='_blank' rel="noopener noreferrer"></a>
-              <a className="bi bi-youtube mx-2 fs-4 text-danger" href='https://youtube.com/@rsphotographyyy' target='_blank' rel="noopener noreferrer"></a>
-            </div>
-          </div>
-        </header>
+            <Navbar.Collapse id="navbar-nav">
+              <Nav className="ms-auto">
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/about">About</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/qr">QrGenerator</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/quote">QuotoCalc</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
 
         {/* Main Section with Routes */}
         <section>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path='*' element={<NotFound/>}/>
+            <Route path='quote' element={<QuoteCalc/>}/>
+            <Route path='*' element={<NotFound />} />
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="qr" element={<QrGenerator/>}/>
+            <Route path="qr" element={<QrGenerator />} />
           </Routes>
         </section>
       </BrowserRouter>

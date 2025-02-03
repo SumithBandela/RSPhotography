@@ -75,3 +75,24 @@ footer p {
     width: 100%; /* Make sure the images take up full width on mobile */
   }
 }
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.modal-content {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.btn-close-white {
+  filter: invert(1); /* White close button for dark backgrounds */
+}
+
+.image-responsive {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
