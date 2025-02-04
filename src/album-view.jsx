@@ -1,0 +1,55 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Link, useParams } from "react-router-dom";
+import './album-view.css';
+export function AlbumView() {
+  const { id } = useParams();  // Capture the 'id' from the URL parameters
+  const [album, setAlbum] = useState(null);
+
+  useEffect(() => {
+    // Fetch all albums and filter by the provided 'id'
+    axios.get("collections.json")  // Assuming 'collections.json' has all albums
+      .then(response => {
+        console.log("Fetched albums:", response.data);  // Log to check the structure
+
+        // Find the album by matching the 'id'
+        const selectedAlbum = response.data.find(a => a.id === id);
+        
+        if (selectedAlbum) {
+          setAlbum(selectedAlbum);  // Set the album data if found
+        } else {
+          console.error("Album not found for id:", id);  // Log if album isn't found
+        }
+      })
+      .catch(error => console.error("Error fetching album details:", error));
+  }, [id]);
+
+  // Show a loading message if album data hasn't been set yet
+  if (!album) {
+    return <div>Loading album...</div>;
+  }
+
+  return (
+    <div className="album-view-container">
+      <header className="album-header">
+        <h1 className="album-title">{album.title || "Untitled Album"}</h1>
+        <p className="album-description">{album.description || "No description available."}</p>
+      </header>
+
+      <div className="photos-grid">
+        {album.photos && album.photos.length > 0 ? (
+          album.photos.map(photo => (
+            <div key={photo.id} className="photo-card">
+              <img src={photo.img_src} alt={"Photo " + photo.id} className="photo-image" />
+            </div>
+          ))
+        ) : (
+          <p>No photos available.</p>
+        )}
+      </div>
+      <div className="back-link">
+        <Link to="/collections" className="back-to-collections-btn">Back to Collections</Link>
+      </div>
+    </div>
+  );
+}

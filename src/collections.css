@@ -1,0 +1,68 @@
+/* Container to hold all the images */
+.image-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default to one column on small screens */
+  gap: 16px; /* Space between items */
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Card Style */
+.card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the content stays inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Stack the image and title vertically */
+  justify-content: flex-start; /* Align them at the top */
+  height: 350px; /* Set a height to accommodate both the image and the title */
+}
+
+/* Card Hover Effect */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); /* Floating effect */
+}
+
+/* Image Styling */
+.album-image {
+  width: 100%;
+  height: 200px; /* Fixed height for consistent card sizes */
+  object-fit: cover; /* Ensures the image covers the area */
+  border-radius: 8px;
+}
+
+/* Title Styling */
+.album-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333333; /* Dark color for the title */
+  text-align: center;
+  padding: 8px 16px;
+  background-color: white; /* Light background */
+  border-radius: 5px;
+  margin-top: 8px; /* Adds space between the image and title */
+  flex-grow: 0; /* Prevent title from stretching */
+}
+
+/* Responsive breakpoints */
+@media (min-width: 640px) {
+  .image-gallery-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small devices (sm) */
+  }
+}
+
+@media (min-width: 768px) {
+  .image-gallery-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium devices (md) */
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-gallery-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on large devices (lg) */
+  }
+}

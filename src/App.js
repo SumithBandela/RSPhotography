@@ -7,10 +7,9 @@ import { Contact } from './contact';
 import { NotFound } from './not-found';
 import { QrGenerator } from './qr-generator';
 import {QuoteCalc} from './quote-calc';
-
-// Import React Bootstrap components
 import { Navbar, Nav, Container } from 'react-bootstrap';
-
+import { Collections } from './collections';
+import { AlbumView } from './album-view';
 function App() {
   return (
     <div className="container-fluid">
@@ -58,6 +57,8 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="qr" element={<QrGenerator />} />
+            <Route path="collections" element={<Collections/>}/>
+            <Route path="/album/:id" element={<AlbumView />} />
           </Routes>
         </section>
       </BrowserRouter>

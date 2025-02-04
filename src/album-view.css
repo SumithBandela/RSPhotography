@@ -1,0 +1,117 @@
+.album-view-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.album-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.album-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.album-description {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.back-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-to-collections-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff6f61; /* A bright color */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-collections-btn:hover {
+  background-color: #d25f4b; /* A darker shade for hover effect */
+  transform: translateY(-4px); /* Slight lift effect */
+}
+
+.back-to-collections-btn:active {
+  transform: translateY(2px); /* A pressed effect */
+}
+
+.back-to-collections-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px 2px rgba(255, 111, 97, 0.7); /* Add custom focus effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .album-title {
+    font-size: 2rem;
+  }
+
+  .album-description {
+    font-size: 1rem;
+  }
+
+  .photos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduce minimum size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .album-title {
+    font-size: 1.5rem;
+  }
+
+  .album-description {
+    font-size: 0.9rem;
+  }
+
+  .photos-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+
+  .photo-card {
+    margin-bottom: 10px;
+  }
+}
