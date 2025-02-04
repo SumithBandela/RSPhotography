@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "title": "Summer Memories",
+      "description": "A collection of beautiful summer moments.",
+      "photos": [
+        {
+          "id": 101,
+          "title": "Beach Sunset",
+          "img_src": "https://example.com/images/beach-sunset.jpg"
+        },
+        {
+          "id": 102,
+          "title": "Mountain Hike",
+          "img_src": "https://example.com/images/mountain-hike.jpg"
+        },
+        {
+          "id": 103,
+          "title": "City Lights",
+          "img_src": "https://example.com/images/city-lights.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Winter Wonderland",
+      "description": "Chilly and magical winter scenes.",
+      "photos": [
+        {
+          "id": 201,
+          "title": "Snowy Forest",
+          "img_src": "https://example.com/images/snowy-forest.jpg"
+        },
+        {
+          "id": 202,
+          "title": "Frozen Lake",
+          "img_src": "https://example.com/images/frozen-lake.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Autumn Vibes",
+      "description": "The beautiful hues of autumn leaves.",
+      "photos": [
+        {
+          "id": 301,
+          "title": "Golden Leaves",
+          "img_src": "https://example.com/images/golden-leaves.jpg"
+        },
+        {
+          "id": 302,
+          "title": "Rustic Pathway",
+          "img_src": "https://example.com/images/rustic-pathway.jpg"
+        }
+      ]
+    }
+  ]
+  
