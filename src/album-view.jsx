@@ -3,15 +3,13 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import './album-view.css';
 export function AlbumView() {
-  const { id } = useParams();  // Capture the 'id' from the URL parameters
+  const { id } = useParams();  
   const [album, setAlbum] = useState(null);
 
   useEffect(() => {
     // Fetch all albums and filter by the provided 'id'
     axios.get("collections.json")  // Assuming 'collections.json' has all albums
       .then(response => {
-        console.log("Fetched albums:", response.data);  // Log to check the structure
-
         // Find the album by matching the 'id'
         const selectedAlbum = response.data.find(a => a.id === id);
         
