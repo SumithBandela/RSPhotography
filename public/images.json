@@ -37,7 +37,15 @@
     },
     {
         "id":10,
-        "img_src":"images/Image-10.png"
+        "img_src":"images/Image-10.jpeg"
+    },
+    {
+        "id":11,
+        "img_src":"images/Image-11.jpg"
+    },
+    {
+        "id":12,
+        "img_src":"images/Image-12.jpeg"
     }
 
 ]

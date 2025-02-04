@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": "Bridal Portraits",
+    "description": "A collection of beautiful bridal portraits.",
+    "photos": [
+      {
+        "id": 101,
+        "img_src": "images/Image-1.jpeg"
+      },
+      {
+        "id": 102,
+        "img_src": "images/Image-2.jpg"
+      },
+      {
+        "id": 103,
+        "img_src": "images/Image-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Engagement Sessions",
+    "description": "Lovely moments captured during engagement sessions.",
+    "photos": [
+      {
+        "id": 201,
+        "img_src": "images/Image-1.jpeg"
+      },
+      {
+        "id": 202,
+        "img_src": "images/Image-2.jpg"
+      },
+      {
+        "id": 203,
+        "img_src": "images/Image-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Wedding Ceremony",
+    "description": "Cherished moments from a beautiful wedding ceremony.",
+    "photos": [
+      {
+        "id": 301,
+        "img_src": "images/Image-1.jpeg"
+      },
+      {
+        "id": 302,
+        "img_src": "images/Image-2.jpg"
+      },
+      {
+        "id":303,
+        "img_src": "images/Image-3.jpg"
+      }
+    ]
+  }
+]
