@@ -4,7 +4,7 @@
         "img_src":"images/Image-1.jpeg",
         "photos":[{
             "id":101,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-1.jpeg"
         }]
     },
     {
@@ -12,7 +12,7 @@
         "img_src":"images/Image-2.jpg",
         "photos":[{
             "id":201,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-2.jpg"
         }]
     },
     {
@@ -20,7 +20,7 @@
         "img_src":"images/Image-3.jpg",
         "photos":[{
             "id":301,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-3.jpg"
         }]
     },
     {
@@ -36,7 +36,7 @@
         "img_src":"images/Image-5.jpg",
         "photos":[{
             "id":501,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-5.jpg"
         }]
     },
     {
@@ -44,7 +44,7 @@
         "img_src":"images/Image-6.jpeg",
         "photos":[{
             "id":601,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-6.jpeg"
         }]
     },
     {
@@ -52,7 +52,7 @@
         "img_src":"images/Image-7.jpeg"
         ,"photos":[{
             "id":701,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-7.jpeg"
         }]
     },
     {
@@ -60,7 +60,7 @@
         "img_src":"images/Image-8.jpeg",
         "photos":[{
             "id":801,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-8.jpeg"
         }]
     },
     {
@@ -68,7 +68,7 @@
         "img_src":"images/Image-9.jpg",
         "photos":[{
             "id":901,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-9.jpg"
         }]
     },
     {
@@ -76,7 +76,7 @@
         "img_src":"images/Image-10.jpeg",
         "photos":[{
             "id":1001,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-10.jpeg"
         }]
     },
     {
@@ -84,7 +84,7 @@
         "img_src":"images/Image-11.jpg",
         "photos":[{
             "id":1101,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-11.jpg"
         }]
     },
     {
@@ -92,7 +92,7 @@
         "img_src":"images/Image-12.jpeg",
         "photos":[{
             "id":1201,
-            "img_src":"images/Image-4.jpeg"
+            "img_src":"images/Image-12.jpeg"
         }]
     }
 
