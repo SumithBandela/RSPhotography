@@ -2,15 +2,19 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import './home.css'
 import { Carousel } from "./carousel";
+import { useNavigate } from "react-router-dom";
 export function Home() {
   const [images, setImage] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     axios.get("images.json")
       .then(response => {
         setImage(response.data);
       });
   }, []);
+  const handleImageClick = (imageId) => {
+    navigate(`/image/${imageId}`);
+  };
 
   return (
     <div>
@@ -32,42 +36,21 @@ export function Home() {
         <div>
               <Carousel/>
          </div>
-        {/* Image Collection Section */}
+        {/* Image Collection */}
         <div className="image-collection p-3">
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
-        {images.map((image) => (
-          <div key={image.id} className="col">
-            {/* Image with Modal Trigger */}
-            <img
-              src={image.img_src}
-              className="creative-img img-thumbnail"
-              alt="studio"
-              data-bs-toggle="modal"
-              data-bs-target={`#modal${image.id}`}
-              style={{ cursor: "pointer" }}
-            />
-
-            {/* Responsive Modal for Image */}
-            <div className="modal fade" id={`modal${image.id}`} tabIndex="-1" aria-hidden="true">
-              <div className="modal-dialog modal-dialog-centered">
-                <div className="modal-content bg-transparent border-0">
-                  <div className="modal-body position-relative p-0">
-                    {/* Close Button */}
-                    <button
-                      className="btn-close btn-close-white position-absolute top-0 end-0 m-3"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                    {/* Centered Responsive Image */}
-                    <img src={image.img_src} alt="Zoomed" className="img-fluid image-responsive" />
-                  </div>
-                </div>
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
+            {images.map((image) => (
+              <div key={image.id} className="col">
+                <img
+                  src={image.img_src}
+                  className="creative-img img-thumbnail"
+                  alt="studio"
+                  onClick={() => handleImageClick(image.id)}
+                />
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
 
         {/* Contact and Google Map Section */}
         <div className="row mt-5 justify-content-center">

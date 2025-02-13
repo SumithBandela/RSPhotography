@@ -38,29 +38,35 @@ footer p {
   margin-top: 10px;
 }
 
-/* Remove card background, make images more creative */
+/* Image Collection */
 .creative-img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Make sure the images cover the area properly */
-  border-radius: 15px; /* Rounded corners for a smooth look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect on hover */
-  cursor: pointer; /* Show a pointer on hover */
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 /* Hover effect */
 .creative-img:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Make image container responsive */
+/* Remove extra padding/margins */
 .image-collection {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px; /* Adds space between images */
-  justify-content: center; /* Center the images */
+  padding: 10px;
+}
+  
+
+.social-icons a {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
 }
 
 /* Adjust card layout for responsiveness */
@@ -76,23 +82,3 @@ footer p {
   }
 }
 
-.modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-}
-
-.modal-content {
-  background-color: transparent !important;
-  border: none;
-  box-shadow: none;
-}
-
-.btn-close-white {
-  filter: invert(1); /* White close button for dark backgrounds */
-}
-
-.image-responsive {
-  max-width: 90vw;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 10px;
-}

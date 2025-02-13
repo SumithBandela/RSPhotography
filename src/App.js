@@ -10,6 +10,7 @@ import {QuoteCalc} from './quote-calc';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Collections } from './collections';
 import { AlbumView } from './album-view';
+import { ImageView } from './image-view';
 function App() {
   return (
     <div className="container-fluid">
@@ -29,6 +30,9 @@ function App() {
               <Nav className="ms-auto">
                 <Nav.Item>
                   <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/collections">Collections</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link as={Link} to="/about">About</Nav.Link>
@@ -59,6 +63,7 @@ function App() {
             <Route path="qr" element={<QrGenerator />} />
             <Route path="collections" element={<Collections/>}/>
             <Route path="/album/:id" element={<AlbumView />} />
+            <Route path='/image/:id' element={<ImageView/>}/>
           </Routes>
         </section>
       </BrowserRouter>
