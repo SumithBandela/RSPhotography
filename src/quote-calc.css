@@ -5,10 +5,18 @@
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.quote-ccalc .container:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .quote-calc h1 {
     text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .quote-calc .form-group {
@@ -19,6 +27,7 @@
     display: inline-block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #555;
 }
 
 .quote-calc input[type="checkbox"] {
@@ -28,10 +37,29 @@
 .quote-calc input[type="text"], 
 .quote-calc input[type="number"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.quote-calc input[type="text"]:focus, 
+.quote-calc input[type="number"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.quote-calc button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .quote-calc button:hover {
@@ -43,4 +71,19 @@
     font-size: 1.2em;
     text-align: center;
     color: #007BFF;
+}
+
+@media (max-width: 600px) {
+    .quote-calc .container {
+        padding: 15px;
+    }
+
+    .quote-calc h1 {
+        font-size: 1.5em;
+    }
+
+    .quote-calc button {
+        width: 100%;
+        padding: 12px;
+    }
 }
