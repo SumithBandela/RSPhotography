@@ -8,9 +8,11 @@ export function ImageView() {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
-    axios.get("images.json") // Ensure the correct path
+    axios.get("images.json") // Ensure this is the correct path
       .then(response => {
-        const selectedImage = response.data.find(img => img.id === parseInt(id, 10)); // Convert id to number
+        const imagesArray = response.data.images; // Extract "images" array from JSON
+        const selectedImage = imagesArray.find(img => img.id.toString() === id); // Ensure ID match
+        
         if (selectedImage) {
           setImage(selectedImage);
         } else {
@@ -21,26 +23,26 @@ export function ImageView() {
   }, [id]);
 
   if (!image) {
-    return <div>Loading image...</div>;
+    return <div className="loading-message">Loading image...</div>;
   }
 
   return (
     <div className="image-view-container">
-
       <div className="photos-grid">
         {image.photos && image.photos.length > 0 ? (
-          image.photos.map(photo => (
-            <div key={photo.id} className="photo-card">
-              <img src={photo.img_src} alt={`Photo ${photo.id}`} className="photo-image" />
+          image.photos.map((photo, index) => (
+            <div key={index} className="photo-card">
+              <img src={photo.img_src} alt={`Photo ${index+1}`} className="photo-image img-thumbnail" />
             </div>
           ))
         ) : (
-          <p>No additional photos available.</p>
+          <p className="text-center">No additional photos available.</p>
         )}
       </div>
 
-      <div className="back-link">
-        <Link to="/home" className="back-to-home-btn">Back to Home</Link>
+      {/* Back Button */}
+      <div className="text-center mt-4">
+        <Link to="/home" className="back-to-home-btn" >Back to Home</Link>
       </div>
     </div>
   );

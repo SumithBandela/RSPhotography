@@ -1,22 +1,22 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './collections.css';
+import './gallery.css';
 
-export function Collections() {
+export function Gallery() {
   const [albums, setAlbums] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("collections.json")
+    axios.get("images.json")
       .then(response => {
-        setAlbums(response.data);
+        setAlbums(response.data.albums);
       })
       .catch(error => console.error("Error fetching albums:", error));
   }, []);
 
   const handleCardClick = (id) => {
-    navigate(`/album/${id}`);
+    navigate(`/gallery/${id}`);
   };
 
   return (

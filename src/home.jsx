@@ -5,18 +5,21 @@ import { Carousel } from "./carousel";
 import { useNavigate } from "react-router-dom";
 
 export function Home() {
-  const [images, setImage] = useState([]);
+  const [images, setImages] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios.get("images.json")
       .then(response => {
-        setImage(response.data);
+        setImages(response.data.images);
+      })
+      .catch(error => {
+        console.error("Error fetching images:", error);
       });
   }, []);
 
-  const handleImageClick = (imageId) => {
-    navigate(`/image/${imageId}`);
+  const handleImageClick = (id) => {
+    navigate(`/home/${id}`);
   };
 
   return (
@@ -44,7 +47,7 @@ export function Home() {
         <div className="image-collection p-3">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
             {images.map((image) => (
-              <div key={image.id} className="col">
+              <div key={image.img_src} className="col">
                 <img
                   src={image.img_src}
                   className="creative-img img-thumbnail"

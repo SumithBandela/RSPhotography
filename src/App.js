@@ -8,9 +8,9 @@ import { NotFound } from './not-found';
 import { QrGenerator } from './qr-generator';
 import {QuoteCalc} from './quote-calc';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Collections } from './collections';
 import { AlbumView } from './album-view';
 import { ImageView } from './image-view';
+import { Gallery } from './gallery';
 function App() {
   return (
     <div className="container-fluid">
@@ -32,7 +32,7 @@ function App() {
                   <Nav.Link as={Link} to="/home">Home</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/collections">Collections</Nav.Link>
+                  <Nav.Link as={Link} to="/gallery">Gallery</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link as={Link} to="/about">About</Nav.Link>
@@ -41,10 +41,10 @@ function App() {
                   <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/qr">QrGenerator</Nav.Link>
+                  <Nav.Link as={Link} to="/qr">QR Code</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/quote">QuotoCalc</Nav.Link>
+                  <Nav.Link as={Link} to="/quote">Quotation</Nav.Link>
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>
@@ -55,15 +55,17 @@ function App() {
         <section>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path='quote' element={<QuoteCalc/>}/>
             <Route path='*' element={<NotFound />} />
             <Route path="home" element={<Home />} />
+            <Route path='/home/:id' element={<ImageView/>}/>
+            <Route path="gallery" element={<Gallery/>}/>
+            <Route path="/gallery/:id" element={<AlbumView />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="qr" element={<QrGenerator />} />
-            <Route path="collections" element={<Collections/>}/>
-            <Route path="/album/:id" element={<AlbumView />} />
-            <Route path='/image/:id' element={<ImageView/>}/>
+            <Route path='quote' element={<QuoteCalc/>}/>
+           
+            
           </Routes>
         </section>
       </BrowserRouter>

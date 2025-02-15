@@ -57,7 +57,7 @@
   text-align: center;
 }
 
-.back-to-collections-btn {
+.back-to-gallery-btn {
   display: inline-block;
   padding: 12px 30px;
   background-color: #ff6f61; /* A bright color */
@@ -69,16 +69,16 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.back-to-collections-btn:hover {
+.back-to-gallery-btn:hover {
   background-color: #d25f4b; /* A darker shade for hover effect */
   transform: translateY(-4px); /* Slight lift effect */
 }
 
-.back-to-collections-btn:active {
+.back-to-gallery-btn:active {
   transform: translateY(2px); /* A pressed effect */
 }
 
-.back-to-collections-btn:focus {
+.back-to-gallery-btn:focus {
   outline: none; /* Remove default focus outline */
   box-shadow: 0 0 5px 2px rgba(255, 111, 97, 0.7); /* Add custom focus effect */
 }

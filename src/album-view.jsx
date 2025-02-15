@@ -8,10 +8,10 @@ export function AlbumView() {
 
   useEffect(() => {
     // Fetch all albums and filter by the provided 'id'
-    axios.get("collections.json")  // Assuming 'collections.json' has all albums
+    axios.get("images.json")  // Assuming 'collections.json' has all albums
       .then(response => {
         // Find the album by matching the 'id'
-        const selectedAlbum = response.data.find(a => a.id === id);
+        const selectedAlbum = response.data.albums.find(a => a.id.toString() === id);
         
         if (selectedAlbum) {
           setAlbum(selectedAlbum);  // Set the album data if found
@@ -36,9 +36,9 @@ export function AlbumView() {
 
       <div className="photos-grid">
         {album.photos && album.photos.length > 0 ? (
-          album.photos.map(photo => (
-            <div key={photo.id} className="photo-card">
-              <img src={photo.img_src} alt={"Photo " + photo.id} className="photo-image" />
+          album.photos.map((photo, index) => (
+            <div key={index} className="photo-card">
+              <img src={photo.img_src} alt={`Photo ${index+1}`} className="photo-image img-thumbnail" />
             </div>
           ))
         ) : (
@@ -46,7 +46,7 @@ export function AlbumView() {
         )}
       </div>
       <div className="back-link">
-        <Link to="/collections" className="back-to-collections-btn">Back to Collections</Link>
+        <Link to="/gallery" className="back-to-gallery-btn">Back to Gallery</Link>
       </div>
     </div>
   );
