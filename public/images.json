@@ -98,50 +98,42 @@
     {
         "id":13,
         "img_src":"images/Akhil_1.jpeg",
-        "photos":[{
-            "id":1301,
-            "img_src":"images/Akhil_1.jpeg",
-            "img_src":"images/Akhil_2.jpeg",
-            "img_src":"images/Akhil_3.jpeg",
-            "img_src":"images/Akhil_4.jpeg",
-            "img_src":"images/Akhil_5.jpeg",
-            "img_src":"images/Akhil_6.jpeg",
-            "img_src":"images/Akhil_7.jpeg",
-            "img_src":"images/Akhil_8.jpeg",
-            "img_src":"images/Akhil_9.jpeg"
-        }]
+        "photos":[{"id":1301,"img_src":"images/Akhil_1.jpeg"}
+        ,{"id":1302,"img_src":"images/Akhil_2.jpeg"},
+        {"id":1303,"img_src":"images/Akhil_3.jpeg"},
+        {"id":1304,"img_src":"images/Akhil_4.jpeg"},
+        {"id":1305,"img_src":"images/Akhil_5.jpeg"},
+        {"id":1306,"img_src":"images/Akhil_6.jpeg"},
+        {"id":1307,"img_src":"images/Akhil_7.jpeg"},
+        {"id":1308,"img_src":"images/Akhil_8.jpeg"},
+        {"id":1309,"img_src":"images/Akhil_9.jpeg"}]
+        
     },
     {
         "id":14,
         "img_src":"images/Akhil_2.jpeg",
-        "photos":[{
-            "id":1401,
-            "img_src":"images/Akhil_1.jpeg",
-            "img_src":"images/Akhil_2.jpeg",
-            "img_src":"images/Akhil_3.jpeg",
-            "img_src":"images/Akhil_4.jpeg",
-            "img_src":"images/Akhil_5.jpeg",
-            "img_src":"images/Akhil_6.jpeg",
-            "img_src":"images/Akhil_7.jpeg",
-            "img_src":"images/Akhil_8.jpeg",
-            "img_src":"images/Akhil_9.jpeg"
-        }]
+        "photos":[{"id":1401,"img_src":"images/Akhil_2.jpeg"},
+        {"id":1401,"img_src":"images/Akhil_3.jpeg"},
+        {"id":1402,"img_src":"images/Akhil_4.jpeg"},
+        {"id":1403,"img_src":"images/Akhil_5.jpeg"},
+        {"id":1404,"img_src":"images/Akhil_6.jpeg"},
+        {"id":1405,"img_src":"images/Akhil_7.jpeg"},
+        {"id":1406,"img_src":"images/Akhil_8.jpeg"},
+        {"id":1407,"img_src":"images/Akhil_9.jpeg"}]
+        
     },
     {
         "id":15,
         "img_src":"images/Akhil_3.jpeg",
-        "photos":[{
-            "id":1501,
-            "img_src":"images/Akhil_1.jpeg",
-            "img_src":"images/Akhil_2.jpeg",
-            "img_src":"images/Akhil_3.jpeg",
-            "img_src":"images/Akhil_4.jpeg",
-            "img_src":"images/Akhil_5.jpeg",
-            "img_src":"images/Akhil_6.jpeg",
-            "img_src":"images/Akhil_7.jpeg",
-            "img_src":"images/Akhil_8.jpeg",
-            "img_src":"images/Akhil_9.jpeg"
-        }]
+        "photos":[{"id":1501,"img_src":"images/Akhil_1.jpeg"},
+        {"id":1501,"img_src":"images/Akhil_2.jpeg"},
+        {"id":1502,"img_src":"images/Akhil_3.jpeg"},
+        {"id":1503,"img_src":"images/Akhil_4.jpeg"},
+        {"id":1504,"img_src":"images/Akhil_5.jpeg"},
+        {"id":1505,"img_src":"images/Akhil_6.jpeg"},
+        {"id":1506,"img_src":"images/Akhil_7.jpeg"},
+        {"id":1507,"img_src":"images/Akhil_8.jpeg"},
+        {"id":1508,"img_src":"images/Akhil_9.jpeg"}]
     }
 
 
