@@ -94,6 +94,23 @@
             "id":1201,
             "img_src":"images/Image-12.jpeg"
         }]
+    },
+    {
+        "id":13,
+        "img_src":"images/Akhil_1.jpeg",
+        "photos":[{
+            "id":1301,
+            "img_src":"images/Akhil_1.jpeg",
+            "img_src":"images/Akhil_2.jpeg",
+            "img_src":"images/Akhil_3.jpeg",
+            "img_src":"images/Akhil_4.jpeg",
+            "img_src":"images/Akhil_5.jpeg",
+            "img_src":"images/Akhil_6.jpeg",
+            "img_src":"images/Akhil_7.jpeg",
+            "img_src":"images/Akhil_8.jpeg",
+            "img_src":"images/Akhil_9.jpeg"
+        }]
     }
+
 
 ]
