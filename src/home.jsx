@@ -1,17 +1,20 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import './home.css'
+import './home.css';
 import { Carousel } from "./carousel";
 import { useNavigate } from "react-router-dom";
+
 export function Home() {
   const [images, setImage] = useState([]);
   const navigate = useNavigate();
+
   useEffect(() => {
     axios.get("images.json")
       .then(response => {
         setImage(response.data);
       });
   }, []);
+
   const handleImageClick = (imageId) => {
     navigate(`/image/${imageId}`);
   };
@@ -22,11 +25,11 @@ export function Home() {
         {/* Hero Section */}
         <div className="hero-section row align-items-center mb-5">
           <div className="col-md-6 col-sm-12">
-            <h1 style={{ fontFamily: 'Arial, sans-serif' }}>Rashmi Studio's</h1>
+            <h1 className="font-arial">Rashmi Studio's</h1>
             <span className="bi bi-geo-alt text-danger fs-5 me-1"></span>
-            <a className="text-black fs-5 text-decoration-none" href="https://maps.app.goo.gl/thrukEr9zSRujThHA" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'Arial, sans-serif' }}>Hyderabad</a>
-            <p className="text-muted fs-5 mt-4" style={{ fontFamily: 'Arial, sans-serif' }}>Where Moments Become Memories</p>
-            <p className="lead" style={{ fontFamily: 'Arial, sans-serif' }}>Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
+            <a className="text-black fs-5 text-decoration-none font-arial" href="https://maps.app.goo.gl/thrukEr9zSRujThHA" target="_blank" rel="noopener noreferrer">Hyderabad</a>
+            <p className="text-muted fs-5 mt-4 font-arial">Where Moments Become Memories</p>
+            <p className="lead font-arial">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
           </div>
           <div className="col-md-6 col-sm-12 text-center">
             <img src="images/Logo.png" alt="Studio" className="img-fluid rounded hero-image" />
@@ -34,8 +37,9 @@ export function Home() {
         </div>
 
         <div>
-              <Carousel/>
-         </div>
+          <Carousel />
+        </div>
+
         {/* Image Collection */}
         <div className="image-collection p-3">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
@@ -68,10 +72,10 @@ export function Home() {
                 </iframe>
               </div>
               <div className="card-body">
-                <p className="fw-bold" style={{ fontFamily: 'Arial, sans-serif' }}>15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
-                <p style={{ fontFamily: 'Arial, sans-serif' }}>Mon-Sun: 09:00 AM - 07:00 PM</p>
-                <p style={{ fontFamily: 'Arial, sans-serif' }}>Phone: +91 970 599 7571</p>
-                <p style={{ fontFamily: 'Arial, sans-serif' }}>Email: contactrsphoto@gmail.com</p>
+                <p className="fw-bold font-arial">15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
+                <p className="font-arial">Mon-Sun: 09:00 AM - 07:00 PM</p>
+                <p className="font-arial">Phone: +91 970 599 7571</p>
+                <p className="font-arial">Email: contactrsphoto@gmail.com</p>
               </div>
             </div>
           </div>
@@ -80,29 +84,29 @@ export function Home() {
         {/* About Section */}
         <div className="about-section mt-5">
           <div className="card p-4 shadow-sm rounded">
-            <h3 className="text-center mb-4" style={{ fontFamily: 'Arial, sans-serif' }}>About Us</h3>
-            <p className="lead text-muted" style={{ fontFamily: 'Arial, sans-serif' }}>
+            <h3 className="text-center mb-4 font-arial">About Us</h3>
+            <p className="lead text-muted font-arial">
               At Rashmi Studio's, we believe that every moment holds a story, a memory waiting to be captured. We don’t just take photographs; we create timeless works of art that speak louder than words.
             </p>
-            <p className="text-muted" style={{ fontFamily: 'Arial, sans-serif' }}>
+            <p className="text-muted font-arial">
               Whether it's a joyful wedding, a stunning portrait, or an unforgettable event, we pour our heart and soul into every shot.
             </p>
 
             {/* Our Services Section */}
             <div className="mt-4">
-              <h4 className="mb-3" style={{ fontFamily: 'Arial, sans-serif' }}>Our Services</h4>
-              <ul style={{ fontFamily: 'Arial, sans-serif' }}>
+              <h4 className="mb-3 font-arial">Our Services</h4>
+              <ul className="font-arial">
                 <li>Wedding Photography - Capturing the magic of your special day.</li>
                 <li>Event Photography - Corporate events to intimate gatherings, we capture it all.</li>
                 <li>Portrait Photography - Perfect headshots, family portraits, or milestones.</li>
                 <li>Product Photography - Showcase your products with perfect lighting and angles.</li>
               </ul>
             </div>
-            
+
             {/* Why Choose Us Section */}
             <div className="mt-4">
-              <h4 className="mb-3" style={{ fontFamily: 'Arial, sans-serif' }}>Why Choose Us?</h4>
-              <p style={{ fontFamily: 'Arial, sans-serif' }}>
+              <h4 className="mb-3 font-arial">Why Choose Us?</h4>
+              <p className="font-arial">
                 We blend creativity, technical expertise, and a personalized approach to deliver extraordinary results. Trust us to create beautiful memories that will last a lifetime.
               </p>
             </div>
@@ -111,10 +115,10 @@ export function Home() {
       </div>
 
       {/* Footer Section */}
-      <footer className="text-center py-3 mt-5 bg-dark text-white" style={{ fontFamily: 'Arial, sans-serif' }}>
+      <footer className="text-center py-3 mt-5 bg-dark text-white font-arial">
         <p>&copy; 2025 Rashmi Studio's | All Rights Reserved</p>
         <div className="social-icons">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="bi bi-facebook text-primary mx-2 fs-3 "></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="bi bi-facebook text-primary mx-2 fs-3"></a>
           <a href="https://www.instagram.com/rs_officialphotography" target="_blank" rel="noopener noreferrer" className="bi bi-instagram text-white mx-2 fs-3"></a>
           <a href="https://youtube.com/@rsphotographyyy" target="_blank" rel="noopener noreferrer" className="bi bi-youtube text-danger mx-2 fs-3"></a>
         </div>
