@@ -121,9 +121,15 @@ export function Home() {
       <footer className="text-center py-3 mt-5 bg-dark text-white font-arial">
         <p>&copy; 2025 Rashmi Studio's | All Rights Reserved</p>
         <div className="social-icons">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="bi bi-facebook text-primary mx-2 fs-3"></a>
-          <a href="https://www.instagram.com/rs_officialphotography" target="_blank" rel="noopener noreferrer" className="bi bi-instagram text-white mx-2 fs-3"></a>
-          <a href="https://youtube.com/@rsphotographyyy" target="_blank" rel="noopener noreferrer" className="bi bi-youtube text-danger mx-2 fs-3"></a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="mx-2 fs-3 text-primary">
+        <i className="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/rs_officialphotography" target="_blank" rel="noopener noreferrer" className="mx-2 fs-3 text-white">
+        <i className="bi bi-instagram"></i>
+        </a>
+        <a href="https://youtube.com/@rsphotographyyy" target="_blank" rel="noopener noreferrer" className="mx-2 fs-3 text-danger">
+        <i className="bi bi-youtube"></i>
+        </a>
         </div>
         <p>Email: contactrsphoto@gmail.com | Phone: +91 970 599 7571</p>
       </footer>

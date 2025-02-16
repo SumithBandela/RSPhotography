@@ -38,7 +38,7 @@ export function AlbumView() {
         {album.photos && album.photos.length > 0 ? (
           album.photos.map((photo, index) => (
             <div key={index} className="photo-card">
-              <img src={photo.img_src} alt={`Photo ${index+1}`} className="photo-image img-thumbnail" />
+              <img src={photo.img_src} className="photo-image img-thumbnail" />
             </div>
           ))
         ) : (
