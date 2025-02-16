@@ -1,149 +1,314 @@
 {
-    "images": [
-      {
-        "id": 1,
-        "img_src": "images/Image-1.jpeg",
-        "photos": [{ "img_src": "images/Image-1.jpeg" }]
-      },
-      {
-        "id": 2,
-        "img_src": "images/Image-2.jpg",
-        "photos": [{ "img_src": "images/Image-2.jpg" }]
-      },
-      {
-        "id": 3,
-        "img_src": "images/Image-3.jpg",
-        "photos": [{ "img_src": "images/Image-3.jpg" }]
-      },
-      {
-        "id": 4,
-        "img_src": "images/Image-4.jpeg",
-        "photos": [{ "img_src": "images/Image-4.jpeg" }]
-      },
-      {
-        "id": 5,
-        "img_src": "images/Image-5.jpg",
-        "photos": [{ "img_src": "images/Image-5.jpg" }]
-      },
-      {
-        "id": 6,
-        "img_src": "images/Image-6.jpeg",
-        "photos": [{ "img_src": "images/Image-6.jpeg" }]
-      },
-      {
-        "id": 7,
-        "img_src": "images/Image-7.jpeg",
-        "photos": [{ "img_src": "images/Image-7.jpeg" }]
-      },
-      {
-        "id": 8,
-        "img_src": "images/Image-8.jpeg",
-        "photos": [{ "img_src": "images/Image-8.jpeg" }]
-      },
-      {
-        "id": 9,
-        "img_src": "images/Image-9.jpg",
-        "photos": [{ "img_src": "images/Image-9.jpg" }]
-      },
-      {
-        "id": 10,
-        "img_src": "images/Image-10.jpeg",
-        "photos": [{ "img_src": "images/Image-10.jpeg" }]
-      },
-      {
-        "id": 11,
-        "img_src": "images/Image-11.jpg",
-        "photos": [{ "img_src": "images/Image-11.jpg" }]
-      },
-      {
-        "id": 12,
-        "img_src": "images/Image-12.jpeg",
-        "photos": [{ "img_src": "images/Image-12.jpeg" }]
-      },
-      {
-        "id":13,
-        "img_src":"images/Akhil_4.JPG",
-        "photos":[{"id":1301,"img_src":"images/Akhil_1.JPG"}
-        ,{"id":1302,"img_src":"images/Akhil_2.JPG"},
-        {"id":1303,"img_src":"images/Akhil_3.JPG"},
-        {"id":1304,"img_src":"images/Akhil_4.JPG"},
-        {"id":1305,"img_src":"images/Akhil_5.JPG"},
-        {"id":1306,"img_src":"images/Akhil_6.JPG"},
-        {"id":1307,"img_src":"images/Akhil_7.JPG"},
-        {"id":1308,"img_src":"images/Akhil_8.JPG"},
-        {"id":1309,"img_src":"images/Akhil_9.JPG"}]
-        
+  "images": [
+    {
+      "id": 1,
+      "img_src": "images/Image-1.jpeg",
+      "photos": [
+        {
+          "img_src": "images/Image-1.jpeg"
+        }
+      ]
     },
     {
-        "id":14,
-        "img_src":"images/Akhil_2.JPG",
-        "photos":[{"id":1401,"img_src":"images/Akhil_2.JPG"},
-        {"id":1401,"img_src":"images/Akhil_3.JPG"},
-        {"id":1402,"img_src":"images/Akhil_4.JPG"},
-        {"id":1403,"img_src":"images/Akhil_5.JPG"},
-        {"id":1404,"img_src":"images/Akhil_6.JPG"},
-        {"id":1405,"img_src":"images/Akhil_7.JPG"},
-        {"id":1406,"img_src":"images/Akhil_8.JPG"},
-        {"id":1407,"img_src":"images/Akhil_9.JPG"}]
-        
+      "id": 2,
+      "img_src": "images/Image-2.jpg",
+      "photos": [
+        {
+          "img_src": "images/Image-2.jpg"
+        }
+      ]
     },
     {
-        "id":15,
-        "img_src":"images/Akhil_3.JPG",
-        "photos":[{"id":1501,"img_src":"images/Akhil_3.JPG"},
-        {"id":1502,"img_src":"images/Akhil_4.JPG"},
-        {"id":1503,"img_src":"images/Akhil_5.JPG"},
-        {"id":1504,"img_src":"images/Akhil_6.JPG"},
-        {"id":1505,"img_src":"images/Akhil_7.JPG"},
-        {"id":1506,"img_src":"images/Akhil_8.JPG"},
-        {"id":1507,"img_src":"images/Akhil_9.JPG"}]
+      "id": 3,
+      "img_src": "images/Image-3.jpg",
+      "photos": [
+        {
+          "img_src": "images/Image-3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "img_src": "images/Image-4.jpeg",
+      "photos": [
+        {
+          "img_src": "images/Image-4.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "img_src": "images/Image-5.jpg",
+      "photos": [
+        {
+          "img_src": "images/Image-5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "img_src": "images/Image-6.jpeg",
+      "photos": [
+        {
+          "img_src": "images/Image-6.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "img_src": "images/Image-7.jpeg",
+      "photos": [
+        {
+          "img_src": "images/Image-7.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "img_src": "images/Image-8.jpeg",
+      "photos": [
+        {
+          "img_src": "images/Image-8.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "img_src": "images/Image-9.jpg",
+      "photos": [
+        {
+          "img_src": "images/Image-9.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "img_src": "images/Image-10.jpeg",
+      "photos": [
+        {
+          "img_src": "images/Image-10.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "img_src": "images/Image-11.jpg",
+      "photos": [
+        {
+          "img_src": "images/Image-11.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "img_src": "images/Image-12.jpeg",
+      "photos": [
+        {
+          "img_src": "images/Image-12.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "img_src": "images/Akhil_4.JPG",
+      "photos": [
+        {
+          "id": 1301,
+          "img_src": "images/Akhil_1.JPG"
+        },
+        {
+          "id": 1302,
+          "img_src": "images/Akhil_2.JPG"
+        },
+        {
+          "id": 1303,
+          "img_src": "images/Akhil_3.JPG"
+        },
+        {
+          "id": 1304,
+          "img_src": "images/Akhil_4.JPG"
+        },
+        {
+          "id": 1305,
+          "img_src": "images/Akhil_5.JPG"
+        },
+        {
+          "id": 1306,
+          "img_src": "images/Akhil_6.JPG"
+        },
+        {
+          "id": 1307,
+          "img_src": "images/Akhil_7.JPG"
+        },
+        {
+          "id": 1308,
+          "img_src": "images/Akhil_8.JPG"
+        },
+        {
+          "id": 1309,
+          "img_src": "images/Akhil_9.JPG"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "img_src": "images/Akhil_2.JPG",
+      "photos": [
+        {
+          "id": 1401,
+          "img_src": "images/Akhil_2.JPG"
+        },
+        {
+          "id": 1401,
+          "img_src": "images/Akhil_3.JPG"
+        },
+        {
+          "id": 1402,
+          "img_src": "images/Akhil_4.JPG"
+        },
+        {
+          "id": 1403,
+          "img_src": "images/Akhil_5.JPG"
+        },
+        {
+          "id": 1404,
+          "img_src": "images/Akhil_6.JPG"
+        },
+        {
+          "id": 1405,
+          "img_src": "images/Akhil_7.JPG"
+        },
+        {
+          "id": 1406,
+          "img_src": "images/Akhil_8.JPG"
+        },
+        {
+          "id": 1407,
+          "img_src": "images/Akhil_9.JPG"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "img_src": "images/Akhil_3.JPG",
+      "photos": [
+        {
+          "id": 1501,
+          "img_src": "images/Akhil_3.JPG"
+        },
+        {
+          "id": 1502,
+          "img_src": "images/Akhil_4.JPG"
+        },
+        {
+          "id": 1503,
+          "img_src": "images/Akhil_5.JPG"
+        },
+        {
+          "id": 1504,
+          "img_src": "images/Akhil_6.JPG"
+        },
+        {
+          "id": 1505,
+          "img_src": "images/Akhil_7.JPG"
+        },
+        {
+          "id": 1506,
+          "img_src": "images/Akhil_8.JPG"
+        },
+        {
+          "id": 1507,
+          "img_src": "images/Akhil_9.JPG"
+        }
+      ]
     }
-
-    ],
-    "slides": [
-      { "img_src": "images/Photo-1.jpeg" },
-      { "img_src": "images/Photo-2.jpeg" },
-      { "img_src": "images/Photo-4.png" },
-      { "img_src": "images/Photo-5.png" },
-      { "img_src": "images/Photo-6.png" },
-      { "img_src": "images/Photo-7.png" }
-    ],
-    "albums": [
-      {
-        "id":1,
-        "title": "Bridal Portraits",
-        "description": "Beautiful moments of the bride on her special day.",
-        "img_src": "images/album-1.jpeg",
-        "photos": [{ "img_src": "images/album-1.jpeg" }]
-      },
-      {
-        "id":2,
-        "title": "Engagement",
-        "description": "Sweet and loving moments from the engagement.",
-        "img_src": "images/album-2.JPG",
-        "photos": [{ "img_src": "images/album-2.JPG" }]
-      },
-      {
-        "id":3,
-        "title": "Wedding Ceremony",
-        "description": "The best moments from the wedding ceremony.",
-        "img_src": "images/album-3.jpeg",
-        "photos": [{ "img_src": "images/album-3.jpeg" }]
-      },
-      {
-        "id":4,
-        "title": "Reception Moments",
-        "description": "Fun and happy moments from the wedding reception.",
-        "img_src": "images/album-4.jpg",
-        "photos": [{ "img_src": "images/album-4.jpg" }]
-      },
-      {
-        "id":5,
-        "title": "Candid Moments",
-        "description": "Real and natural moments full of love and laughter.",
-        "img_src": "images/album-5.jpg",
-        "photos": [{ "img_src": "images/album-5.jpg" }]
-      }
-    ]
-  }
-  
+  ],
+  "slides": [
+    {
+      "img_src": "images/Photo-1.jpeg"
+    },
+    {
+      "img_src": "images/Photo-2.jpeg"
+    },
+    {
+      "img_src": "images/Photo-4.png"
+    },
+    {
+      "img_src": "images/Photo-5.png"
+    },
+    {
+      "img_src": "images/Photo-6.png"
+    },
+    {
+      "img_src": "images/Photo-7.png"
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "title": "Bridal Portraits",
+      "description": "Beautiful moments of the bride on her special day.",
+      "img_src": "images/album-1.jpeg",
+      "photos": [
+        {
+          "img_src": "images/album-1.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Engagement",
+      "description": "Sweet and loving moments from the engagement.",
+      "img_src": "images/album-2.JPG",
+      "photos": [
+        {
+          "img_src": "images/album-2.JPG"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Wedding Ceremony",
+      "description": "The best moments from the wedding ceremony.",
+      "img_src": "images/album-3.jpeg",
+      "photos": [
+        {
+          "img_src": "images/album-3.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Reception Moments",
+      "description": "Fun and happy moments from the wedding reception.",
+      "img_src": "images/album-4.jpg",
+      "photos": [
+        {
+          "img_src": "images/album-4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Candid Moments",
+      "description": "Real and natural moments full of love and laughter.",
+      "img_src": "images/album-5.jpg",
+      "photos": [
+        {
+          "img_src": "images/album-5.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "New Album 6",
+      "description": "Description for new album 6",
+      "img_src": "images/Photo-3.png",
+      "photos": [
+        {
+          "img_src": "images/Photo-3.png"
+        }
+      ]
+    }
+  ]
+}
