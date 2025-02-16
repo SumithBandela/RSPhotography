@@ -12,6 +12,7 @@ export function Home() {
     axios.get("images.json")
       .then(response => {
         setImages(response.data.images);
+        console.log(response.data.images)
       })
       .catch(error => {
         console.error("Error fetching images:", error);
