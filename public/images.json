@@ -317,10 +317,13 @@
       "img_src": "../images/akhil/DSC_7158.JPG",
       "photos": [
         {
-          "img_src": "../images/akhil/DSC_7158.JPG"
+          "img_src": "images/akhil/DSC_7158.JPG"
         },
         {
-          "img_src": "../images/akhil/DSC_7159.JPG"
+          "img_src": "images/akhil/DSC_7159.JPG"
+        },
+        {
+          "img_src": "images/akhil/DSC_7255.JPG"
         }
       ]
     }

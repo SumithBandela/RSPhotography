@@ -14,7 +14,7 @@ function updateAlbumsJson(newImagePath) {
     }
 
     const jsonData = JSON.parse(data);
-    const imgSrc = path.relative(path.join(__dirname, 'public'), newImagePath).replace(/\\/g, '/');
+    const imgSrc = `images/${path.relative(imagesFolder, newImagePath).replace(/\\/g, '/')}`;
     const subfolderPath = path.dirname(newImagePath);
     const metadataFilePath = path.join(subfolderPath, 'metadata.json');
 
@@ -62,7 +62,7 @@ function removeDeletedImages(deletedImagePath) {
     }
 
     const jsonData = JSON.parse(data);
-    const imgSrc = path.relative(path.join(__dirname, 'public'), deletedImagePath).replace(/\\/g, '/');
+    const imgSrc = `images/${path.relative(imagesFolder, deletedImagePath).replace(/\\/g, '/')}`;
 
     jsonData.albums.forEach(album => {
       album.photos = album.photos.filter(photo => photo.img_src !== imgSrc);
