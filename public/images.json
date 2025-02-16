@@ -326,6 +326,31 @@
           "img_src": "images/akhil/DSC_7255.JPG"
         }
       ]
+    },
+    {
+      "id": 8,
+      "title": "Archana Sreemantam",
+      "description": "A beautiful Baby shower of Archana.",
+      "img_src": "images/Archana/ROY08976.JPG",
+      "photos": [
+        {
+          "img_src": "images/Archana/ROY08976.JPG"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Avinash weds Sowmika",
+      "description": "A beautiful wedding.",
+      "img_src": "images/avinash/C5961T01 - Copy.JPG",
+      "photos": [
+        {
+          "img_src": "images/avinash/C5961T01 - Copy.JPG"
+        },
+        {
+          "img_src": "images/avinash/C5959T01.JPG"
+        }
+      ]
     }
   ]
 }
