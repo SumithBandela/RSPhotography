@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
 
-const imagesFolder = path.join(__dirname, 'public', 'images');
-const jsonFilePath = path.join(__dirname, 'public', 'images.json');
+const imagesFolder = path.join(__dirname, 'images');
+const jsonFilePath = path.join(__dirname, 'images.json');
 
 // Function to update images.json
 function updateAlbumsJson(newImage) {
