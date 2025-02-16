@@ -40,12 +40,6 @@ function App() {
                 <Nav.Item>
                   <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link as={Link} to="/qr">QR Code</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link as={Link} to="/quote">Quotation</Nav.Link>
-                </Nav.Item>
               </Nav>
             </Navbar.Collapse>
           </Container>
