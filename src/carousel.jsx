@@ -41,7 +41,7 @@ export function Carousel() {
       {photos.length > 0 ? (
         <div className="carousel-card card">
           <div className="card-body">
-            <button className="btn btn-lg carousel-nav-button prev" onClick={handlePrevious}>
+            <button className="btn btn-lg carousel-nav-button prev  text-secondary" onClick={handlePrevious}>
               &#10094;
             </button>
             <div className="carousel-inner-container">
@@ -54,7 +54,7 @@ export function Carousel() {
                 />
               </div>
             </div>
-            <button className="btn btn-lg carousel-nav-button next" onClick={handleNext}>
+            <button className="btn btn-lg carousel-nav-button next text-secondary " onClick={handleNext}>
               &#10095;
             </button>
           </div>
