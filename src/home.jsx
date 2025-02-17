@@ -36,7 +36,7 @@ export function Home() {
             <p className="lead font-arial">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
           </div>
           <div className="col-md-6 col-sm-12 text-center">
-            <img src="images/Logo.jpeg" alt="Studio" className="img-fluid rounded hero-image" />
+            <img src="images/Logo.jpeg" alt="Studio" className="img-fluid rounded hero-image"  width='60%'/>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export function Home() {
               <div key={image.img_src} className="col">
                 <img
                   src={image.img_src}
-                  className="creative-img img-thumbnail"
+                  className="creative-img "
                   alt="studio"
                   onClick={() => handleImageClick(image.id)}
                 />

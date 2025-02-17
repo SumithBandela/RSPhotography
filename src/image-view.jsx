@@ -33,7 +33,7 @@ export function ImageView() {
         {image.photos && image.photos.length > 0 ? (
           image.photos.map((photo, index) => (
             <div key={index} className="photo-card" onClick={() => setSelectedPhoto(photo.img_src)}>
-              <img src={photo.img_src} alt="img" className="photo-image img-thumbnail" />
+              <img src={photo.img_src} alt="img" className="photo-image " />
             </div>
           ))
         ) : (

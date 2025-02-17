@@ -19,7 +19,7 @@ function App() {
           <Container>
             {/* Logo Section */}
             <Navbar.Brand as={Link} to="/home">
-              <img src="images/header-logo.png" width="100" alt="Rashmi Studio's Logo" />
+              <img src="images/header-logo.png" width="120" alt="Rashmi Studio's Logo"  />
             </Navbar.Brand>
 
             {/* Navbar Toggle for Mobile */}
