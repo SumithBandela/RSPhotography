@@ -6,12 +6,13 @@ import "./image-view.css";
 export function ImageView() {
   const { id } = useParams();  
   const [image, setImage] = useState(null);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   useEffect(() => {
     axios.get("images.json") // Ensure this is the correct path
       .then(response => {
-        const imagesArray = response.data.images; // Extract "images" array from JSON
-        const selectedImage = imagesArray.find(img => img.id.toString() === id); // Ensure ID match
+        const imagesArray = response.data.images;
+        const selectedImage = imagesArray.find(img => img.id.toString() === id);
         
         if (selectedImage) {
           setImage(selectedImage);
@@ -31,7 +32,7 @@ export function ImageView() {
       <div className="photos-grid">
         {image.photos && image.photos.length > 0 ? (
           image.photos.map((photo, index) => (
-            <div key={index} className="photo-card">
+            <div key={index} className="photo-card" onClick={() => setSelectedPhoto(photo.img_src)}>
               <img src={photo.img_src} alt="img" className="photo-image img-thumbnail" />
             </div>
           ))
@@ -40,9 +41,19 @@ export function ImageView() {
         )}
       </div>
 
+      {/* Modal */}
+      {selectedPhoto && (
+        <div className="modal-overlay" style={{ zIndex: 1050 }}>
+          <div className="modal-content">
+            <span className="close-button" onClick={() => setSelectedPhoto(null)}>&times;</span>
+            <img src={selectedPhoto} alt="Enlarged" className="modal-image" />
+          </div>
+        </div>
+      )}
+
       {/* Back Button */}
       <div className="text-center mt-4">
-        <Link to="/home" className="back-to-home-btn" >Back to Home</Link>
+        <Link to="/home" className="back-to-home-btn">Back to Home</Link>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import './album-view.css';
 export function AlbumView() {
   const { id } = useParams();  
   const [album, setAlbum] = useState(null);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   useEffect(() => {
     // Fetch all albums and filter by the provided 'id'
@@ -38,13 +39,23 @@ export function AlbumView() {
         {album.photos && album.photos.length > 0 ? (
           album.photos.map((photo, index) => (
             <div key={index} className="photo-card">
-              <img src={photo.img_src} alt="img" className="photo-image img-thumbnail" />
+              <img src={photo.img_src} alt="img" className="photo-image img-thumbnail" onClick={() => setSelectedPhoto(photo.img_src)} />
             </div>
           ))
         ) : (
           <p>No photos available.</p>
         )}
       </div>
+      {/* Modal */}
+      {selectedPhoto && (
+        <div className="modal-overlay" style={{ zIndex: 1050 }}>
+          <div className="modal-content">
+            <span className="close-button" onClick={() => setSelectedPhoto(null)}>&times;</span>
+            <img src={selectedPhoto} alt="Enlarged" className="modal-image" />
+          </div>
+        </div>
+      )}
+
       <div className="back-link">
         <Link to="/gallery" className="back-to-gallery-btn">Back to Gallery</Link>
       </div>
