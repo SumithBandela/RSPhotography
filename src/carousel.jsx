@@ -39,7 +39,7 @@ export function Carousel() {
   return (
     <div className="carousel-wrapper d-flex justify-content-center align-items-center">
       {photos.length > 0 ? (
-        <div className="carousel-card card">
+        <div className="carousel-card ">
           <div className="card-body">
             <button className="btn btn-lg carousel-nav-button prev  text-secondary" onClick={handlePrevious}>
               &#10094;

@@ -144,13 +144,24 @@
 
 /* Responsive Design for small screens */
 @media (max-width: 768px) {
-  .photos-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller grid items */
+  .photo-image {
+    height: 70vh; /* Covers 70% of screen height */
+    object-fit: cover;
+  }
+
+  .modal-image {
+    max-height: 80vh; /* Ensures modal image also follows the 70% rule */
   }
 }
 
 @media (max-width: 480px) {
-  .photos-grid {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
+  .photo-image {
+    height: 70vh; /* Ensures consistency on smaller screens */
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .modal-image {
+    max-height: 80vh; /* Applies the same rule to enlarged images */
   }
 }
