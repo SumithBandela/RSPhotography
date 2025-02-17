@@ -28,7 +28,6 @@ export function Carousel() {
     return () => clearInterval(interval); // Cleanup on component unmount
   }, [photos]);
 
-  // Function to handle previous and next clicks
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
   };
@@ -42,13 +41,10 @@ export function Carousel() {
       {photos.length > 0 ? (
         <div className="carousel-card card">
           <div className="card-body">
-          <button className="btn btn-lg carousel-nav-button prev bi bi-chevron-left" onClick={handlePrevious}>
-              </button>
+            <button className="btn btn-lg carousel-nav-button prev" onClick={handlePrevious}>
+              &#10094;
+            </button>
             <div className="carousel-inner-container">
-              {/* Previous Button */}
-              
-
-              {/* Centered Image */}
               <div className="carousel-image-container">
                 <img
                   src={photos[currentIndex]?.img_src}
@@ -56,11 +52,10 @@ export function Carousel() {
                   className="carousel-image img-fluid"
                 />
               </div>
-
-              {/* Next Button */}
             </div>
-            <button className="btn btn-lg carousel-nav-button next bi bi-chevron-right" onClick={handleNext}>
-              </button>
+            <button className="btn btn-lg carousel-nav-button next" onClick={handleNext}>
+              &#10095;
+            </button>
           </div>
         </div>
       ) : (

@@ -105,7 +105,6 @@
   font-size: 30px;
   cursor: pointer;
   padding: 10px 15px;
-  background-color: #333; /* Dark background for contrast */
   border-radius: 50%;
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -113,7 +112,6 @@
 
 /* Hover effect for close button */
 .close-button:hover {
-  background-color: #ff5733; /* Premium orange for contrast */
   transform: scale(1.1); /* Slight zoom for interactivity */
 }
 
