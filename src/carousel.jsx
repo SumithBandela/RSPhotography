@@ -50,6 +50,7 @@ export function Carousel() {
                   src={photos[currentIndex]?.img_src}
                   alt={`Slide ${currentIndex + 1}`}
                   className="carousel-image img-fluid"
+                  style={{ width: '100%', height: 'auto', maxHeight: '500px' }}
                 />
               </div>
             </div>
