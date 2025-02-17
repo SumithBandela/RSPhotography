@@ -1,164 +1,158 @@
-.album-view-container {
-    padding: 20px;
-    background-color: #f8f9fa;
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .album-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .album-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .album-description {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .photos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 10px;
-  }
-  
-  .photo-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .photo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-  }
-  
-  .photo-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .back-link {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .back-to-home-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #ff6f61; /* A bright color */
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .back-to-home-btn:hover {
-    background-color: #d25f4b; /* A darker shade for hover effect */
-    transform: translateY(-4px); /* Slight lift effect */
-  }
-  
-  .back-to-home-btn:active {
-    transform: translateY(2px); /* A pressed effect */
-  }
-  
-  .back-to-home-btn:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 5px 2px rgba(255, 111, 97, 0.7); /* Add custom focus effect */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .album-title {
-      font-size: 2rem;
-    }
-  
-    .album-description {
-      font-size: 1rem;
-    }
-  
-    .photos-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduce minimum size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .album-title {
-      font-size: 1.5rem;
-    }
-  
-    .photos-grid {
-      grid-template-columns: 1fr; /* Single column on very small screens */
-    }
-  
-    .photo-card {
-      margin-bottom: 10px;
-    }
-  }
-  /* Ensure modal appears above the navbar */
+/* Base styling for the container */
+.image-view-container {
+  font-family: 'Lora', serif; /* Premium, elegant font */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Grid setup for photos */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* More spacious layout */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Photo card with premium look */
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Rounded corners for a softer feel */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Larger shadows for depth */
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Hover effect on image cards */
+.photo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.15);
+}
+
+/* Image styling inside photo cards */
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px; /* Rounded edges for the images */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Modal styling */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8); /* Darker background for a premium feel */
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1050; /* Higher than the navbar */
+  z-index: 1050;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
 }
 
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Modal content styling with smooth scaling effect */
 .modal-content {
   position: relative;
   background: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  max-width: 90%;
-  max-height: 90%;
+  border-radius: 15px;
+  max-width: 85%;
+  max-height: 85%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: scale(0.8);
+  animation: modalScale 0.3s forwards;
 }
 
+/* Modal scaling animation */
+@keyframes modalScale {
+  0% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+/* Image in modal with smooth effect */
 .modal-image {
   max-width: 100%;
   max-height: 80vh;
-  border-radius: 8px;
+  border-radius: 12px; /* Rounded corners for the modal image */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
+/* Close button styled to look modern and premium */
 .close-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: white;
-  border: none;
-  font-size: 20px;
+  color: #fff;
+  font-size: 30px;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 10px 15px;
+  background-color: #333; /* Dark background for contrast */
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effect for close button */
 .close-button:hover {
-  background: white;
-  color: black;
+  background-color: #ff5733; /* Premium orange for contrast */
+  transform: scale(1.1); /* Slight zoom for interactivity */
+}
+
+/* Back Button */
+.back-to-home-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #d4af37; /* Premium gold color */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
   border-radius: 30px;
-  font-size: 22px;
-  
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+  background-color: #c49f29; /* Slightly darker gold for hover */
+  transform: translateY(-4px);
+}
+
+.back-to-home-btn:active {
+  transform: translateY(2px);
+}
+
+.back-to-home-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px 3px rgba(212, 175, 55, 0.7); /* Focus effect with gold shadow */
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+  .photos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller grid items */
+  }
+}
+
+@media (max-width: 480px) {
+  .photos-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
 }

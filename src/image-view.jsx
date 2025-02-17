@@ -4,7 +4,7 @@ import axios from "axios";
 import "./image-view.css";
 
 export function ImageView() {
-  const { id } = useParams();  
+  const { id } = useParams();
   const [image, setImage] = useState(null);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
@@ -43,8 +43,8 @@ export function ImageView() {
 
       {/* Modal */}
       {selectedPhoto && (
-        <div className="modal-overlay" style={{ zIndex: 1050 }}>
-          <div className="modal-content">
+        <div className="modal-overlay" onClick={() => setSelectedPhoto(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
             <span className="close-button" onClick={() => setSelectedPhoto(null)}>&times;</span>
             <img src={selectedPhoto} alt="Enlarged" className="modal-image" />
           </div>
