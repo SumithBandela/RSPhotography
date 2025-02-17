@@ -108,6 +108,7 @@
   border-radius: 50%;
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1060;
 }
 
 /* Hover effect for close button */
@@ -148,9 +149,15 @@
     width: auto;
     max-height: 80vh; /* Keeps the image within 80% of the viewport height */
     object-fit: cover; /* Ensures the image fills the modal */
-    transform: scale(1.2); /* Zooms in the image */
+    transform: scale(1.1); /* Zooms in the image */
     transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
   }
+  .close-button {
+    top: 10px; /* Keeps it at the top */
+    right: 10px; /* Keeps it at the right */
+    font-size: 30px; /* Keeps font size for tablets */
+  }
+ 
 }
 
 @media (max-width: 480px) {
@@ -158,8 +165,14 @@
     width: auto;
     max-height: 80vh; /* Keeps the image within 80% of the viewport height */
     object-fit: cover; /* Ensures the image fills the modal */
-    transform: scale(1.3); /* Further zooms in the image */
+    transform: scale(1.1); /* Further zooms in the image */
     transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+  }
+  .close-button {
+    top: 15px; /* Slight adjustment for smaller screens */
+    right: 15px; /* Adjust for very small screens */
+    font-size: 35px; /* Larger font for better touch interaction */
+    padding: 15px 20px; /* Larger padding for mobile touch */
   }
 }
 
