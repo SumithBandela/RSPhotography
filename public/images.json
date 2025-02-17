@@ -110,115 +110,115 @@
     },
     {
       "id": 13,
-      "img_src": "images/Akhil_4.JPG",
+      "img_src": "images/akhil/Akhil_4.JPG",
       "photos": [
         {
           "id": 1301,
-          "img_src": "images/Akhil_1.JPG"
+          "img_src": "images/akhil/Akhil_1.JPG"
         },
         {
           "id": 1302,
-          "img_src": "images/Akhil_2.JPG"
+          "img_src": "images/akhil/Akhil_2.JPG"
         },
         {
           "id": 1303,
-          "img_src": "images/Akhil_3.JPG"
+          "img_src": "images/akhil/Akhil_3.JPG"
         },
         {
           "id": 1304,
-          "img_src": "images/Akhil_4.JPG"
+          "img_src": "images/akhil/Akhil_4.JPG"
         },
         {
           "id": 1305,
-          "img_src": "images/Akhil_5.JPG"
+          "img_src": "images/akhil/Akhil_5.JPG"
         },
         {
           "id": 1306,
-          "img_src": "images/Akhil_6.JPG"
+          "img_src": "images/akhil/Akhil_6.JPG"
         },
         {
           "id": 1307,
-          "img_src": "images/Akhil_7.JPG"
+          "img_src": "images/akhil/Akhil_7.JPG"
         },
         {
           "id": 1308,
-          "img_src": "images/Akhil_8.JPG"
+          "img_src": "images/akhil/Akhil_8.JPG"
         },
         {
           "id": 1309,
-          "img_src": "images/Akhil_9.JPG"
+          "img_src": "images/akhil/Akhil_9.JPG"
         }
       ]
     },
     {
       "id": 14,
-      "img_src": "images/Akhil_2.JPG",
+      "img_src": "images/akhil/Akhil_2.JPG",
       "photos": [
         {
           "id": 1401,
-          "img_src": "images/Akhil_2.JPG"
+          "img_src": "images/akhil/Akhil_2.JPG"
         },
         {
           "id": 1401,
-          "img_src": "images/Akhil_3.JPG"
+          "img_src": "images/akhil/Akhil_3.JPG"
         },
         {
           "id": 1402,
-          "img_src": "images/Akhil_4.JPG"
+          "img_src": "images/akhil/Akhil_4.JPG"
         },
         {
           "id": 1403,
-          "img_src": "images/Akhil_5.JPG"
+          "img_src": "images/akhil/Akhil_5.JPG"
         },
         {
           "id": 1404,
-          "img_src": "images/Akhil_6.JPG"
+          "img_src": "images/akhil/Akhil_6.JPG"
         },
         {
           "id": 1405,
-          "img_src": "images/Akhil_7.JPG"
+          "img_src": "images/akhil/Akhil_7.JPG"
         },
         {
           "id": 1406,
-          "img_src": "images/Akhil_8.JPG"
+          "img_src": "images/akhil/Akhil_8.JPG"
         },
         {
           "id": 1407,
-          "img_src": "images/Akhil_9.JPG"
+          "img_src": "images/akhil/Akhil_9.JPG"
         }
       ]
     },
     {
       "id": 15,
-      "img_src": "images/Akhil_3.JPG",
+      "img_src": "images/akhil/Akhil_3.JPG",
       "photos": [
         {
           "id": 1501,
-          "img_src": "images/Akhil_3.JPG"
+          "img_src": "images/akhil/Akhil_3.JPG"
         },
         {
           "id": 1502,
-          "img_src": "images/Akhil_4.JPG"
+          "img_src": "images/akhil/Akhil_4.JPG"
         },
         {
           "id": 1503,
-          "img_src": "images/Akhil_5.JPG"
+          "img_src": "images/akhil/Akhil_5.JPG"
         },
         {
           "id": 1504,
-          "img_src": "images/Akhil_6.JPG"
+          "img_src": "images/akhil/Akhil_6.JPG"
         },
         {
           "id": 1505,
-          "img_src": "images/Akhil_7.JPG"
+          "img_src": "images/akhil/Akhil_7.JPG"
         },
         {
           "id": 1506,
-          "img_src": "images/Akhil_8.JPG"
+          "img_src": "images/akhil/Akhil_8.JPG"
         },
         {
           "id": 1507,
-          "img_src": "images/Akhil_9.JPG"
+          "img_src": "images/akhil/Akhil_9.JPG"
         }
       ]
     }
@@ -301,17 +301,6 @@
     },
     {
       "id": 6,
-      "title": "New Album 6",
-      "description": "Description for new album 6",
-      "img_src": "images/Photo-3.png",
-      "photos": [
-        {
-          "img_src": "images/Photo-3.png"
-        }
-      ]
-    },
-    {
-      "id": 7,
       "title": "Akhil weds Pooja",
       "description": "A beautiful wedding of Akhil and Pooja.",
       "img_src": "images/akhil/DSC_7158.JPG",
@@ -328,7 +317,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 7,
       "title": "Archana Sreemantam",
       "description": "A beautiful Baby shower of Archana.",
       "img_src": "images/Archana/ROY08976.JPG",
@@ -339,7 +328,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": 8,
       "title": "Avinash weds Sowmika",
       "description": "A beautiful wedding.",
       "img_src": "images/avinash/C5961T01 - Copy.JPG",
