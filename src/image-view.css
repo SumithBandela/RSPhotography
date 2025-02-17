@@ -146,15 +146,20 @@
 @media (max-width: 768px) {
   .modal-image {
     width: auto;
-    max-height: 80vh; /* Modal image takes up 80% of the screen height */
-    object-fit: contain; /* Ensures the image fits inside the modal without distortion */
+    max-height: 80vh; /* Keeps the image within 80% of the viewport height */
+    object-fit: cover; /* Ensures the image fills the modal */
+    transform: scale(1.2); /* Zooms in the image */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
   }
 }
 
 @media (max-width: 480px) {
   .modal-image {
     width: auto;
-    max-height: 80vh; /* Modal image takes up 80% of the screen height */
-    object-fit: contain; /* Ensures the image fits inside the modal without distortion */
+    max-height: 80vh; /* Keeps the image within 80% of the viewport height */
+    object-fit: cover; /* Ensures the image fills the modal */
+    transform: scale(1.3); /* Further zooms in the image */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
   }
 }
+
