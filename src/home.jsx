@@ -2,11 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import './home.css';
 import { Carousel } from "./carousel";
-import { useNavigate } from "react-router-dom";
 
 export function Home() {
   const [images, setImages] = useState([]);
-  const navigate = useNavigate();
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   useEffect(() => {
