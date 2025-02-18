@@ -28,8 +28,8 @@ export function Contact() {
 
   return (
     <div className="contact-container">
-      <div className="contact-card ">
-        <h3 className="contact-title text-primary" >Contact Us</h3>
+      <div className="contact-card">
+        <h3 className="contact-title text-primary">Contact Us</h3>
 
         {/* Contact Form */}
         <form onSubmit={formik.handleSubmit} className="contact-form">
@@ -72,13 +72,10 @@ export function Contact() {
             margin="normal"
           />
           <div>
-          <Button type="submit" variant="contained" className="submit-btn p-2 rounded rounded-5 mt-3">
-            Submit
-          </Button>
+            <Button type="submit" variant="contained" className="submit-btn">
+              Submit
+            </Button>
           </div>
-          
-    
-         
         </form>
 
         {/* Contact Information */}
@@ -88,6 +85,7 @@ export function Contact() {
 
           <h4>Working Hours</h4>
           <p>Monday to Sunday: 09:00 AM - 07:00 PM</p>
+
           <h4>Contact Number</h4>
           <p>+91 970 599 7571</p>
 
