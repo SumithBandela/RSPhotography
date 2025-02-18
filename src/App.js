@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="container-fluid">
       <BrowserRouter>
-        <Navbar collapseOnSelect expand="lg" bg="white" variant="light" sticky="top" className="shadow-sm">
+        <Navbar collapseOnSelect expand="lg" bg="white" variant="light"  className="shadow-sm">
           <Container>
             {/* Logo Section */}
             <Navbar.Brand as={Link} to="/home">

@@ -2,11 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import './home.css';
 import { Carousel } from "./carousel";
-import { useNavigate } from "react-router-dom";
 
 export function Home() {
   const [images, setImages] = useState([]);
-  const navigate = useNavigate();
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   useEffect(() => {
     axios.get("images.json")
@@ -18,9 +17,7 @@ export function Home() {
       });
   }, []);
 
-  const handleImageClick = (id) => {
-    navigate(`/home/${id}`);
-  };
+  
 
   return (
     <div>
@@ -52,11 +49,21 @@ export function Home() {
                   src={image.img_src}
                   className="creative-img "
                   alt="studio"
-                  onClick={() => handleImageClick(image.id)}
+                  onClick={() => setSelectedPhoto(image.img_src)}
                 />
               </div>
             ))}
           </div>
+          {/* Modal */}
+      {selectedPhoto && (
+        <div className="modal-overlay" onClick={() => setSelectedPhoto(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <span className="close-button" onClick={() => setSelectedPhoto(null)}>&times;</span>
+            <img src={selectedPhoto} alt="Enlarged" className="modal-image" />
+          </div>
+        </div>
+      )}
+
         </div>
 
         {/* Contact and Google Map Section */}
