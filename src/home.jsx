@@ -35,7 +35,7 @@ export function Home() {
             <p className="lead font-arial">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
           </div>
           <div className="col-md-6 col-sm-12 text-center">
-            <img src="images/Logo.jpeg" alt="Studio" className="img-fluid rounded hero-image"  width='70%'/>
+            <img src="images/Logo.webp" alt="Studio" className="img-fluid rounded hero-image"  width='70%'/>
           </div>
         </div>
 
