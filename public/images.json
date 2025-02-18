@@ -3,236 +3,236 @@
     {
       "id": 1,
       "title":"",
-      "img_src": "images/Image-1.jpeg",
+      "img_src": "images/Image-1.webp",
       "video_src":"videos/Nikita & Rajesh.mp4",
       "photos": [
         {
-          "img_src": "images/Image-1.jpeg"
+          "img_src": "images/Image-1.webp"
         }
       ]
     },
     {
       "id": 2,
       "title":"",
-      "img_src": "images/Image-2.jpg",
+      "img_src": "images/Image-2.webp",
       "photos": [
         {
-          "img_src": "images/Image-2.jpg"
+          "img_src": "images/Image-2.webp"
         }
       ]
     },
     {
       "id": 3,
       "title":"",
-      "img_src": "images/Image-3.jpg",
+      "img_src": "images/Image-3.webp",
       "photos": [
         {
-          "img_src": "images/Image-3.jpg"
+          "img_src": "images/Image-3.webp"
         }
       ]
     },
     {
       "id": 4,
       "title":"",
-      "img_src": "images/Image-4.jpeg",
+      "img_src": "images/Image-4.webp",
       "photos": [
         {
-          "img_src": "images/Image-4.jpeg"
+          "img_src": "images/Image-4.webp"
         }
       ]
     },
     {
       "id": 5,
       "title":"",
-      "img_src": "images/Image-5.jpg",
+      "img_src": "images/Image-5.webp",
       "photos": [
         {
-          "img_src": "images/Image-5.jpg"
+          "img_src": "images/Image-5.webp"
         }
       ]
     },
     {
       "id": 6,
       "title":"",
-      "img_src": "images/Image-6.jpeg",
+      "img_src": "images/Image-6.webp",
       "photos": [
         {
-          "img_src": "images/Image-6.jpeg"
+          "img_src": "images/Image-6.webp"
         }
       ]
     },
     {
       "id": 7,
       "title":"",
-      "img_src": "images/Image-7.jpeg",
+      "img_src": "images/Image-7.webp",
       "photos": [
         {
-          "img_src": "images/Image-7.jpeg"
+          "img_src": "images/Image-7.webp"
         }
       ]
     },
     {
       "id": 8,
       "title":"",
-      "img_src": "images/Image-8.jpeg",
+      "img_src": "images/Image-8.webp",
       "photos": [
         {
-          "img_src": "images/Image-8.jpeg"
+          "img_src": "images/Image-8.webp"
         }
       ]
     },
     {
       "id": 9,
       "title":"",
-      "img_src": "images/Image-9.jpg",
+      "img_src": "images/Image-9.webp",
       "photos": [
         {
-          "img_src": "images/Image-9.jpg"
+          "img_src": "images/Image-9.webp"
         }
       ]
     },
     {
       "id": 10,
       "title":"",
-      "img_src": "images/Image-10.jpeg",
+      "img_src": "images/Image-10.webp",
       "photos": [
         {
-          "img_src": "images/Image-10.jpeg"
+          "img_src": "images/Image-10.webp"
         }
       ]
     },
     {
       "id": 11,
       "title":"",
-      "img_src": "images/Image-11.jpg",
+      "img_src": "images/Image-11.webp",
       "photos": [
         {
-          "img_src": "images/Image-11.jpg"
+          "img_src": "images/Image-11.webp"
         }
       ]
     },
     {
       "id": 12,
       "title":"",
-      "img_src": "images/Image-12.jpeg",
+      "img_src": "images/Image-12.webp",
       "photos": [
         {
-          "img_src": "images/Image-12.jpeg"
+          "img_src": "images/Image-12.webp"
         }
       ]
     },
     {
       "id": 13,
       "title":"",
-      "img_src": "images/akhil/Akhil_4.JPG",
+      "img_src": "images/akhil/Akhil_4.webp",
       "photos": [
         {
           "id": 1301,
-          "img_src": "images/akhil/Akhil_1.JPG"
+          "img_src": "images/akhil/Akhil_1.webp"
         },
         {
           "id": 1302,
-          "img_src": "images/akhil/Akhil_2.JPG"
+          "img_src": "images/akhil/Akhil_2.webp"
         },
         {
           "id": 1303,
-          "img_src": "images/akhil/Akhil_3.JPG"
+          "img_src": "images/akhil/Akhil_3.webp"
         },
         {
           "id": 1304,
-          "img_src": "images/akhil/Akhil_4.JPG"
+          "img_src": "images/akhil/Akhil_4.webp"
         },
         {
           "id": 1305,
-          "img_src": "images/akhil/Akhil_5.JPG"
+          "img_src": "images/akhil/Akhil_5.webp"
         },
         {
           "id": 1306,
-          "img_src": "images/akhil/Akhil_6.JPG"
+          "img_src": "images/akhil/Akhil_6.webp"
         },
         {
           "id": 1308,
-          "img_src": "images/akhil/Akhil_8.JPG"
+          "img_src": "images/akhil/Akhil_8.webp"
         }
       ]
     },
     {
       "id": 14,
       "title":"",
-      "img_src": "images/akhil/Akhil_2.JPG",
+      "img_src": "images/akhil/Akhil_2.webp",
       "photos": [
         {
           "id": 1401,
-          "img_src": "images/akhil/Akhil_2.JPG"
+          "img_src": "images/akhil/Akhil_2.webp"
         },
         {
           "id": 1401,
-          "img_src": "images/akhil/Akhil_3.JPG"
+          "img_src": "images/akhil/Akhil_3.webp"
         },
         {
           "id": 1402,
-          "img_src": "images/akhil/Akhil_4.JPG"
+          "img_src": "images/akhil/Akhil_4.webp"
         },
         {
           "id": 1403,
-          "img_src": "images/akhil/Akhil_5.JPG"
+          "img_src": "images/akhil/Akhil_5.webp"
         },
         {
           "id": 1404,
-          "img_src": "images/akhil/Akhil_6.JPG"
+          "img_src": "images/akhil/Akhil_6.webp"
         },
         {
           "id": 1406,
-          "img_src": "images/akhil/Akhil_8.JPG"
+          "img_src": "images/akhil/Akhil_8.webp"
         }
       ]
     },
     {
       "id": 15,
       "title":"",
-      "img_src": "images/akhil/Akhil_3.JPG",
+      "img_src": "images/akhil/Akhil_3.webp",
       "photos": [
         {
           "id": 1501,
-          "img_src": "images/akhil/Akhil_3.JPG"
+          "img_src": "images/akhil/Akhil_3.webp"
         },
         {
           "id": 1502,
-          "img_src": "images/akhil/Akhil_4.JPG"
+          "img_src": "images/akhil/Akhil_4.webp"
         },
         {
           "id": 1503,
-          "img_src": "images/akhil/Akhil_5.JPG"
+          "img_src": "images/akhil/Akhil_5.webp"
         },
         {
           "id": 1504,
-          "img_src": "images/akhil/Akhil_6.JPG"
+          "img_src": "images/akhil/Akhil_6.webp"
         },
         {
           "id": 1506,
-          "img_src": "images/akhil/Akhil_8.JPG"
+          "img_src": "images/akhil/Akhil_8.webp"
         }
       ]
     }
   ],
   "slides": [
     {
-      "img_src": "images/Photo-1.jpeg"
+      "img_src": "images/Photo-1.webp"
     },
     {
-      "img_src": "images/Photo-2.jpeg"
+      "img_src": "images/Photo-2.webp"
     },
     {
-      "img_src": "images/Photo-4.png"
+      "img_src": "images/Photo-4.webp"
     },
     {
-      "img_src": "images/Photo-5.png"
+      "img_src": "images/Photo-5.webp"
     },
     {
-      "img_src": "images/Photo-6.png"
+      "img_src": "images/Photo-6.webp"
     },
     {
-      "img_src": "images/Photo-7.png"
+      "img_src": "images/Photo-7.webp"
     }
   ],
   "albums": [
@@ -240,12 +240,12 @@
       "id": 1,
       "title": "Bridal Portraits",
       "description": "Beautiful moments of the bride on her special day.",
-      "img_src": "images/album-1.jpeg",
+      "img_src": "images/album-1.webp",
       "video_src":"videos/Nikita & Rajesh.mp4",
       "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/album-1.jpeg"
+          "img_src": "images/album-1.webp"
         }
       ]
     },
@@ -253,12 +253,12 @@
       "id": 2,
       "title": "Engagement",
       "description": "Sweet and loving moments from the engagement.",
-      "img_src": "images/album-2.JPG",
+      "img_src": "images/album-2.webp",
       "video_src":"videos/Nikita & Rajesh.mp4",
       "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/album-2.JPG"
+          "img_src": "images/album-2.webp"
         }
       ]
     },
@@ -266,12 +266,12 @@
       "id": 3,
       "title": "Wedding Ceremony",
       "description": "The best moments from the wedding ceremony.",
-      "img_src": "images/album-3.jpeg",
+      "img_src": "images/album-3.webp",
      "video_src":"videos/Nikita & Rajesh.mp4",
       "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/album-3.jpeg"
+          "img_src": "images/album-3.webp"
         }
       ]
     },
@@ -279,12 +279,12 @@
       "id": 4,
       "title": "Reception Moments",
       "description": "Fun and happy moments from the wedding reception.",
-      "img_src": "images/album-4.jpg",
+      "img_src": "images/album-4.webp",
       "video_src":"videos/Nikita & Rajesh.mp4",
       "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/album-4.jpg"
+          "img_src": "images/album-4.webp"
         }
       ]
     },
@@ -292,12 +292,12 @@
       "id": 5,
       "title": "Candid Moments",
       "description": "Real and natural moments full of love and laughter.",
-      "img_src": "images/album-5.jpg",
+      "img_src": "images/album-5.webp",
      "video_src":"videos/Nikita & Rajesh.mp4",
       "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/album-5.jpg"
+          "img_src": "images/album-5.webp"
         }
       ]
     },
@@ -305,18 +305,18 @@
       "id": 6,
       "title": "Akhil weds Pooja",
       "description": "A beautiful wedding of Akhil and Pooja.",
-      "img_src": "images/akhil/DSC_7158.JPG",
+      "img_src": "images/akhil/DSC_7158.webp",
       "video_src":"videos/Nikita & Rajesh.mp4",
       "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/akhil/DSC_7158.JPG"
+          "img_src": "images/akhil/DSC_7158.webp"
         },
         {
-          "img_src": "images/akhil/DSC_7159.JPG"
+          "img_src": "images/akhil/DSC_7159.webp"
         },
         {
-          "img_src": "images/akhil/DSC_7255.JPG"
+          "img_src": "images/akhil/DSC_7255.webp"
         }
       ]
     },
@@ -324,12 +324,12 @@
       "id": 7,
       "title": "Archana Sreemantam",
       "description": "A beautiful Baby shower of Archana.",
-      "img_src": "images/Archana/ROY08976.JPG",
+      "img_src": "images/Archana/ROY08976.webp",
       "video_src":"videos/Nikita & Rajesh.mp4",
       "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/Archana/ROY08976.JPG"
+          "img_src": "images/Archana/ROY08976.webp"
         }
       ]
     },
@@ -337,15 +337,15 @@
       "id": 8,
       "title": "Avinash weds Sowmika",
       "description": "A beautiful wedding.",
-      "img_src": "images/avinash/C5961T01 - Copy.JPG",
+      "img_src": "images/avinash/C5961T01 - Copy.webp",
      "video_src":"videos/Nikita & Rajesh.mp4",
       "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/avinash/C5961T01 - Copy.JPG"
+          "img_src": "images/avinash/C5961T01 - Copy.webp"
         },
         {
-          "img_src": "images/avinash/C5959T01.JPG"
+          "img_src": "images/avinash/C5959T01.webp"
         }
       ]
     }
