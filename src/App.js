@@ -53,7 +53,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path='/home/:id' element={<ImageView/>}/>
             <Route path="gallery" element={<Gallery/>}/>
-            <Route path="/gallery/:id" element={<AlbumView />} />
+            <Route path="/gallery/:title" element={<AlbumView />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="qr" element={<QrGenerator />} />
