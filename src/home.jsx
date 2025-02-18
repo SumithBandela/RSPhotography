@@ -19,9 +19,7 @@ export function Home() {
       });
   }, []);
 
-  const handleImageClick = (id) => {
-    navigate(`/home/${id}`);
-  };
+  
 
   return (
     <div>
