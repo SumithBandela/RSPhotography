@@ -6,7 +6,7 @@
     justify-content: flex-start;
     height: 100vh;
     margin: 0;
-    background-image: url('../public/images/Logoblack.jpeg'); /* Default image */
+    background-image: url('../public/images/Logoblack.webp'); /* Default image */
     background-size: cover;
     background-position: top;
     background-color: rgba(0, 0, 0, 0.7); /* Black background with 50% transparency */
