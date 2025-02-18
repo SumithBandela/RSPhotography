@@ -47,14 +47,14 @@ button:hover {
 /* Tablet devices */
 @media (max-width: 768px) {
     .main {
-        background-image: url('../public/images/Logoblack-phone.jpg');
+        background-image: url('../public/images/Logoblack-phone.webp');
     }
 }
 
 /* Mobile devices */
 @media (max-width: 480px) {
     .main {
-        background-image: url('../public/images/Logoblack-phone.jpg');
+        background-image: url('../public/images/Logoblack-phone.webp');
     }
 }
 
