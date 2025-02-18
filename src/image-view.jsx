@@ -29,11 +29,16 @@ export function ImageView() {
 
   return (
     <div className="image-view-container">
+      {image.title ?
+      <header className="image-view-header">
+      <h1 className="image-view-title">{image.title}</h1>
+    </header>:""}
+      {/* Photos Grid */}
       <div className="photos-grid">
         {image.photos && image.photos.length > 0 ? (
           image.photos.map((photo, index) => (
             <div key={index} className="photo-card" onClick={() => setSelectedPhoto(photo.img_src)}>
-              <img src={photo.img_src} alt="img" className="photo-image " />
+              <img src={photo.img_src} alt="img" className="photo-image" />
             </div>
           ))
         ) : (

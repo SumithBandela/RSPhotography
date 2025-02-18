@@ -2,7 +2,9 @@
   "images": [
     {
       "id": 1,
+      "title":"",
       "img_src": "images/Image-1.jpeg",
+      "video_src":"videos/Nikita & Rajesh.mp4",
       "photos": [
         {
           "img_src": "images/Image-1.jpeg"
@@ -11,6 +13,7 @@
     },
     {
       "id": 2,
+      "title":"",
       "img_src": "images/Image-2.jpg",
       "photos": [
         {
@@ -20,6 +23,7 @@
     },
     {
       "id": 3,
+      "title":"",
       "img_src": "images/Image-3.jpg",
       "photos": [
         {
@@ -29,6 +33,7 @@
     },
     {
       "id": 4,
+      "title":"",
       "img_src": "images/Image-4.jpeg",
       "photos": [
         {
@@ -38,6 +43,7 @@
     },
     {
       "id": 5,
+      "title":"",
       "img_src": "images/Image-5.jpg",
       "photos": [
         {
@@ -47,6 +53,7 @@
     },
     {
       "id": 6,
+      "title":"",
       "img_src": "images/Image-6.jpeg",
       "photos": [
         {
@@ -56,6 +63,7 @@
     },
     {
       "id": 7,
+      "title":"",
       "img_src": "images/Image-7.jpeg",
       "photos": [
         {
@@ -65,6 +73,7 @@
     },
     {
       "id": 8,
+      "title":"",
       "img_src": "images/Image-8.jpeg",
       "photos": [
         {
@@ -74,6 +83,7 @@
     },
     {
       "id": 9,
+      "title":"",
       "img_src": "images/Image-9.jpg",
       "photos": [
         {
@@ -83,6 +93,7 @@
     },
     {
       "id": 10,
+      "title":"",
       "img_src": "images/Image-10.jpeg",
       "photos": [
         {
@@ -92,6 +103,7 @@
     },
     {
       "id": 11,
+      "title":"",
       "img_src": "images/Image-11.jpg",
       "photos": [
         {
@@ -101,6 +113,7 @@
     },
     {
       "id": 12,
+      "title":"",
       "img_src": "images/Image-12.jpeg",
       "photos": [
         {
@@ -110,6 +123,7 @@
     },
     {
       "id": 13,
+      "title":"",
       "img_src": "images/akhil/Akhil_4.JPG",
       "photos": [
         {
@@ -144,6 +158,7 @@
     },
     {
       "id": 14,
+      "title":"",
       "img_src": "images/akhil/Akhil_2.JPG",
       "photos": [
         {
@@ -174,6 +189,7 @@
     },
     {
       "id": 15,
+      "title":"",
       "img_src": "images/akhil/Akhil_3.JPG",
       "photos": [
         {
@@ -225,6 +241,8 @@
       "title": "Bridal Portraits",
       "description": "Beautiful moments of the bride on her special day.",
       "img_src": "images/album-1.jpeg",
+      "video_src":"videos/Nikita & Rajesh.mp4",
+      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-1.jpeg"
@@ -236,6 +254,8 @@
       "title": "Engagement",
       "description": "Sweet and loving moments from the engagement.",
       "img_src": "images/album-2.JPG",
+      "video_src":"videos/Nikita & Rajesh.mp4",
+      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-2.JPG"
@@ -247,6 +267,8 @@
       "title": "Wedding Ceremony",
       "description": "The best moments from the wedding ceremony.",
       "img_src": "images/album-3.jpeg",
+     "video_src":"videos/Nikita & Rajesh.mp4",
+      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-3.jpeg"
@@ -258,6 +280,8 @@
       "title": "Reception Moments",
       "description": "Fun and happy moments from the wedding reception.",
       "img_src": "images/album-4.jpg",
+      "video_src":"videos/Nikita & Rajesh.mp4",
+      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-4.jpg"
@@ -269,6 +293,8 @@
       "title": "Candid Moments",
       "description": "Real and natural moments full of love and laughter.",
       "img_src": "images/album-5.jpg",
+     "video_src":"videos/Nikita & Rajesh.mp4",
+      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-5.jpg"
@@ -280,6 +306,8 @@
       "title": "Akhil weds Pooja",
       "description": "A beautiful wedding of Akhil and Pooja.",
       "img_src": "images/akhil/DSC_7158.JPG",
+      "video_src":"videos/Nikita & Rajesh.mp4",
+      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/akhil/DSC_7158.JPG"
@@ -297,6 +325,8 @@
       "title": "Archana Sreemantam",
       "description": "A beautiful Baby shower of Archana.",
       "img_src": "images/Archana/ROY08976.JPG",
+      "video_src":"videos/Nikita & Rajesh.mp4",
+      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/Archana/ROY08976.JPG"
@@ -308,6 +338,8 @@
       "title": "Avinash weds Sowmika",
       "description": "A beautiful wedding.",
       "img_src": "images/avinash/C5961T01 - Copy.JPG",
+     "video_src":"videos/Nikita & Rajesh.mp4",
+      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/avinash/C5961T01 - Copy.JPG"

@@ -4,7 +4,16 @@
   padding: 20px;
   min-height: 100vh;
 }
+.image-view-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
+.image-view-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
 /* Grid setup for photos */
 .photos-grid {
   display: grid;
@@ -119,7 +128,7 @@
 .back-to-home-btn {
   display: inline-block;
   padding: 15px 35px;
-  background-color: #d4af37; /* Premium gold color */
+  background-color: #d25f4b; /* Premium gold color */
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -129,17 +138,17 @@
 }
 
 .back-to-home-btn:hover {
-  background-color: #c49f29; /* Slightly darker gold for hover */
-  transform: translateY(-4px);
+  background-color: #d25f4b; /* A darker shade for hover effect */
+  transform: translateY(-4px); /* Slight lift effect */
 }
 
 .back-to-home-btn:active {
-  transform: translateY(2px);
+  transform: translateY(2px); /* A pressed effect */
 }
 
 .back-to-home-btn:focus {
-  outline: none;
-  box-shadow: 0 0 10px 3px rgba(212, 175, 55, 0.7); /* Focus effect with gold shadow */
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px 2px rgba(255, 111, 97, 0.7); /* Add custom focus effect */
 }
 
 /* Responsive Design for small screens */
@@ -151,7 +160,9 @@
     transform: scale(1.2); /* Zooms in the image */
     transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
   }
-  
+  .image-view-title {
+    font-size: 2rem;
+  }
  
 }
 
@@ -163,6 +174,30 @@
     transform: scale(1.3); /* Further zooms in the image */
     transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
   }
-  
+  .image-view-title {
+    font-size: 1.5rem;
+  }
 }
+
+
+
+/* Video description text styling */
+.video-description h2 {
+  font-size: 30px; /* Increase title font size */
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Add uppercase for a premium look */
+}
+
+.video-description p {
+  font-size: 16px; /* Increase description text size */
+  color: #555;
+  line-height: 1.6;
+  max-width: 700px; /* Increase the width for better readability */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
 

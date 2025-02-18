@@ -15,14 +15,14 @@ export function Gallery() {
       .catch(error => console.error("Error fetching albums:", error));
   }, []);
 
-  const handleCardClick = (id) => {
-    navigate(`/gallery/${id}`);
+  const handleCardClick = (title) => {
+    navigate(`/gallery/${title}`);
   };
 
   return (
     <div className="image-gallery-container">
       {albums.map(album => (
-        <div key={album.id} className="card" onClick={() => handleCardClick(album.id)}>
+        <div key={album.title} className="card" onClick={() => handleCardClick(album.title)}>
           <div className="card-body">
             <img src={album.img_src} alt={album.title} className="album-image" />
             <h3 className="album-title">{album.title || "Untitled Album"}</h3>
