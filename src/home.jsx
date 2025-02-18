@@ -31,9 +31,6 @@ export function Home() {
             <p className="text-muted fs-5 mt-4 font-arial">Where Moments Become Memories</p>
             <p className="lead font-arial">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
           </div>
-          <div className="col-md-6 col-sm-12 text-center">
-            <img src="images/Logo.webp" alt="Studio" className="img-fluid rounded hero-image"  width='70%'/>
-          </div>
         </div>
 
         <div>

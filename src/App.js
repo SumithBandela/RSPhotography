@@ -3,9 +3,8 @@ import './App.css';
 import { HashRouter as BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import { Home } from './home';
 import { About } from './about';
-import { Contact } from './contact';
+import { Contact } from './contact-us';
 import { NotFound } from './not-found';
-import { QrGenerator } from './qr-generator';
 import {QuoteCalc} from './quote-calc';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { AlbumView } from './album-view';
@@ -15,11 +14,11 @@ function App() {
   return (
     <div className="container-fluid">
       <BrowserRouter>
-        <Navbar collapseOnSelect expand="lg" bg="white" variant="light"  className="shadow-sm">
+        <Navbar collapseOnSelect expand="lg" bg="white" variant="light" className="shadow-sm">
           <Container>
             {/* Logo Section */}
             <Navbar.Brand as={Link} to="/home">
-              <img src="images/header-logo.webp" width="120" alt="Rashmi Studio's Logo"  />
+              <img src="images/header-logo.webp" width="130" alt="Rashmi Studio's Logo" />
             </Navbar.Brand>
 
             {/* Navbar Toggle for Mobile */}
@@ -56,7 +55,6 @@ function App() {
             <Route path="/gallery/:title" element={<AlbumView />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="qr" element={<QrGenerator />} />
             <Route path='quote' element={<QuoteCalc/>}/>
            
             

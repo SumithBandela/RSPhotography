@@ -5,6 +5,9 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.4",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@popperjs/core": "^2.11.8",
     "@svgr/webpack": "^8.1.0",
@@ -69,7 +72,7 @@
     "webpack": "^5.64.4",
     "webpack-dev-server": "^4.6.0",
     "webpack-manifest-plugin": "^4.0.2",
-    "workbox-webpack-plugin": "^6.4.1"
+    "workbox-webpack-plugin": "^7.3.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
