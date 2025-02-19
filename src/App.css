@@ -1,4 +1,6 @@
-
+.app-container{
+  font-family: 'Bulter',sans-serif;
+}
 /* Ensure Full Width on All Devices */
 .container-fluid {
   padding: 0;
