@@ -1,35 +1,8 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import './home.css';
-import { Carousel } from "./carousel";
 import { ReactCarousel } from "./react-carousel";
 import { ReactCards } from "./react-cards";
 
 export function Home() {
-  const [images, setImages] = useState([]);
-  const[SelectedPhotoIndex,setSelectedPhotoIndex] = useState(null);
-
-  useEffect(() => {
-    axios.get("images.json")
-      .then(response => {
-        setImages(response.data.images);
-      })
-      .catch(error => {
-        console.error("Error fetching images:", error);
-      });
-  }, []);
-
-  const handleNext = () => {
-    setSelectedPhotoIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrev = () => {
-    setSelectedPhotoIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
 
   return (
     <div className=" home-container">
