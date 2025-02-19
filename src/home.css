@@ -131,6 +131,12 @@ footer p {
   transform: scale(1.1); /* Slight zoom for interactivity */
 }
 
+.prev-button{
+  z-index: 1060;
+}
+.next-button{
+  z-index: 1060;
+}
 .social-icons a {
   transition: transform 0.3s ease;
 }

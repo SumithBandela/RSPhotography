@@ -3,216 +3,62 @@
     {
       "id": 1,
       "title":"",
-      "img_src": "images/Image-1.webp",
-      "video_src":"videos/Nikita & Rajesh.mp4",
-      "photos": [
-        {
-          "img_src": "images/Image-1.webp"
-        }
-      ]
+      "img_src": "images/Image-1.webp"
     },
     {
       "id": 2,
       "title":"",
-      "img_src": "images/Image-2.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-2.webp"
-        }
-      ]
+      "img_src": "images/Image-2.webp"
     },
     {
       "id": 3,
       "title":"",
-      "img_src": "images/Image-3.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-3.webp"
-        }
-      ]
+      "img_src": "images/Image-3.webp"
     },
     {
       "id": 4,
       "title":"",
-      "img_src": "images/Image-4.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-4.webp"
-        }
-      ]
+      "img_src": "images/Image-4.webp"
     },
     {
       "id": 5,
       "title":"",
-      "img_src": "images/Image-5.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-5.webp"
-        }
-      ]
+      "img_src": "images/Image-5.webp"
     },
     {
       "id": 6,
       "title":"",
-      "img_src": "images/Image-6.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-6.webp"
-        }
-      ]
+      "img_src": "images/Image-6.webp"
     },
     {
       "id": 7,
       "title":"",
-      "img_src": "images/Image-7.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-7.webp"
-        }
-      ]
+      "img_src": "images/Image-7.webp"
     },
     {
       "id": 8,
       "title":"",
-      "img_src": "images/Image-8.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-8.webp"
-        }
-      ]
+      "img_src": "images/Image-8.webp"
     },
     {
       "id": 9,
       "title":"",
-      "img_src": "images/Image-9.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-9.webp"
-        }
-      ]
+      "img_src": "images/Image-9.webp"
     },
     {
       "id": 10,
       "title":"",
-      "img_src": "images/Image-10.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-10.webp"
-        }
-      ]
+      "img_src": "images/Image-10.webp"
     },
     {
       "id": 11,
       "title":"",
-      "img_src": "images/Image-11.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-11.webp"
-        }
-      ]
+      "img_src": "images/Image-11.webp"
     },
     {
       "id": 12,
       "title":"",
-      "img_src": "images/Image-12.webp",
-      "photos": [
-        {
-          "img_src": "images/Image-12.webp"
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "title":"",
-      "img_src": "images/akhil/Akhil_4.webp",
-      "photos": [
-        {
-          "id": 1301,
-          "img_src": "images/akhil/Akhil_1.webp"
-        },
-        {
-          "id": 1302,
-          "img_src": "images/akhil/Akhil_2.webp"
-        },
-        {
-          "id": 1303,
-          "img_src": "images/akhil/Akhil_3.webp"
-        },
-        {
-          "id": 1304,
-          "img_src": "images/akhil/Akhil_4.webp"
-        },
-        {
-          "id": 1305,
-          "img_src": "images/akhil/Akhil_5.webp"
-        },
-        {
-          "id": 1306,
-          "img_src": "images/akhil/Akhil_6.webp"
-        },
-        {
-          "id": 1308,
-          "img_src": "images/akhil/Akhil_8.webp"
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "title":"",
-      "img_src": "images/akhil/Akhil_2.webp",
-      "photos": [
-        {
-          "id": 1401,
-          "img_src": "images/akhil/Akhil_2.webp"
-        },
-        {
-          "id": 1401,
-          "img_src": "images/akhil/Akhil_3.webp"
-        },
-        {
-          "id": 1402,
-          "img_src": "images/akhil/Akhil_4.webp"
-        },
-        {
-          "id": 1403,
-          "img_src": "images/akhil/Akhil_5.webp"
-        },
-        {
-          "id": 1404,
-          "img_src": "images/akhil/Akhil_6.webp"
-        },
-        {
-          "id": 1406,
-          "img_src": "images/akhil/Akhil_8.webp"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "title":"",
-      "img_src": "images/akhil/Akhil_3.webp",
-      "photos": [
-        {
-          "id": 1501,
-          "img_src": "images/akhil/Akhil_3.webp"
-        },
-        {
-          "id": 1502,
-          "img_src": "images/akhil/Akhil_4.webp"
-        },
-        {
-          "id": 1503,
-          "img_src": "images/akhil/Akhil_5.webp"
-        },
-        {
-          "id": 1504,
-          "img_src": "images/akhil/Akhil_6.webp"
-        },
-        {
-          "id": 1506,
-          "img_src": "images/akhil/Akhil_8.webp"
-        }
-      ]
+      "img_src": "images/Image-12.webp"
     }
   ],
   "slides": [

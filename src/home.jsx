@@ -5,7 +5,7 @@ import { Carousel } from "./carousel";
 
 export function Home() {
   const [images, setImages] = useState([]);
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const[SelectedPhotoIndex,setSelectedPhotoIndex] = useState(null);
 
   useEffect(() => {
     axios.get("images.json")
@@ -17,7 +17,17 @@ export function Home() {
       });
   }, []);
 
-  
+  const handleNext = () => {
+    setSelectedPhotoIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrev = () => {
+    setSelectedPhotoIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <div>
@@ -40,23 +50,28 @@ export function Home() {
         {/* Image Collection */}
         <div className="image-collection p-3">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
-            {images.map((image) => (
-              <div key={image.img_src} className="col">
+            {images.map((image,index) => (
+              <div key={index} className="col">
                 <img
                   src={image.img_src}
                   className="creative-img "
                   alt="studio"
-                  onClick={() => setSelectedPhoto(image.img_src)}
+                  onClick={() => setSelectedPhotoIndex(index)}
                 />
               </div>
             ))}
           </div>
           {/* Modal */}
-      {selectedPhoto && (
-        <div className="modal-overlay" onClick={() => setSelectedPhoto(null)}>
+      {SelectedPhotoIndex !=null && images.length>0 && (
+        <div className="modal-overlay" onClick={() => setSelectedPhotoIndex(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <span className="close-button" onClick={() => setSelectedPhoto(null)}>&times;</span>
-            <img src={selectedPhoto} alt="Enlarged" className="modal-image" />
+            <span className="close-button" onClick={() => setSelectedPhotoIndex(null)}>&times;</span>
+           <div className="d-flex justify-content-center align-items-center">
+           <button className=" btn btn-lg text-white prev-button " onClick={handlePrev}>&#10094;</button>
+            <img src={images[SelectedPhotoIndex]?.img_src} alt="Enlarged" className="modal-image" />
+            <button className=" btn btn-lg text-white next-button" onClick={handleNext}>&#10095;</button>
+           </div>
+
           </div>
         </div>
       )}
@@ -102,7 +117,7 @@ export function Home() {
             {/* Our Services Section */}
             <div className="mt-4">
               <h4 className="mb-3 font-arial">Our Services</h4>
-              <ul className="font-arial">
+              <ul className="font-arial text">
                 <li>Wedding Photography - Capturing the magic of your special day.</li>
                 <li>Event Photography - Corporate events to intimate gatherings, we capture it all.</li>
                 <li>Portrait Photography - Perfect headshots, family portraits, or milestones.</li>

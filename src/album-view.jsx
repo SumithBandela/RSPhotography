@@ -5,7 +5,10 @@ import './album-view.css';
 export function AlbumView() {
   const { title } = useParams();  
   const [album, setAlbum] = useState(null);
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const[images,setImages] = useState([]);
+  const[selectedPhotoIndex,setSelectedPhotoIndex] = useState(null);
+
+ 
 
   useEffect(() => {
     // Fetch all albums and filter by the provided 'id'
@@ -15,7 +18,8 @@ export function AlbumView() {
         const selectedAlbum = response.data.albums.find(a => a.title.toString() === title);
         
         if (selectedAlbum) {
-          setAlbum(selectedAlbum);  // Set the album data if found
+          setAlbum(selectedAlbum);
+          setImages(selectedAlbum.photos)  // Set the album data if found
         } else {
           console.error("Album not found for id:", title);  // Log if album isn't found
         }
@@ -27,6 +31,17 @@ export function AlbumView() {
   if (!album) {
     return <div>Loading album...</div>;
   }
+
+  function handleNext() {
+    setSelectedPhotoIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+  function handlePrev () {
+    setSelectedPhotoIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <div className="album-view-container">
@@ -47,9 +62,9 @@ export function AlbumView() {
         )}
       <div className="photos-grid">
         {album.photos && album.photos.length > 0 ? (
-          album.photos.map((photo, index) => (
+          images.map((image, index) => (
             <div key={index} className="photo-card">
-              <img src={photo.img_src} alt="img" className="photo-image" onClick={() => setSelectedPhoto(photo.img_src)} />
+              <img src={image.img_src} alt="img" className="photo-image" onClick={() => setSelectedPhotoIndex(index)} />
             </div>
           ))
         ) : (
@@ -57,11 +72,15 @@ export function AlbumView() {
         )}
       </div>
       {/* Modal */}
-      {selectedPhoto && (
-        <div className="modal-overlay" style={{ zIndex: 1050 }}>
-          <div className="modal-content">
-            <span className="close-button" onClick={() => setSelectedPhoto(null)}>&times;</span>
-            <img src={selectedPhoto} alt="Enlarged" className="modal-image" />
+      {selectedPhotoIndex !=null && images.length>0 && (
+        <div className="modal-overlay"  onClick={() => setSelectedPhotoIndex(null)}>
+          <div className="modal-content"  onClick={e => e.stopPropagation()}>
+            <span className="close-button" onClick={() => setSelectedPhotoIndex(null)}>&times;</span>
+            <div className="d-flex justify-content-center align-items-center">
+              <button className="prev-button btn btn-lg text-white " onClick={handlePrev}>&#10094;</button>
+            <img src={images[selectedPhotoIndex]?.img_src} alt="Enlarged" className="modal-image" />
+            <button className="next-button btn btn-lg text-white" onClick={handleNext}>&#10095;</button>
+            </div>
           </div>
         </div>
       )}
