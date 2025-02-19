@@ -1,0 +1,78 @@
+/* Ensure cards are centered and responsive */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Adjust image card width based on screen size */
+  .image-card {
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .image-card {
+      max-width: 400px;
+    }
+  }
+  
+  /* Make modal background transparent */
+  .modal-content {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Center modal content */
+  .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: transparent !important;
+    text-align: center;
+  }
+  
+  /* Image container for modal */
+  .image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Ensure modal image fits within the screen */
+  .modal-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-image {
+      max-width: 95vw;
+      max-height: 95vh;
+    }
+  }
+  
+  /* Close button styles */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-button svg {
+    color: white;
+  }
+  

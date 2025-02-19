@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import './home.css';
 import { Carousel } from "./carousel";
+import { ReactCarousel } from "./react-carousel";
+import { ReactCards } from "./react-cards";
 
 export function Home() {
   const [images, setImages] = useState([]);
@@ -44,63 +46,10 @@ export function Home() {
         </div>
 
         <div>
-          <Carousel />
+          <ReactCarousel />
         </div>
-
-        {/* Image Collection */}
-        <div className="image-collection p-3">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2">
-            {images.map((image,index) => (
-              <div key={index} className="col">
-                <img
-                  src={image.img_src}
-                  className="creative-img "
-                  alt="studio"
-                  onClick={() => setSelectedPhotoIndex(index)}
-                />
-              </div>
-            ))}
-          </div>
-          {/* Modal */}
-      {SelectedPhotoIndex !=null && images.length>0 && (
-        <div className="modal-overlay" onClick={() => setSelectedPhotoIndex(null)}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <span className="close-button" onClick={() => setSelectedPhotoIndex(null)}>&times;</span>
-           <div className="d-flex justify-content-center align-items-center">
-           <button className=" btn btn-lg text-white prev-button " onClick={handlePrev}>&#10094;</button>
-            <img src={images[SelectedPhotoIndex]?.img_src} alt="Enlarged" className="modal-image" />
-            <button className=" btn btn-lg text-white next-button" onClick={handleNext}>&#10095;</button>
-           </div>
-
-          </div>
-        </div>
-      )}
-
-        </div>
-
-        {/* Contact and Google Map Section */}
-        <div className="row mt-5 justify-content-center">
-          <div className="col-md-6">
-            <div className="card m-2 p-4 shadow-lg">
-              <div className="card-img-top">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.152160083092!2d78.51406897493283!3d17.30820608356551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba340e911bbb1%3A0x48d09e53ee22ad93!2sRS%20Photography!5e0!3m2!1sen!2sin!4v1738002340750!5m2!1sen!2sin"
-                  width="100%"
-                  height="300"
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Address">
-                </iframe>
-              </div>
-              <div className="card-body">
-                <p className="fw-bold font-arial">15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
-                <p>Mon-Sun: 09:00 AM - 07:00 PM</p>
-                <p>Phone: +91 970 599 7571</p>
-                <p>Email: contactrsphoto@gmail.com</p>
-              </div>
-            </div>
-          </div>
+        <div className="mt-5">
+          <ReactCards/>
         </div>
 
         {/* About Section */}

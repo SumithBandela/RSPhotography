@@ -1,0 +1,31 @@
+/* Carousel container */
+.carousel-container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  /* Responsive carousel image styling */
+  .carousel-image {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Different heights for different screen sizes */
+  @media (min-width: 1200px) {
+    .carousel-image {
+      height: 500px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .carousel-image {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .carousel-image {
+      height: 300px;
+    }
+  }
+  
