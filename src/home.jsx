@@ -30,16 +30,16 @@ export function Home() {
   };
 
   return (
-    <div>
+    <div className=" home-container">
       <div className="container-fluid p-4">
         {/* Hero Section */}
         <div className="hero-section row align-items-center mb-5">
           <div className="col-md-6 col-sm-12">
-            <h1 className="font-arial">Rashmi Studio's</h1>
+            <h1>Rashmi Studio's</h1>
             <span className="bi bi-geo-alt text-danger fs-5 me-1"></span>
-            <a className="text-black fs-5 text-decoration-none font-arial" href="https://maps.app.goo.gl/thrukEr9zSRujThHA" target="_blank" rel="noopener noreferrer">Hyderabad</a>
+            <a className="text-black fs-5 text-decoration-none" href="https://maps.app.goo.gl/thrukEr9zSRujThHA" target="_blank" rel="noopener noreferrer">Hyderabad</a>
             <p className="text-muted fs-5 mt-4 font-arial">Where Moments Become Memories</p>
-            <p className="lead font-arial">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
+            <p className="lead">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
           </div>
         </div>
 
@@ -95,9 +95,9 @@ export function Home() {
               </div>
               <div className="card-body">
                 <p className="fw-bold font-arial">15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
-                <p className="font-arial">Mon-Sun: 09:00 AM - 07:00 PM</p>
-                <p className="font-arial">Phone: +91 970 599 7571</p>
-                <p className="font-arial">Email: contactrsphoto@gmail.com</p>
+                <p>Mon-Sun: 09:00 AM - 07:00 PM</p>
+                <p>Phone: +91 970 599 7571</p>
+                <p>Email: contactrsphoto@gmail.com</p>
               </div>
             </div>
           </div>
@@ -106,18 +106,18 @@ export function Home() {
         {/* About Section */}
         <div className="about-section mt-5">
           <div className="card p-4 shadow-sm rounded">
-            <h3 className="text-center mb-4 font-arial">About Us</h3>
-            <p className="lead text-muted font-arial">
+            <h3 className="text-center mb-4">About Us</h3>
+            <p className="lead text-muted">
               At Rashmi Studio's, we believe that every moment holds a story, a memory waiting to be captured. We don’t just take photographs; we create timeless works of art that speak louder than words.
             </p>
-            <p className="text-muted font-arial">
+            <p className="text-muted">
               Whether it's a joyful wedding, a stunning portrait, or an unforgettable event, we pour our heart and soul into every shot.
             </p>
 
             {/* Our Services Section */}
             <div className="mt-4">
-              <h4 className="mb-3 font-arial">Our Services</h4>
-              <ul className="font-arial text">
+              <h4 className="mb-3">Our Services</h4>
+              <ul className=" text">
                 <li>Wedding Photography - Capturing the magic of your special day.</li>
                 <li>Event Photography - Corporate events to intimate gatherings, we capture it all.</li>
                 <li>Portrait Photography - Perfect headshots, family portraits, or milestones.</li>
@@ -127,8 +127,8 @@ export function Home() {
 
             {/* Why Choose Us Section */}
             <div className="mt-4">
-              <h4 className="mb-3 font-arial">Why Choose Us?</h4>
-              <p className="font-arial">
+              <h4 className="mb-3">Why Choose Us?</h4>
+              <p>
                 We blend creativity, technical expertise, and a personalized approach to deliver extraordinary results. Trust us to create beautiful memories that will last a lifetime.
               </p>
             </div>
