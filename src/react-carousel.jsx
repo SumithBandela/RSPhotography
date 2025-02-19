@@ -8,7 +8,7 @@ export function ReactCarousel() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    axios.get("/images.json")
+    axios.get("images.json")
       .then((response) => {
         if (response.data && response.data.slides) {
           setImages(response.data.slides);
