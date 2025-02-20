@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { HashRouter as BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import { Home } from './home';
 import { About } from './about';
 import { Contact } from './contact-us';
@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className="container-fluid app-container">
+    <div className="app-container">
       <BrowserRouter>
         <Navbar 
           collapseOnSelect 

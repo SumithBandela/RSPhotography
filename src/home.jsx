@@ -16,10 +16,10 @@ export function Home() {
   })
   return (
     <div className=" home-container">
-      <div className="container-fluid p-4">
+      <div className=" p-4">
         {/* Hero Section */}
-        <div className="hero-section row align-items-center mb-5">
-          <div className="col-md-6 col-sm-12">
+        <div className="hero-section row align-items-center">
+          <div className="hero-container col-md-6 col-sm-12">
             <h1>Rashmi Studio's</h1>
             <span className="bi bi-geo-alt text-danger fs-5 me-1"></span>
             <a className="text-black fs-5 text-decoration-none" href="https://maps.app.goo.gl/thrukEr9zSRujThHA" target="_blank" rel="noopener noreferrer">Hyderabad</a>

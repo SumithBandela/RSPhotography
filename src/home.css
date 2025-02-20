@@ -1,3 +1,6 @@
+.hero-container{
+  margin-left: 40px;
+}
 .hero-section h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -68,6 +71,9 @@ footer p {
   .creative-img {
     border-radius: 10px; /* Slightly smaller border radius on smaller screens */
   }
+  .hero-container{
+    margin-left:18px;
+  }
  
 }
 
@@ -76,5 +82,8 @@ footer p {
     width: 100%; /* Make sure the images take up full width on mobile */
   }
   
+  .hero-container{
+    margin-left: 10px;
+  }
 }
 
