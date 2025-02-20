@@ -1,0 +1,61 @@
+{
+    "feedback": [
+      {
+        "albumTitle": "Bridal Portraits",
+        "customerName": "John & Emily",
+        "comment": "Absolutely breathtaking! The elegance and grace in each portrait make me feel like a fairytale bride all over again. Thank you for capturing my best moments so beautifully!",
+        "rating": 5,
+        "date": "2025-02-15"
+      },
+      {
+        "albumTitle": "Engagement",
+        "customerName": "Sophia Carter",
+        "comment": "Our love story shines through every picture! The candid smiles, the romantic glances—each shot is a perfect memory. Couldn’t have asked for better photography!",
+        "rating": 4.9,
+        "date": "2025-01-28"
+      },
+      {
+        "albumTitle": "Wedding Ceremony",
+        "customerName": "Michael Johnson",
+        "comment": "The emotions, the colors, the traditions—you captured everything so beautifully! Looking at these pictures feels like reliving the ceremony all over again. Absolutely stunning!",
+        "rating": 5,
+        "date": "2025-02-10"
+      },
+      {
+        "albumTitle": "Reception Moments",
+        "customerName": "Emily Davis",
+        "comment": "The joy and laughter of our reception shine through in every picture! You perfectly captured the magic of the night, from the first dance to the heartfelt speeches. Simply amazing!",
+        "rating": 4.8,
+        "date": "2025-02-05"
+      },
+      {
+        "albumTitle": "Candid Moments",
+        "customerName": "Robert Wilson",
+        "comment": "These candid shots are beyond incredible! The laughter, the unexpected moments, the raw emotions—everything was captured so naturally. Feels so real and alive!",
+        "rating": 5,
+        "date": "2025-01-20"
+      },
+      {
+        "albumTitle": "Akhil weds Pooja",
+        "customerName": "Akhil weds Pooja",
+        "comment": "What a dreamy wedding album! The golden sunset, the intimate moments, and the vibrant celebrations—each photo tells a beautiful love story. Truly unforgettable!",
+        "rating": 5,
+        "date": "2025-02-12"
+      },
+      {
+        "albumTitle": "Archana Sreemantam",
+        "customerName": "Archana",
+        "comment": "A truly special moment in my life, captured with such grace and beauty! The emotions, the love, and the joy of our Sreemantam ceremony shine in every frame. These memories will be cherished forever!",
+        "rating": 5,
+        "date": "2025-01-12"
+      },
+      {
+        "albumTitle": "Avinash weds Sowmika",
+        "customerName": "Avinash & Sowmika",
+        "comment": "From the sacred vows to the vibrant celebrations, every picture perfectly captures the essence of our wedding day! The emotions and details were brought to life beautifully. We couldn't be happier with these memories!",
+        "rating": 5,
+        "date": "2025-01-12"
+      }
+    ]
+  }
+  

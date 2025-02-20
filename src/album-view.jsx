@@ -7,7 +7,7 @@ export function AlbumView() {
   const { title } = useParams();  
   const[album,setAlbum] = useState([]); 
   const [images, setImages] = useState([]);
- 
+  const [feedback, setFeedback] = useState([]); // State for feedback
 
   useEffect(() => {
     // Fetch all albums and filter by the provided 'id'
@@ -24,6 +24,13 @@ export function AlbumView() {
         }
       })
       .catch(error => console.error("Error fetching album details:", error));
+
+      axios.get("feedback.json")  // Assuming a JSON file with feedback
+      .then(response => {
+        const albumFeedback = response.data.feedback.filter(f => f.albumTitle === title);
+        setFeedback(albumFeedback);
+      })
+      .catch(error => console.error("Error fetching feedback:", error));
   }, [title]);
 
   // Show a loading message if album data hasn't been set yet
@@ -49,6 +56,23 @@ export function AlbumView() {
         )}
 
         <ReactCards images={images}/>
+
+          {/* Customer Feedback Section */}
+      <div className="feedback-section">
+        <h2>💬 Customer Feedback</h2>
+        {feedback.length > 0 ? (
+          feedback.map((f, index) => (
+            <div key={index} className="feedback-card">
+              <p className="feedback-name">👤 <strong>{f.customerName}</strong></p>
+              <p className="feedback-date">📅 {new Date(f.date).toLocaleDateString()}</p>
+              <p className="feedback-comment">💖 {f.comment}</p>
+              <p className="feedback-rating">{Array(Math.round(f.rating)).fill("⭐").join("")}</p>
+            </div>
+          ))
+        ) : (
+          <p>No feedback available yet</p>
+        )}
+      </div>
 
       <div className="back-link">
         <Link to="/gallery" className="back-to-gallery-btn">Back to Gallery</Link>

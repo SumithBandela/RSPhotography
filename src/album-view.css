@@ -147,3 +147,48 @@
     max-height: 300px; /* Reduce video height for very small screens */
   }
 }
+.feedback-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feedback-card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #ff6b6b;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.feedback-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.feedback-comment {
+  font-size: 16px;
+  color: #444;
+  font-style: italic;
+}
+
+.feedback-rating {
+  font-size: 20px;
+  color: #ffcc00;
+}
