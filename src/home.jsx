@@ -36,7 +36,7 @@ export function Home() {
         </div>
 
         {/* Contact and Google Map Section */}
-        <div className="row mt-5 justify-content-center">
+        <div className="row mt-5 justify-content-center map-section">
           <div className="col-md-6">
             <div className="card m-2 p-4 shadow-lg">
               <div className="card-img-top">
@@ -52,9 +52,9 @@ export function Home() {
               </div>
               <div className="card-body">
                 <p className="fw-bold" style={{ fontFamily: 'Arial, sans-serif' }}>15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
-                <p style={{ fontFamily: 'Arial, sans-serif' }}>Mon-Sun: 09:00 AM - 07:00 PM</p>
-                <p style={{ fontFamily: 'Arial, sans-serif' }}>Phone: +91 970 599 7571</p>
-                <p style={{ fontFamily: 'Arial, sans-serif' }}>Email: contactrsphoto@gmail.com</p>
+                <p>Mon-Sun: 09:00 AM - 07:00 PM</p>
+                <p>Phone: +91 970 599 7571</p>
+                <p>Email: contactrsphoto@gmail.com</p>
               </div>
             </div>
           </div>

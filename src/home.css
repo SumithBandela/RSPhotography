@@ -83,7 +83,10 @@ footer p {
   }
   
   .hero-container{
-    margin-left: 10px;
+    margin-left: 3px;
   }
 }
 
+.map-section p{
+  font-family: Arial, sans-serif;
+}
