@@ -8,6 +8,7 @@
   .carousel-image {
     width: 100%;
     object-fit: cover;
+    border-radius: 8px;
   }
   
   /* Different heights for different screen sizes */
@@ -25,7 +26,7 @@
   
   @media (max-width: 767px) {
     .carousel-image {
-      height: 250px;
+      height: 230px;
     }
     .carousel-container{
       max-width: 100%;

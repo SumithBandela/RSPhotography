@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding: 1rem;
+    padding: 5px;
   }
   
   /* Adjust image card width based on screen size */
