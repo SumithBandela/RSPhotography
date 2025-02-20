@@ -28,7 +28,7 @@ export function Home() {
           </div>
         </div>
 
-        <div>
+        <div className='mt-3'>
           <ReactCarousel />
         </div>
         <div className="mt-5">
