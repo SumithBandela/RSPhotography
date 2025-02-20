@@ -58,7 +58,8 @@ export function AlbumView() {
         <ReactCards images={images}/>
 
           {/* Customer Feedback Section */}
-      <div className="feedback-section">
+      <div className="justify-content-center align-items-center d-flex">
+      <div className="feedback-section" >
         <h2>💬 Customer Feedback</h2>
         {feedback.length > 0 ? (
           feedback.map((f, index) => (
@@ -72,6 +73,7 @@ export function AlbumView() {
         ) : (
           <p>No feedback available yet</p>
         )}
+      </div>
       </div>
 
       <div className="back-link">

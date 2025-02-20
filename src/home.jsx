@@ -51,7 +51,7 @@ export function Home() {
                 </iframe>
               </div>
               <div className="card-body">
-                <p className="fw-bold" style={{ fontFamily: 'Arial, sans-serif' }}>15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
+                <p className="fw-bold">15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
                 <p>Mon-Sun: 09:00 AM - 07:00 PM</p>
                 <p>Phone: +91 970 599 7571</p>
                 <p>Email: contactrsphoto@gmail.com</p>
