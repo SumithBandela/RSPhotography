@@ -1,27 +1,21 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import { FaTimes } from "react-icons/fa";
 import "./react-cards.css";
+import { CloseButton } from "react-bootstrap";
 
-export function ReactCards() {
-  const [images, setImages] = useState([]);
+export function ReactCards({ images }) {
   const [show, setShow] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    axios
-      .get("images.json")
-      .then((response) => {
-        setImages(response.data.images);
-      })
-      .catch((error) => console.error("Error fetching images:", error));
-  }, []);
+  const handleClose = () => {
+    setShow(false);
+    setSelectedImage(null);
+    setCurrentIndex(0);
+  };
 
-  const handleClose = () => setShow(false);
   const handleShow = (image, index) => {
     setSelectedImage(image);
     setCurrentIndex(index);
@@ -40,12 +34,17 @@ export function ReactCards() {
     <div className="cards-container">
       {images.length > 0 ? (
         images.map((image, index) => (
-          <Card key={index} className="image-card" onClick={() => handleShow(image, index)}>
+          <Card
+            key={index}
+            className="image-card"
+            onClick={() => handleShow(image, index)}
+            aria-selected={selectedImage === image}
+          >
             <Card.Img variant="top" src={image.img_src} alt={image.alt || "Image"} />
           </Card>
         ))
       ) : (
-        <p>Loading images...</p>
+        <p>No images available</p>
       )}
       <Modal show={show} onHide={handleClose} animation centered>
         <Modal.Body className="modal-body">
@@ -61,9 +60,7 @@ export function ReactCards() {
                     : handleSwipe("prev")
                 }
               />
-              <Button className="close-button" onClick={handleClose}>
-                <FaTimes size={24} />
-              </Button>
+              <span className="close-button" onClick={handleClose}><CloseButton variant="white"/></span>
             </div>
           )}
         </Modal.Body>

@@ -1,9 +1,19 @@
 import './home.css';
 import { ReactCarousel } from "./react-carousel";
 import { ReactCards } from "./react-cards";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export function Home() {
 
+  const[images,setImages] = useState([]);
+
+  useEffect(()=>{
+    axios.get("images.json")
+    .then(response=>{
+      setImages(response.data.images);
+    })
+  })
   return (
     <div className=" home-container">
       <div className="container-fluid p-4">
@@ -22,7 +32,32 @@ export function Home() {
           <ReactCarousel />
         </div>
         <div className="mt-5">
-          <ReactCards/>
+          <ReactCards images={images} />
+        </div>
+
+        {/* Contact and Google Map Section */}
+        <div className="row mt-5 justify-content-center">
+          <div className="col-md-6">
+            <div className="card m-2 p-4 shadow-lg">
+              <div className="card-img-top">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.152160083092!2d78.51406897493283!3d17.30820608356551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba340e911bbb1%3A0x48d09e53ee22ad93!2sRS%20Photography!5e0!3m2!1sen!2sin!4v1738002340750!5m2!1sen!2sin"
+                  width="100%"
+                  height="300"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Address">
+                </iframe>
+              </div>
+              <div className="card-body">
+                <p className="fw-bold" style={{ fontFamily: 'Arial, sans-serif' }}>15-92/A BDL Colony, Phase 2, Sai Nagar Colony, Badangpet, Hyderabad, Telangana 500005</p>
+                <p style={{ fontFamily: 'Arial, sans-serif' }}>Mon-Sun: 09:00 AM - 07:00 PM</p>
+                <p style={{ fontFamily: 'Arial, sans-serif' }}>Phone: +91 970 599 7571</p>
+                <p style={{ fontFamily: 'Arial, sans-serif' }}>Email: contactrsphoto@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* About Section */}

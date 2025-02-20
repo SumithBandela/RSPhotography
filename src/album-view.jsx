@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import Card from "react-bootstrap/Card";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import { FaTimes } from "react-icons/fa";
 import './album-view.css';
+import { ReactCards } from "./react-cards";
 export function AlbumView() {
   const { title } = useParams();  
   const[album,setAlbum] = useState([]); 
   const [images, setImages] = useState([]);
-  const [show, setShow] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
  
 
   useEffect(() => {
@@ -37,21 +30,6 @@ export function AlbumView() {
   if (!album) {
     return <div>Loading album...</div>;
   }
-
-  const handleClose = () => setShow(false);
-  const handleShow = (image, index) => {
-    setSelectedImage(image);
-    setCurrentIndex(index);
-    setShow(true);
-  };
-
-  const handleSwipe = (direction) => {
-    let newIndex = currentIndex + (direction === "next" ? 1 : -1);
-    if (newIndex >= 0 && newIndex < images.length) {
-      setSelectedImage(images[newIndex]);
-      setCurrentIndex(newIndex);
-    }
-  };
   return (
     <div className="album-view-container">
       <header className="album-header">
@@ -69,38 +47,8 @@ export function AlbumView() {
             <p>{album.video_description || "No description available."}</p>
           </div>
         )}
-       <div className="cards-container">
-      {images.length > 0 ? (
-        images.map((image, index) => (
-          <Card key={index} className="image-card" onClick={() => handleShow(image, index)}>
-            <Card.Img variant="top" src={image.img_src} alt={image.alt || "Image"} />
-          </Card>
-        ))
-      ) : (
-        <p>Loading images...</p>
-      )}
-      <Modal show={show} onHide={handleClose} animation centered>
-        <Modal.Body className="modal-body">
-          {selectedImage && (
-            <div className="image-container">
-              <img
-                src={selectedImage.img_src}
-                alt={selectedImage.alt || "Selected"}
-                className="modal-image"
-                onClick={(e) =>
-                  e.clientX > window.innerWidth / 2
-                    ? handleSwipe("next")
-                    : handleSwipe("prev")
-                }
-              />
-              <Button className="close-button" onClick={handleClose}>
-                <FaTimes size={24} />
-              </Button>
-            </div>
-          )}
-        </Modal.Body>
-      </Modal>
-    </div>
+
+        <ReactCards images={images}/>
 
       <div className="back-link">
         <Link to="/gallery" className="back-to-gallery-btn">Back to Gallery</Link>
