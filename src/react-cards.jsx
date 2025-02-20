@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 import "./react-cards.css";
 import { CloseButton } from "react-bootstrap";
 
