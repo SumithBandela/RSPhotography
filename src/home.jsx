@@ -24,14 +24,14 @@ export function Home() {
             <span className="bi bi-geo-alt text-danger fs-5 me-1"></span>
             <a className="text-black fs-5 text-decoration-none" href="https://maps.app.goo.gl/thrukEr9zSRujThHA" target="_blank" rel="noopener noreferrer">Hyderabad</a>
             <p className="text-muted fs-5 mt-4 font-arial">Where Moments Become Memories</p>
-            <p className="lead">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
+            <p className="lead ">Capturing life’s most precious moments with passion and creativity. Whether it's a wedding, a portrait, or an event, every click tells a unique story.</p>
           </div>
         </div>
 
         <div className='mt-3'>
           <ReactCarousel />
         </div>
-        <div className="mt-3">
+        <div className="mt-4">
           <ReactCards images={images} />
         </div>
 

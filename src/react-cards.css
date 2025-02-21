@@ -57,6 +57,9 @@
       max-width: 95vw;
       max-height: 95vh;
     }
+    .modal-content{
+      transform: scale(1.05);
+    }
   }
   
   /* Close button styles */
