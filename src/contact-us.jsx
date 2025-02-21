@@ -40,8 +40,10 @@ export function Contact() {
             onChange={formik.handleChange}
             fullWidth
             margin="normal"
+            required
           />
           <TextField
+          type='email'
             label="Email Address"
             variant="outlined"
             name="email"
