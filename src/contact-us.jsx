@@ -1,10 +1,9 @@
 import React from "react";
 import "./contact-us.css";
 import { useFormik } from "formik";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
-
+import {db,collection,addDoc} from './firebase';
 export function Contact() {
   let navigate = useNavigate();
   const formik = useFormik({
@@ -15,14 +14,14 @@ export function Contact() {
       message: "",
     },
     onSubmit: async (formData) => {
-      try {
-        await axios.post(`http://127.0.0.1:7070/contact`, formData);
-        alert("Thank you for reaching out! We'll get back to you shortly.");
+         try {
+          await addDoc(collection(db,"rsphotography"),formData);
+         alert("Thank you for reaching out! We'll get back to you shortly.");
         navigate("/home");
-      } catch (error) {
-        console.error("Error submitting contact form:", error);
-        alert("Something went wrong. Please try again.");
-      }
+         }catch(error){
+           console.log("Error submitting contact form:", error);
+            alert("Something went wrong. Please try again.");
+         }
     },
   });
 
