@@ -2,62 +2,62 @@
   "images": [
     {
       "id": 1,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-1.webp"
     },
     {
       "id": 2,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-2.webp"
     },
     {
       "id": 3,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-3.webp"
     },
     {
       "id": 4,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-4.webp"
     },
     {
       "id": 5,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-5.webp"
     },
     {
       "id": 6,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-6.webp"
     },
     {
       "id": 7,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-7.webp"
     },
     {
       "id": 8,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-8.webp"
     },
     {
       "id": 9,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-9.webp"
     },
     {
       "id": 10,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-10.webp"
     },
     {
       "id": 11,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-11.webp"
     },
     {
       "id": 12,
-      "title":"",
+      "title": "",
       "img_src": "images/Image-12.webp"
     }
   ],
@@ -87,8 +87,8 @@
       "title": "Bridal Portraits",
       "description": "Beautiful moments of the bride on her special day.",
       "img_src": "images/album-1.webp",
-      "video_src":"videos/Nikita & Rajesh.mp4",
-      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
+      "video_src": "videos/Nikita & Rajesh.mp4",
+      "video_description": "Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-1.webp"
@@ -100,8 +100,8 @@
       "title": "Engagement",
       "description": "Sweet and loving moments from the engagement.",
       "img_src": "images/album-2.webp",
-      "video_src":"videos/Nikita & Rajesh.mp4",
-      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
+      "video_src": "videos/Nikita & Rajesh.mp4",
+      "video_description": "Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-2.webp"
@@ -113,8 +113,8 @@
       "title": "Wedding Ceremony",
       "description": "The best moments from the wedding ceremony.",
       "img_src": "images/album-3.webp",
-     "video_src":"videos/Nikita & Rajesh.mp4",
-      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
+      "video_src": "videos/Nikita & Rajesh.mp4",
+      "video_description": "Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-3.webp"
@@ -126,8 +126,8 @@
       "title": "Reception Moments",
       "description": "Fun and happy moments from the wedding reception.",
       "img_src": "images/album-4.webp",
-      "video_src":"videos/Nikita & Rajesh.mp4",
-      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
+      "video_src": "videos/Nikita & Rajesh.mp4",
+      "video_description": "Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-4.webp"
@@ -139,8 +139,8 @@
       "title": "Candid Moments",
       "description": "Real and natural moments full of love and laughter.",
       "img_src": "images/album-5.webp",
-      "video_src":"videos/Nikita & Rajesh.mp4",
-      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
+      "video_src": "videos/Nikita & Rajesh.mp4",
+      "video_description": "Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/album-5.webp"
@@ -152,17 +152,23 @@
       "title": "Akhil weds Pooja",
       "description": "A beautiful wedding of Akhil and Pooja.",
       "img_src": "images/akhil/DSC_7158.webp",
-      "video_src":"videos/Nikita & Rajesh.mp4",
-      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
+      "video_src": "videos/Nikita & Rajesh.mp4",
+      "video_description": "Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
-          "img_src": "images/akhil/DSC_7158.webp"
+          "img_src": "images/akhil/DSC_7678.webp"
         },
         {
-          "img_src": "images/akhil/DSC_7159.webp"
+          "img_src": "images/akhil/DSC_7616.webp"
         },
         {
-          "img_src": "images/akhil/DSC_7255.webp"
+          "img_src": "images/akhil/DSC_7619.webp"
+        },
+        {
+          "img_src": "images/akhil/DSC_7621.webp"
+        },
+        {
+          "img_src": "images/akhil/DSC_7657.webp"
         }
       ]
     },
@@ -171,11 +177,32 @@
       "title": "Archana Sreemantam",
       "description": "A beautiful Baby shower of Archana.",
       "img_src": "images/Archana/ROY08976.webp",
-      "video_src":"videos/Nikita & Rajesh.mp4",
-      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
+      "video_src": "videos/Nikita & Rajesh.mp4",
+      "video_description": "Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/Archana/ROY08976.webp"
+        },
+        {
+          "img_src": "images/Archana/5.webp"
+        },
+        {
+          "img_src": "images/Archana/6.webp"
+        },
+        {
+          "img_src": "images/Archana/7.webp"
+        },
+        {
+          "img_src": "images/Archana/8.webp"
+        },
+        {
+          "img_src": "images/Archana/ROY08958.webp"
+        },
+        {
+          "img_src": "images/Archana/1.webp"
+        },
+        {
+          "img_src": "images/Archana/2.webp"
         }
       ]
     },
@@ -184,8 +211,8 @@
       "title": "Avinash weds Sowmika",
       "description": "A beautiful wedding.",
       "img_src": "images/avinash/C5961T01 - Copy.webp",
-     "video_src":"videos/Nikita & Rajesh.mp4",
-      "video_description":"Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
+      "video_src": "videos/Nikita & Rajesh.mp4",
+      "video_description": "Nikita & Rajesh || Ring Ceremony || Engagement || Teaser || RS Photography",
       "photos": [
         {
           "img_src": "images/avinash/C5961T01 - Copy.webp"

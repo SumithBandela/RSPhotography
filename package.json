@@ -43,7 +43,7 @@
     "jest": "^27.4.3",
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
-    "jspdf": "^2.5.2",
+    "jspdf": "^3.0.0",
     "mini-css-extract-plugin": "^2.4.5",
     "mongodb": "^6.13.0",
     "postcss": "^8.4.4",
@@ -77,7 +77,10 @@
     "workbox-webpack-plugin": "^7.3.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start-react": "node scripts/start.js",
+    "start": "concurrently \"npm run start-react\" \"npm run start-update-images\" \"npm run start-image-compressor\"",
+    "start-update-images": "node ./public/updateImages.js",
+    "start-image-compressor": "python ./python/imageCompressorTOwebP.py",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
@@ -162,6 +165,7 @@
     "@babel/plugin-transform-optional-chaining": "^7.25.9",
     "@babel/plugin-transform-private-methods": "^7.25.9",
     "@babel/plugin-transform-private-property-in-object": "^7.25.9",
+    "concurrently": "^9.1.2",
     "gh-pages": "^6.3.0"
   }
 }
