@@ -16,7 +16,7 @@ class ImageHandler(FileSystemEventHandler):
 
     def __init__(self, directory):
         self.directory = directory
-        self.archive_dir = os.path.join(directory, "Archive")
+        self.archive_dir = os.path.join("C:/codeBaseDevelopment/RSPhotography/public", "Archive")
 
         # Create Archive directory if it doesn't exist
         os.makedirs(self.archive_dir, exist_ok=True)
@@ -65,6 +65,9 @@ class ImageHandler(FileSystemEventHandler):
         """
         if not event.is_directory:
             self.process_image(event.src_path)
+        else:
+            # If a new directory is created, start monitoring it
+            monitor_directory(event.src_path)
 
 def monitor_directory(directory):
     """
@@ -72,7 +75,7 @@ def monitor_directory(directory):
     """
     event_handler = ImageHandler(directory)  # Create an event handler
     observer = Observer()  # Initialize an observer
-    observer.schedule(event_handler, directory, recursive=False)  # Start monitoring the directory
+    observer.schedule(event_handler, directory, recursive=True)  # Start monitoring the directory
     observer.start()
 
     print(f"👀 Watching directory: {directory} for new images...")
