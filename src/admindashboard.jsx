@@ -4,7 +4,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 export function AdminDashboard() {
-    const[cookies,setCookie,removeCookie] = useCookies(['username']);
+    const[cookies,removeCookie] = useCookies(['username']);
     const [clientDetails, setClientDetails] = useState([]);
     let navigate = useNavigate()
     useEffect(() => {

@@ -5,7 +5,7 @@ import { db } from "./firebase"; // Import Firebase config
 import { collection, getDocs } from "firebase/firestore";
 
 export function AdminLogin() {
-    const [cookies, setCookie] = useCookies(["username"]);
+    const [setCookie] = useCookies(["username"]);
     let navigate = useNavigate();
 
     const formik = useFormik({
