@@ -9,6 +9,9 @@ import { QuoteCalc } from './quote-calc';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { AlbumView } from './album-view';
 import { Gallery } from './gallery';
+import { AdminLogin } from './adminlogin';
+import { AdminDashboard } from './admindashboard';
+import { Invalid } from './invalid';
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -52,6 +55,9 @@ function App() {
                 <Nav.Item>
                   <Nav.Link as={Link} to="/contact" onClick={handleNavClick}>Contact us</Nav.Link>
                 </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/login" onClick={handleNavClick}>Login</Nav.Link>
+                </Nav.Item>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -68,6 +74,9 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="quote" element={<QuoteCalc />} />
+            <Route path='login' element={<AdminLogin/>}/>
+            <Route path='dashboard' element={<AdminDashboard/>}/>
+            <Route path='invalid' element={<Invalid/>}/>
           </Routes>
         </section>
       </BrowserRouter>
