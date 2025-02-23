@@ -32,7 +32,7 @@ export function AdminDashboard() {
     }
 
     return (
-        <div>
+        <div className="overflow-scroll">
             <div className="m-2 text-success justify-content-center d-flex rounded">
                 <span className="fs-3 p-2">{cookies["username"]} - Dashboard</span>
             </div>
