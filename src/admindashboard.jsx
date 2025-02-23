@@ -3,10 +3,12 @@ import { db } from "./firebase"; // Ensure you have firebase configured
 import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+
 export function AdminDashboard() {
-    const[cookies,removeCookie] = useCookies(['username']);
+    const [cookies, , removeCookie] = useCookies(["username"]); // Removed unused 'setCookie'
     const [clientDetails, setClientDetails] = useState([]);
-    let navigate = useNavigate()
+    let navigate = useNavigate();
+
     useEffect(() => {
         const fetchClients = async () => {
             try {
@@ -24,14 +26,16 @@ export function AdminDashboard() {
         fetchClients();
     }, []);
 
-    function handleSignOut()
-    {
-        removeCookie(['username']);
-        navigate('/home')
+    function handleSignOut() {
+        removeCookie("username"); // Remove only "username" instead of an array
+        navigate("/home");
     }
+
     return (
         <div>
-            <div className="m-2 text-success justify-content-center d-flex rounded"><span className="fs-3 p-2 " >{cookies['username']} - Dashboard</span></div>
+            <div className="m-2 text-success justify-content-center d-flex rounded">
+                <span className="fs-3 p-2">{cookies["username"]} - Dashboard</span>
+            </div>
             <table className="table table-hover m-2 p-2">
                 <thead>
                     <tr>
@@ -53,7 +57,6 @@ export function AdminDashboard() {
                 </tbody>
             </table>
             <div className="btn btn-link" onClick={handleSignOut}>Signout</div>
-
         </div>
     );
 }
