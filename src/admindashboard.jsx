@@ -91,11 +91,11 @@ return sortableItems;
             <table className="table table-hover m-2 p-2 ">
                 <thead>
                     <tr>
-                        <th onClick={()=>handleSort('name')}>Name {sortConfig.key === 'name' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : '►'} </th>
+                        <th onClick={()=>handleSort('name')}>Name {sortConfig.key === 'name' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : ' '} </th>
                         <th>Email</th>
-                        <th>Phone Number </th>
+                        <th>Phone</th>
                         <th>Message</th>
-                        <th onClick={()=>handleSort('date')}>Date {sortConfig.key === 'date' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : '► '}</th>
+                        <th onClick={()=>handleSort('date')}>Date {sortConfig.key === 'date' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : ' '}</th>
                     </tr>
                 </thead>
                 <tbody>
