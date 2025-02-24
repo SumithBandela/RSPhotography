@@ -7,8 +7,10 @@ import { useCookies } from "react-cookie";
 export function AdminDashboard() {
     const [cookies, , removeCookie] = useCookies(["username"]); // Removed unused 'setCookie'
     const [clientDetails, setClientDetails] = useState([]);
-    const[sortConfig,setSortConfig] = useState({key:null,direction:'asc'})
+    const[sortConfig,setSortConfig] = useState({key:'date',direction:'desc'})
     let navigate = useNavigate();
+    const sortedClientDetails = sortedItems();
+
 
     useEffect(() => {
         if(!(cookies.username==='rsphotography'))
@@ -37,37 +39,37 @@ export function AdminDashboard() {
         sortedItems();
     })
       
-     function sortedItems()
-     {
+    function sortedItems() {
         const sortableItems = [...clientDetails];
-
-if (sortConfig.key !== null) {
-  sortableItems.sort((a, b) => {
-    if (sortConfig.key === 'date') {
-      const parseDate = (dateStr) => {
-        const [day, month, year] = dateStr.split('/').map(Number);
-        return new Date(year, month - 1, day); // Month is 0-based in JS Date
-      };
-
-      const dateA = parseDate(a.date);
-      const dateB = parseDate(b.date);
-
-      return sortConfig.direction === 'asc' ? dateA - dateB : dateB - dateA;
-    } else {
-      // For name, do a case-insensitive sort
-      const nameA = a.name.toLowerCase();
-      const nameB = b.name.toLowerCase();
-      if (nameA < nameB) return sortConfig.direction === 'asc' ? -1 : 1;
-      if (nameA > nameB) return sortConfig.direction === 'asc' ? 1 : -1;
-      return 0;
+    
+        if (sortConfig.key !== null) {
+            sortableItems.sort((a, b) => {
+                if (sortConfig.key === "date") {
+                    const parseDateTime = (dateTimeStr) => {
+                        const [datePart, timePart] = dateTimeStr.split(", "); // Assuming format: "DD/MM/YYYY, HH:MM:SS"
+                        const [day, month, year] = datePart.split("/").map(Number);
+                        const [hours, minutes, seconds] = timePart ? timePart.split(":").map(Number) : [0, 0, 0];
+    
+                        return new Date(year, month - 1, day, hours, minutes, seconds);
+                    };
+    
+                    const dateA = parseDateTime(a.date);
+                    const dateB = parseDateTime(b.date);
+    
+                    return sortConfig.direction === "asc" ? dateA - dateB : dateB - dateA;
+                } else {
+                    const nameA = a.name.toLowerCase();
+                    const nameB = b.name.toLowerCase();
+                    if (nameA < nameB) return sortConfig.direction === "asc" ? -1 : 1;
+                    if (nameA > nameB) return sortConfig.direction === "asc" ? 1 : -1;
+                    return 0;
+                }
+            });
+        }
+        return sortableItems;
     }
-  });
-}
+    
 
-return sortableItems;
-     }
-
-     const sortedClientDetails = sortedItems();
     function handleSignOut() {
         removeCookie("username"); // Remove only "username" instead of an array
         navigate("/home");

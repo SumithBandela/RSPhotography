@@ -12,7 +12,7 @@ export function Contact() {
       email: "",
       phone: "",
       message: "",
-      date: new Date().toLocaleDateString('en-GB')
+      date: dateFunction()
     },
     onSubmit: async (formData,{setTouched}) => {
       setTouched({
@@ -37,13 +37,26 @@ export function Contact() {
     validationSchema:yup.object({name:yup.string().required('Name required'),email:yup.string().required('Email required').email(),phone:yup.string().required('Mobile required').matches(/^\d{10}$/,'Invalid mobile'),message:yup.string().required('Message required')})
   });
 
+ function dateFunction()
+  {
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0'); // Get day and pad with 0 if needed
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+    return `${day}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
+  }
   return (
     <div className="contact-container">
       <div className="contact-card">
         <h3 className="contact-title text-primary">Contact Us</h3>
-
+          {formik.values.date}
         {/* Contact Form */}
         <form onSubmit={formik.handleSubmit} className="contact-form">
+        
           <TextField
             label="Full Name"
             variant="outlined"
