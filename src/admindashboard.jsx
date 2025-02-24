@@ -40,23 +40,31 @@ export function AdminDashboard() {
      function sortedItems()
      {
         const sortableItems = [...clientDetails];
-        if (sortConfig.key !== null) {
-          sortableItems.sort((a, b) => {
-            if (sortConfig.key === 'date') {
-              const dateA = new Date(a.date);
-              const dateB = new Date(b.date);
-              return sortConfig.direction === 'asc' ? dateA - dateB : dateB - dateA;
-            } else {
-              // For name, do a case-insensitive sort
-              const nameA = a.name.toLowerCase();
-              const nameB = b.name.toLowerCase();
-              if (nameA < nameB) return sortConfig.direction === 'asc' ? -1 : 1;
-              if (nameA > nameB) return sortConfig.direction === 'asc' ? 1 : -1;
-              return 0;
-            }
-          });
-        }
-        return sortableItems;
+
+if (sortConfig.key !== null) {
+  sortableItems.sort((a, b) => {
+    if (sortConfig.key === 'date') {
+      const parseDate = (dateStr) => {
+        const [day, month, year] = dateStr.split('/').map(Number);
+        return new Date(year, month - 1, day); // Month is 0-based in JS Date
+      };
+
+      const dateA = parseDate(a.date);
+      const dateB = parseDate(b.date);
+
+      return sortConfig.direction === 'asc' ? dateA - dateB : dateB - dateA;
+    } else {
+      // For name, do a case-insensitive sort
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      if (nameA < nameB) return sortConfig.direction === 'asc' ? -1 : 1;
+      if (nameA > nameB) return sortConfig.direction === 'asc' ? 1 : -1;
+      return 0;
+    }
+  });
+}
+
+return sortableItems;
      }
 
      const sortedClientDetails = sortedItems();
@@ -83,11 +91,11 @@ export function AdminDashboard() {
             <table className="table table-hover m-2 p-2 ">
                 <thead>
                     <tr>
-                        <th onClick={()=>handleSort('name')}>Name {sortConfig.key === 'name' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : '▲'} </th>
+                        <th onClick={()=>handleSort('name')}>Name {sortConfig.key === 'name' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : '►'} </th>
                         <th>Email</th>
                         <th>Phone Number </th>
                         <th>Message</th>
-                        <th onClick={()=>handleSort('date')}>Date {sortConfig.key === 'date' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : '▲'}</th>
+                        <th onClick={()=>handleSort('date')}>Date {sortConfig.key === 'date' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : '► '}</th>
                     </tr>
                 </thead>
                 <tbody>
