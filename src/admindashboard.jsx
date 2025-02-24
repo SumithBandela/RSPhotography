@@ -42,7 +42,8 @@ export function AdminDashboard() {
             <div className="m-2 text-success justify-content-center d-flex rounded">
                 <span className="fs-3 p-2">{cookies["username"]} - Dashboard</span>
             </div>
-            <table className="table table-hover m-2 p-2 overflow-scroll">
+            <div className="overflow-scroll">
+            <table className="table table-hover m-2 p-2 ">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -62,6 +63,7 @@ export function AdminDashboard() {
                     ))}
                 </tbody>
             </table>
+            </div>
             <div className="btn btn-link" onClick={handleSignOut}>Signout</div>
         </div>
     );

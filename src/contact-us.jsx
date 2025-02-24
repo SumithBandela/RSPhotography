@@ -54,7 +54,7 @@ export function Contact() {
             margin="normal"
           />
            {formik.touched.email && formik.errors.email && (
-                  <div style={{ color: "red" ,textAlign:'left'}}>{formik.errors.name}</div>
+                  <span style={{ color: "red" ,textAlign:'left'}}>{formik.errors.name}</span>
                 )}   
           <TextField
           type='text'
@@ -67,7 +67,7 @@ export function Contact() {
             margin="normal"
           />
             {formik.touched.email && formik.errors.email && (
-                  <div style={{ color: "red",textAlign:'left' }}>{formik.errors.email}</div>
+                  <span style={{ color: "red",textAlign:'left' }}>{formik.errors.email}</span>
                 )}         
            <TextField
             label="Phone Number"
@@ -79,7 +79,7 @@ export function Contact() {
             margin="normal"
           />
  {formik.touched.email && formik.errors.email && (
-                  <div style={{ color: "red",textAlign:'left'}}>{formik.errors.phone}</div>
+                  <span style={{ color: "red",textAlign:'left'}}>{formik.errors.phone}</span>
                 )}             <TextField
             label="Your Message"
             variant="outlined"
@@ -92,9 +92,10 @@ export function Contact() {
             margin="normal"
           />
  {formik.touched.email && formik.errors.email && (
-                  <div style={{ color: "red" ,textAlign:'left'}}>{formik.errors.message}</div>
-                )}             <div>
-            <Button type="submit" variant="contained" className="submit-btn">
+                  <span style={{ color: "red" ,textAlign:'left'}}>{formik.errors.message}</span>
+                )}            
+            <div>
+            <Button type="submit" variant="contained" className="submit-btn mt-2">
               Submit
             </Button>
           </div>
