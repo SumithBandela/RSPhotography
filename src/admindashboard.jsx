@@ -30,7 +30,7 @@ export function AdminDashboard() {
     
             fetchClients();
         }
-    }, []);
+    }, [cookies.username,navigate]);
 
     function handleSignOut() {
         removeCookie("username"); // Remove only "username" instead of an array
