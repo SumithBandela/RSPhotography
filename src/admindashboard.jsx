@@ -7,6 +7,7 @@ import { useCookies } from "react-cookie";
 export function AdminDashboard() {
     const [cookies, , removeCookie] = useCookies(["username"]); // Removed unused 'setCookie'
     const [clientDetails, setClientDetails] = useState([]);
+    const[sortConfig,setSortConfig] = useState({key:null,direction:'asc'})
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -17,7 +18,7 @@ export function AdminDashboard() {
         }else{
             const fetchClients = async () => {
                 try {
-                    const querySnapshot = await getDocs(collection(db, "rsphotography")); // Adjust collection name
+                    const querySnapshot = await getDocs(collection(db, "ClientDetails")); // Adjust collection name
                     const clientsData = querySnapshot.docs.map(doc => ({
                         id: doc.id,
                         ...doc.data(),
@@ -32,11 +33,47 @@ export function AdminDashboard() {
         }
     }, [cookies.username,navigate]);
 
+    useEffect(()=>{
+        sortedItems();
+    })
+      
+     function sortedItems()
+     {
+        const sortableItems = [...clientDetails];
+        if (sortConfig.key !== null) {
+          sortableItems.sort((a, b) => {
+            if (sortConfig.key === 'date') {
+              const dateA = new Date(a.date);
+              const dateB = new Date(b.date);
+              return sortConfig.direction === 'asc' ? dateA - dateB : dateB - dateA;
+            } else {
+              // For name, do a case-insensitive sort
+              const nameA = a.name.toLowerCase();
+              const nameB = b.name.toLowerCase();
+              if (nameA < nameB) return sortConfig.direction === 'asc' ? -1 : 1;
+              if (nameA > nameB) return sortConfig.direction === 'asc' ? 1 : -1;
+              return 0;
+            }
+          });
+        }
+        return sortableItems;
+     }
+
+     const sortedClientDetails = sortedItems();
     function handleSignOut() {
         removeCookie("username"); // Remove only "username" instead of an array
         navigate("/home");
     }
 
+    function handleSort(key)
+    {
+        let direction = 'asc';
+        if(sortConfig.key === key && sortConfig.direction ==='asc'){
+            direction = 'desc';
+        }
+        setSortConfig({key,direction})
+        
+    }
     return (
         <div>
             <div className="m-2 text-success justify-content-center d-flex rounded">
@@ -46,19 +83,21 @@ export function AdminDashboard() {
             <table className="table table-hover m-2 p-2 ">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th onClick={()=>handleSort('name')}>Name {sortConfig.key === 'name' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : '▲'} </th>
                         <th>Email</th>
-                        <th>Phone Number</th>
+                        <th>Phone Number </th>
                         <th>Message</th>
+                        <th onClick={()=>handleSort('date')}>Date {sortConfig.key === 'date' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : '▲'}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {clientDetails.map(client => (
+                    {sortedClientDetails.map(client => (
                         <tr key={client.id}>
                             <td>{client.name}</td>
                             <td>{client.email}</td>
                             <td>{client.phone}</td>
                             <td>{client.message}</td>
+                            <td>{client.date.toLocaleString()}</td>
                         </tr>
                     ))}
                 </tbody>

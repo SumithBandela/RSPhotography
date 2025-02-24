@@ -56,7 +56,7 @@ function App() {
                   <Nav.Link as={Link} to="/contact" onClick={handleNavClick}>Contact us</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/login" onClick={handleNavClick}>Login</Nav.Link>
+                  <Nav.Link as={Link} to="/login" onClick={handleNavClick}>Dashboard</Nav.Link>
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>

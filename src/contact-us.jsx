@@ -1,4 +1,3 @@
-import React from "react";
 import "./contact-us.css";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +12,7 @@ export function Contact() {
       email: "",
       phone: "",
       message: "",
+      date: new Date().toLocaleDateString('en-GB')
     },
     onSubmit: async (formData,{setTouched}) => {
       setTouched({
@@ -26,7 +26,7 @@ export function Contact() {
         return; // Stop form submission if validation fails
       }   
       try {
-          await addDoc(collection(db,"rsphotography"),formData);
+          await addDoc(collection(db,"ClientDetails"),formData);
          alert("Thank you for reaching out! We'll get back to you shortly.");
         navigate("/home");
          }catch(error){
@@ -53,7 +53,7 @@ export function Contact() {
             fullWidth
             margin="normal"
           />
-           {formik.touched.email && formik.errors.email && (
+           {formik.touched.name && formik.errors.name && (
                   <span style={{ color: "red" ,textAlign:'left'}}>{formik.errors.name}</span>
                 )}   
           <TextField
@@ -78,7 +78,7 @@ export function Contact() {
             fullWidth
             margin="normal"
           />
- {formik.touched.email && formik.errors.email && (
+ {formik.touched.phone && formik.errors.phone && (
                   <span style={{ color: "red",textAlign:'left'}}>{formik.errors.phone}</span>
                 )}             <TextField
             label="Your Message"
@@ -91,7 +91,7 @@ export function Contact() {
             fullWidth
             margin="normal"
           />
- {formik.touched.email && formik.errors.email && (
+ {formik.touched.message && formik.errors.message && (
                   <span style={{ color: "red" ,textAlign:'left'}}>{formik.errors.message}</span>
                 )}            
             <div>
