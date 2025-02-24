@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
 import {db,collection,addDoc} from './firebase';
+import * as yup from "yup";
 export function Contact() {
   let navigate = useNavigate();
   const formik = useFormik({
@@ -13,8 +14,18 @@ export function Contact() {
       phone: "",
       message: "",
     },
-    onSubmit: async (formData) => {
-         try {
+    onSubmit: async (formData,{setTouched}) => {
+      setTouched({
+        name: true,
+        email: true,
+        phone: true,
+        message: true,
+      });
+  
+      if (!formik.isValid) {
+        return; // Stop form submission if validation fails
+      }   
+      try {
           await addDoc(collection(db,"rsphotography"),formData);
          alert("Thank you for reaching out! We'll get back to you shortly.");
         navigate("/home");
@@ -23,6 +34,7 @@ export function Contact() {
             alert("Something went wrong. Please try again.");
          }
     },
+    validationSchema:yup.object({name:yup.string().required('Name required'),email:yup.string().required('Email required').email(),phone:yup.string().required('Mobile required').matches(/^\d{10}$/,'Invalid mobile'),message:yup.string().required('Message required')})
   });
 
   return (
@@ -40,10 +52,12 @@ export function Contact() {
             onChange={formik.handleChange}
             fullWidth
             margin="normal"
-            required
           />
+           {formik.touched.email && formik.errors.email && (
+                  <div style={{ color: "red" ,textAlign:'left'}}>{formik.errors.name}</div>
+                )}   
           <TextField
-          type='email'
+          type='text'
             label="Email Address"
             variant="outlined"
             name="email"
@@ -52,7 +66,10 @@ export function Contact() {
             fullWidth
             margin="normal"
           />
-          <TextField
+            {formik.touched.email && formik.errors.email && (
+                  <div style={{ color: "red",textAlign:'left' }}>{formik.errors.email}</div>
+                )}         
+           <TextField
             label="Phone Number"
             variant="outlined"
             name="phone"
@@ -61,7 +78,9 @@ export function Contact() {
             fullWidth
             margin="normal"
           />
-          <TextField
+ {formik.touched.email && formik.errors.email && (
+                  <div style={{ color: "red",textAlign:'left'}}>{formik.errors.phone}</div>
+                )}             <TextField
             label="Your Message"
             variant="outlined"
             name="message"
@@ -72,7 +91,9 @@ export function Contact() {
             fullWidth
             margin="normal"
           />
-          <div>
+ {formik.touched.email && formik.errors.email && (
+                  <div style={{ color: "red" ,textAlign:'left'}}>{formik.errors.message}</div>
+                )}             <div>
             <Button type="submit" variant="contained" className="submit-btn">
               Submit
             </Button>

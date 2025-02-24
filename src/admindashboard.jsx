@@ -10,20 +10,26 @@ export function AdminDashboard() {
     let navigate = useNavigate();
 
     useEffect(() => {
-        const fetchClients = async () => {
-            try {
-                const querySnapshot = await getDocs(collection(db, "rsphotography")); // Adjust collection name
-                const clientsData = querySnapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data(),
-                }));
-                setClientDetails(clientsData);
-            } catch (error) {
-                console.error("Error fetching client details:", error);
-            }
-        };
-
-        fetchClients();
+        if(!(cookies.username==='rsphotography'))
+        {
+            navigate('/login')
+            return;
+        }else{
+            const fetchClients = async () => {
+                try {
+                    const querySnapshot = await getDocs(collection(db, "rsphotography")); // Adjust collection name
+                    const clientsData = querySnapshot.docs.map(doc => ({
+                        id: doc.id,
+                        ...doc.data(),
+                    }));
+                    setClientDetails(clientsData);
+                } catch (error) {
+                    console.error("Error fetching client details:", error);
+                }
+            };
+    
+            fetchClients();
+        }
     }, []);
 
     function handleSignOut() {
@@ -32,11 +38,11 @@ export function AdminDashboard() {
     }
 
     return (
-        <div className="overflow-scroll">
+        <div>
             <div className="m-2 text-success justify-content-center d-flex rounded">
                 <span className="fs-3 p-2">{cookies["username"]} - Dashboard</span>
             </div>
-            <table className="table table-hover m-2 p-2">
+            <table className="table table-hover m-2 p-2 overflow-scroll">
                 <thead>
                     <tr>
                         <th>Name</th>

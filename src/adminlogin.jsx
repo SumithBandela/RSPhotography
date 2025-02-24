@@ -39,7 +39,7 @@ export function AdminLogin() {
     return (
         <div className="d-flex justify-content-center admin-container m-5">
             <form onSubmit={formik.handleSubmit} className="border border-2 p-4"  >
-                <h1 className="bi bi-person-fill">Admin Login</h1>
+                <h1 className="bi bi-person-fill"> Dashboard Login</h1>
                 <dl>
                     <dt>Username</dt>
                     <dd>
@@ -50,7 +50,7 @@ export function AdminLogin() {
                         <input type="password" name="password" onChange={formik.handleChange} value={formik.values.password} className="form-control" />
                     </dd>
                 </dl>
-                <button type="submit" className="btn btn-primary">Login</button>
+                <button type="submit" className="btn btn-primary w-100">Login</button>
             </form>
         </div>
     );
