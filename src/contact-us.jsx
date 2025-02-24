@@ -53,7 +53,6 @@ export function Contact() {
     <div className="contact-container">
       <div className="contact-card">
         <h3 className="contact-title text-primary">Contact Us</h3>
-          {formik.values.date}
         {/* Contact Form */}
         <form onSubmit={formik.handleSubmit} className="contact-form">
         
