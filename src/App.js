@@ -56,7 +56,7 @@ function App() {
                   <Nav.Link as={Link} to="/contact" onClick={handleNavClick}>Contact us</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} to="/login" onClick={handleNavClick}><span className="bi bi-person-circle"></span></Nav.Link>
+                  <Nav.Link as={Link} to="/login" onClick={handleNavClick} className='admin-login'><span className="bi bi-person-circle"></span></Nav.Link>
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>
