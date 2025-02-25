@@ -38,8 +38,8 @@ export function ReactCards({ images }) {
             className="image-card"
             onClick={() => handleShow(image, index)}
             aria-selected={selectedImage === image}
-          >
-            <Card.Img variant="top" src={image.img_src} alt={image.alt || "Image"} className="card-img"/>
+            style={{background:'transparent',boxShadow:'none',border:'none'}}>
+            <Card.Img variant="top" src={image.img_src} alt={image.alt || "Image"} className="card-img" style={{height:'100%',objectFit:'contain'}}/>
           </Card>
         ))
       ) : (
@@ -49,6 +49,13 @@ export function ReactCards({ images }) {
         <Modal.Body className="modal-body">
           {selectedImage && (
             <div className="image-container">
+              <button
+                variant="dark"
+                className="btn btn-lg bi bi-chevron-left text-white border-0 prev-button"
+                onClick={() => handleSwipe("prev")}
+                disabled={currentIndex === 0}
+              >
+              </button>
               <img
                 src={selectedImage.img_src}
                 alt={selectedImage.alt || "Selected"}
@@ -59,6 +66,12 @@ export function ReactCards({ images }) {
                     : handleSwipe("prev")
                 }
               />
+              <button
+                variant="dark"
+                className="bi bi-chevron-right btn-lg text-white btn border-0 next-button"
+                onClick={() => handleSwipe("next")}
+                disabled={currentIndex === images.length - 1}
+              ></button>
               <span className="close-button" onClick={handleClose}><CloseButton variant="white"/></span>
             </div>
           )}

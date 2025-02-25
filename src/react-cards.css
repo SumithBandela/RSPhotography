@@ -9,9 +9,7 @@
   
   /* Adjust image card width based on screen size */
   .image-card {
-    width: 100%;
-    max-width: 300px;
-    cursor: pointer;
+    max-width: 500px;
   }
   
   @media (max-width: 768px) {
@@ -25,6 +23,7 @@
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    transform:scale(1.06);
   }
   
   /* Center modal content */
@@ -60,6 +59,9 @@
     .modal-content{
       transform: scale(1.03);
     }
+    .prev-button, .next-button {
+    display: none !important;
+  }
   }
   
   /* Close button styles */
@@ -71,6 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
   
   

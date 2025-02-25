@@ -43,8 +43,7 @@ export function AlbumView() {
         <h1 className="album-title">{album.title || "Untitled Album"}</h1>
         <p className="album-description">{album.description || "No description available."}</p>
       </header>
- 
-      {/* Video Section */}
+      {/* Video Section 
       {album.video_src && (
       <div className="video-container">
             <video className="image-video" controls autoPlay>
@@ -53,7 +52,7 @@ export function AlbumView() {
             </video>
             <p>{album.video_description || "No description available."}</p>
           </div>
-        )}
+        )} */}
 
         <ReactCards images={images}/>
 
