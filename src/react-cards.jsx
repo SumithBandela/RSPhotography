@@ -39,7 +39,7 @@ export function ReactCards({ images }) {
             onClick={() => handleShow(image, index)}
             aria-selected={selectedImage === image}
           >
-            <Card.Img variant="top" src={image.img_src} alt={image.alt || "Image"} />
+            <Card.Img variant="top" src={image.img_src} alt={image.alt || "Image"} className="card-img"/>
           </Card>
         ))
       ) : (
