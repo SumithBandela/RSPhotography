@@ -9,7 +9,7 @@
   
   /* Adjust image card width based on screen size */
   .image-card {
-    max-width: 380px;
+    max-width: 300px;
   }
   
   @media (max-width: 768px) {
