@@ -2,7 +2,7 @@ var express = require("express");
 var cors = require("cors");
 var admin = require("firebase-admin");
 
-// 🔹 Load environment variables (Render uses them)
+// 🔹 Load environment variables
 require("dotenv").config();
 
 var app = express();
@@ -10,43 +10,56 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// ✅ Debug: Check if FIREBASE_SERVICE_ACCOUNT is loaded
+// ✅ Debug: Check if FIREBASE_SERVICE_ACCOUNT is loaded properly
 if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
-    console.error("❌ FIREBASE_SERVICE_ACCOUNT is not set!");
-    process.exit(1); // Stop execution if missing
+    console.error("❌ FIREBASE_SERVICE_ACCOUNT is missing. Check environment variables.");
+    process.exit(1);
 }
 
 let serviceAccount;
 try {
     serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+    console.log("✅ FIREBASE_SERVICE_ACCOUNT loaded successfully");
 } catch (error) {
-    console.error("❌ Error parsing FIREBASE_SERVICE_ACCOUNT:", error);
-    process.exit(1); // Stop execution if JSON is invalid
+    console.error("❌ Error parsing FIREBASE_SERVICE_ACCOUNT:", error.message);
+    process.exit(1);
 }
 
 // 🔹 Initialize Firebase Admin SDK
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-});
+try {
+    admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount)
+    });
+    console.log("✅ Firebase Admin SDK initialized");
+} catch (error) {
+    console.error("❌ Error initializing Firebase Admin SDK:", error.message);
+    process.exit(1);
+}
 
 var db = admin.firestore(); // Firestore database instance
 
 // ✅ API to insert client details into Firestore
 app.post("/contact", async (req, res) => {
     try {
+        const { name, email, phone, message, date } = req.body;
+
+        if (!name || !email || !phone || !message) {
+            return res.status(400).json({ error: "Missing required fields" });
+        }
+
         var clientDetails = {
-            name: req.body.name || "",
-            email: req.body.email || "",
-            phone: req.body.phone || "",
-            message: req.body.message || "",
-            date: req.body.date || new Date().toISOString() // Ensure valid format
+            name,
+            email,
+            phone,
+            message,
+            date: date || new Date().toISOString()
         };
 
         await db.collection("ClientDetails").add(clientDetails);
-        console.log(`✅ Record inserted into Firestore`);
+        console.log(`✅ Record inserted into Firestore: ${name}`);
         res.status(200).json({ message: "Data inserted successfully" });
     } catch (error) {
-        console.error("❌ Error inserting record:", error);
+        console.error("❌ Error inserting record:", error.message);
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
@@ -55,6 +68,11 @@ app.post("/contact", async (req, res) => {
 app.get("/users", async (req, res) => {
     try {
         const usersSnapshot = await db.collection("AdminCredentials").get();
+
+        if (usersSnapshot.empty) {
+            return res.status(404).json({ message: "No users found" });
+        }
+
         const users = usersSnapshot.docs.map(doc => ({
             id: doc.id,
             ...doc.data()
@@ -62,7 +80,7 @@ app.get("/users", async (req, res) => {
 
         res.status(200).json(users);
     } catch (error) {
-        console.error("❌ Error fetching users:", error);
+        console.error("❌ Error fetching users:", error.message);
         res.status(500).json({ error: "Error fetching users" });
     }
 });
@@ -71,6 +89,11 @@ app.get("/users", async (req, res) => {
 app.get("/ClientDetails", async (req, res) => {
     try {
         const clientsSnapshot = await db.collection("ClientDetails").get();
+
+        if (clientsSnapshot.empty) {
+            return res.status(404).json({ message: "No client details found" });
+        }
+
         const clients = clientsSnapshot.docs.map(doc => ({
             id: doc.id,
             ...doc.data()
@@ -78,7 +101,7 @@ app.get("/ClientDetails", async (req, res) => {
 
         res.status(200).json(clients);
     } catch (error) {
-        console.error("❌ Error fetching client details:", error);
+        console.error("❌ Error fetching client details:", error.message);
         res.status(500).json({ error: "Error fetching client details" });
     }
 });
