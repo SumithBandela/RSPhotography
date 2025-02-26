@@ -2,7 +2,6 @@ import "./contact-us.css";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
-import {db,collection,addDoc} from './firebase';
 import * as yup from "yup";
 import axios from "axios";
 export function Contact() {

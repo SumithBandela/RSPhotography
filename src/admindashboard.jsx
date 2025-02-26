@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { db } from "./firebase"; // Ensure you have firebase configured
-import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
