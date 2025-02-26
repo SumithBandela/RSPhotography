@@ -51,7 +51,7 @@ export function ReactCards({ images }) {
             <div className="image-container">
               <button
                 variant="dark"
-                className="btn btn-lg bi bi-chevron-left text-white border-0 prev-button"
+                className="btn btn-lg bi bi-chevron-left fs-3 text-white border-0 prev-button"
                 onClick={() => handleSwipe("prev")}
                 disabled={currentIndex === 0}
               >
@@ -68,7 +68,7 @@ export function ReactCards({ images }) {
               />
               <button
                 variant="dark"
-                className="bi bi-chevron-right btn-lg text-white btn border-0 next-button"
+                className="bi bi-chevron-right btn-lg text-white fs-3 btn border-0 next-button"
                 onClick={() => handleSwipe("next")}
                 disabled={currentIndex === images.length - 1}
               ></button>
