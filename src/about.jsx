@@ -6,11 +6,11 @@ export function About() {
     <div className="about-container" >
       <h1 className="text-center mb-5 title">About RS Photography</h1>
       
-      <p className="lead text-center description">
+      <p className="lead description">
         At Rashmi Studio's, we believe that every moment holds a story, a memory waiting to be captured. We don’t just take photographs; we create timeless works of art that speak louder than words. Whether it's a joyful wedding, a stunning portrait, or an unforgettable event, we pour our heart and soul into every shot.
       </p>
       
-      <p className="text-center philosophy">
+      <p className="philosophy">
         With a keen eye for detail and a passion for creativity, we transform fleeting moments into cherished memories. Our philosophy is simple: <strong>photography is not just about capturing an image, but about preserving an emotion.</strong> From the first click to the final edit, our aim is to craft images that not only reflect the beauty around us but also evoke the feelings and essence of the moment.
       </p>
 
