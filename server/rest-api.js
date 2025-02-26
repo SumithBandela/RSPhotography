@@ -19,7 +19,6 @@ if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
 let serviceAccount;
 try {
     serviceAccount = require(process.env.FIREBASE_SERVICE_ACCOUNT);
-    serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
     console.log("✅ FIREBASE_SERVICE_ACCOUNT loaded successfully");
 } catch (error) {
     console.error("❌ Error parsing FIREBASE_SERVICE_ACCOUNT:", error.message);
