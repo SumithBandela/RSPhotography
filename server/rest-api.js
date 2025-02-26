@@ -5,18 +5,31 @@ var admin = require("firebase-admin");
 // 🔹 Load environment variables (Render uses them)
 require("dotenv").config();
 
-// 🔹 Initialize Firestore using environment variable
-var serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+var app = express();
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// ✅ Debug: Check if FIREBASE_SERVICE_ACCOUNT is loaded
+if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
+    console.error("❌ FIREBASE_SERVICE_ACCOUNT is not set!");
+    process.exit(1); // Stop execution if missing
+}
+
+let serviceAccount;
+try {
+    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+} catch (error) {
+    console.error("❌ Error parsing FIREBASE_SERVICE_ACCOUNT:", error);
+    process.exit(1); // Stop execution if JSON is invalid
+}
+
+// 🔹 Initialize Firebase Admin SDK
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
 
 var db = admin.firestore(); // Firestore database instance
-
-var app = express();
-app.use(cors());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 // ✅ API to insert client details into Firestore
 app.post("/contact", async (req, res) => {
@@ -26,7 +39,7 @@ app.post("/contact", async (req, res) => {
             email: req.body.email || "",
             phone: req.body.phone || "",
             message: req.body.message || "",
-            date: req.body.date || new Date().toISOString() // Store as string
+            date: req.body.date || new Date().toISOString() // Ensure valid format
         };
 
         await db.collection("ClientDetails").add(clientDetails);
