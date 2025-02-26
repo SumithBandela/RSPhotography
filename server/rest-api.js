@@ -2,8 +2,11 @@ var express = require("express");
 var cors = require("cors");
 var admin = require("firebase-admin");
 
-// Initialize Firestore
-var serviceAccount = require("../public/serviceAccountKey.json"); // Ensure correct path
+// 🔹 Load environment variables (Render uses them)
+require("dotenv").config();
+
+// 🔹 Initialize Firestore using environment variable
+var serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
@@ -23,13 +26,11 @@ app.post("/contact", async (req, res) => {
             email: req.body.email || "",
             phone: req.body.phone || "",
             message: req.body.message || "",
-            date: req.body.date || new Date().toISOString() // Store as string to avoid Firestore errors
+            date: req.body.date || new Date().toISOString() // Store as string
         };
 
-        await db.collection("ClientDetails").add(clientDetails)
-            .then(() => console.log(`✅ Record inserted into Firestore`))
-            .catch(err => console.error("❌ Firestore Error:", err));
-
+        await db.collection("ClientDetails").add(clientDetails);
+        console.log(`✅ Record inserted into Firestore`);
         res.status(200).json({ message: "Data inserted successfully" });
     } catch (error) {
         console.error("❌ Error inserting record:", error);
@@ -38,7 +39,7 @@ app.post("/contact", async (req, res) => {
 });
 
 // ✅ API to get users from AdminCredentials collection
-app.get('/users', async (req, res) => {
+app.get("/users", async (req, res) => {
     try {
         const usersSnapshot = await db.collection("AdminCredentials").get();
         const users = usersSnapshot.docs.map(doc => ({
@@ -54,7 +55,7 @@ app.get('/users', async (req, res) => {
 });
 
 // ✅ API to get client details from ClientDetails collection
-app.get('/ClientDetails', async (req, res) => {
+app.get("/ClientDetails", async (req, res) => {
     try {
         const clientsSnapshot = await db.collection("ClientDetails").get();
         const clients = clientsSnapshot.docs.map(doc => ({
@@ -69,3 +70,8 @@ app.get('/ClientDetails', async (req, res) => {
     }
 });
 
+// 🔹 Use dynamic port for Render deployment
+const PORT = process.env.PORT || 7070;
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+});
