@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
 import {db,collection,addDoc} from './firebase';
 import * as yup from "yup";
+import axios from "axios";
 export function Contact() {
   let navigate = useNavigate();
   const formik = useFormik({
@@ -12,7 +13,7 @@ export function Contact() {
       email: "",
       phone: "",
       message: "",
-      date: dateFunction()
+      date: dateFunction().toString()
     },
     onSubmit: async (formData,{setTouched}) => {
       setTouched({
@@ -26,10 +27,12 @@ export function Contact() {
         return; // Stop form submission if validation fails
       }   
       try {
-          await addDoc(collection(db,"ClientDetails"),formData);
-         alert("Thank you for reaching out! We'll get back to you shortly.");
-        navigate("/home");
-         }catch(error){
+        axios.post('http://127.0.0.1:7070/contact',(formData))
+        .then(()=>{
+          alert("Thank you for reaching out! We'll get back to you shortly.");
+          navigate("/home");
+        })
+      }catch(error){
            console.log("Error submitting contact form:", error);
             alert("Something went wrong. Please try again.");
          }

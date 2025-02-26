@@ -34,7 +34,7 @@ function App() {
           <Container>
             {/* Logo Section */}
             <Navbar.Brand as={Link} to="/home">
-              <img src="images/header-logo.webp" width="130" alt="Rashmi Studio's Logo" />
+              <img src="images/header-logo.webp"  alt="Rashmi Studio's Logo" className="nav-logo" />
             </Navbar.Brand>
 
             {/* Navbar Toggle for Mobile */}

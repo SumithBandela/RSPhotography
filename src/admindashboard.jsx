@@ -3,6 +3,7 @@ import { db } from "./firebase"; // Ensure you have firebase configured
 import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import axios from "axios";
 
 export function AdminDashboard() {
     const [cookies, , removeCookie] = useCookies(["username"]); // Removed unused 'setCookie'
@@ -20,12 +21,10 @@ export function AdminDashboard() {
         }else{
             const fetchClients = async () => {
                 try {
-                    const querySnapshot = await getDocs(collection(db, "ClientDetails")); // Adjust collection name
-                    const clientsData = querySnapshot.docs.map(doc => ({
-                        id: doc.id,
-                        ...doc.data(),
-                    }));
-                    setClientDetails(clientsData);
+                    axios.get('http://127.0.0.1:7070/clientDetails')
+                    .then(response=>{
+                        setClientDetails(response.data)
+                    })
                 } catch (error) {
                     console.error("Error fetching client details:", error);
                 }
@@ -46,9 +45,16 @@ export function AdminDashboard() {
             sortableItems.sort((a, b) => {
                 if (sortConfig.key === "date") {
                     const parseDateTime = (dateTimeStr) => {
-                        const [datePart, timePart] = dateTimeStr.split(", "); // Assuming format: "DD/MM/YYYY, HH:MM:SS"
+                        if (!dateTimeStr) return new Date(0); // Default to epoch if missing
+    
+                        const parts = dateTimeStr.split(", "); // Split by ", " to separate date and time
+                        if (parts.length < 1) return new Date(0); // Handle invalid cases
+    
+                        const datePart = parts[0]; // Date part (expected: "DD/MM/YYYY")
+                        const timePart = parts[1] || "00:00:00"; // Default to midnight if time is missing
+    
                         const [day, month, year] = datePart.split("/").map(Number);
-                        const [hours, minutes, seconds] = timePart ? timePart.split(":").map(Number) : [0, 0, 0];
+                        const [hours, minutes, seconds] = timePart.split(":").map(Number);
     
                         return new Date(year, month - 1, day, hours, minutes, seconds);
                     };
@@ -58,8 +64,10 @@ export function AdminDashboard() {
     
                     return sortConfig.direction === "asc" ? dateA - dateB : dateB - dateA;
                 } else {
-                    const nameA = a.name.toLowerCase();
-                    const nameB = b.name.toLowerCase();
+                    // Sorting by name (case-insensitive)
+                    const nameA = a.name?.toLowerCase() || "";
+                    const nameB = b.name?.toLowerCase() || "";
+    
                     if (nameA < nameB) return sortConfig.direction === "asc" ? -1 : 1;
                     if (nameA > nameB) return sortConfig.direction === "asc" ? 1 : -1;
                     return 0;
@@ -103,7 +111,7 @@ export function AdminDashboard() {
                 <tbody>
                     {sortedClientDetails.map(client => (
                         <tr key={client.id}>
-                            <td>{client.date.toLocaleString()}</td>
+                            <td>{client.date}</td>
                             <td>{client.name}</td>
                             <td>{client.email}</td>
                             <td>{client.phone}</td>

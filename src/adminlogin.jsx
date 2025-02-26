@@ -1,9 +1,8 @@
 import { useFormik } from "formik";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
-import { db } from "./firebase"; // Import Firebase config
-import { collection, getDocs } from "firebase/firestore";
 import * as yup from "yup";
+import axios from "axios";
 
 export function AdminLogin() {
     const [ , setCookie] = useCookies(["username"]);
@@ -16,8 +15,9 @@ export function AdminLogin() {
         },
         onSubmit: async (user) => {
             try {
-                const querySnapshot = await getDocs(collection(db, "AdminCredentials")); // Adjust collection name
-                const adminList = querySnapshot.docs.map(doc => doc.data());
+                axios.get('http://127.0.0.1:7070/users')
+                .then(response=>{
+                    const adminList = response.data
 
                 const admin = adminList.find(record => record.username === user.username);
 
@@ -31,6 +31,8 @@ export function AdminLogin() {
                 } else {
                     navigate("/invalid");
                 }
+                })
+                
             } catch (error) {
                 console.error("Error fetching admin credentials:", error);
             }
