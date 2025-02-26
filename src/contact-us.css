@@ -1,9 +1,9 @@
-/* Import Roboto (widely used for web content) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import Elegant Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap');
 
 /* General Styles */
 body {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif; /* Modern and elegant */
   background-color: #f8f9fa;
 }
 
@@ -26,6 +26,7 @@ body {
 }
 
 .contact-title {
+  font-family: "Playfair Display", serif;
   font-size: 28px;
   font-weight: 700;
   color: #333;
@@ -48,6 +49,7 @@ body {
   background: #007bff;
   color: white !important;
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
 }
 
 .submit-btn:hover {
@@ -62,6 +64,7 @@ body {
 }
 
 .contact-info h4 {
+  font-family: "Playfair Display", serif;
   font-size: 20px;
   font-weight: 700;
   color: #222;
@@ -69,6 +72,7 @@ body {
 }
 
 .contact-info p {
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: #555;
   margin-bottom: 15px;

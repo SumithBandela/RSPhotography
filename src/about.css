@@ -1,13 +1,21 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif; /* Modern and elegant font for general text */
+}
+
 /* Overall Container */
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Title */
 .title {
+  font-family: 'Playfair Display', serif;
   font-size: 48px;
   font-weight: 600;
   color: #333;
@@ -19,6 +27,7 @@
 
 /* Lead Description */
 .description {
+  font-family: 'Lora', serif;
   font-size: 20px;
   font-weight: 300;
   color: #555;
@@ -29,6 +38,7 @@
 
 /* Philosophy Section */
 .philosophy {
+  font-family: 'Lora', serif;
   font-size: 20px;
   font-weight: 400;
   color: #666;
@@ -47,6 +57,7 @@
 }
 
 .service-title {
+  font-family: 'Playfair Display', serif;
   font-size: 32px;
   font-weight: 500;
   color: #007bff;
@@ -74,6 +85,7 @@
 }
 
 .service-heading {
+  font-family: 'Playfair Display', serif;
   font-size: 20px;
   font-weight: 600;
   color: #007bff;
@@ -81,6 +93,7 @@
 }
 
 .service-item p {
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   color: #555;
   line-height: 1.5;

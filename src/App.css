@@ -1,5 +1,8 @@
+/* Import Elegant Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap');
+
 .app-container{
-  font-family: 'Bulter',sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 /* Ensure Full Width on All Devices */
 .container-fluid {
@@ -11,7 +14,9 @@
 /* Navbar Styling */
 .navbar {
   width: 100%;
+  font-family: 'Playfair Display', serif; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .navbar-brand img {
