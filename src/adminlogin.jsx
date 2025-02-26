@@ -15,7 +15,7 @@ export function AdminLogin() {
         },
         onSubmit: async (user) => {
             try {
-                axios.get('http://127.0.0.1:7070/users')
+                axios.get('https://rsphotography.onrender.com/users')
                 .then(response=>{
                     const adminList = response.data
 

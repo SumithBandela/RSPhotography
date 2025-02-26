@@ -19,7 +19,7 @@ export function AdminDashboard() {
         }else{
             const fetchClients = async () => {
                 try {
-                    axios.get('http://127.0.0.1:7070/clientDetails')
+                    axios.get('https://rsphotography.onrender.com/clientDetails')
                     .then(response=>{
                         setClientDetails(response.data)
                     })

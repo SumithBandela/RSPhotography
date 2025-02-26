@@ -26,7 +26,7 @@ export function Contact() {
         return; // Stop form submission if validation fails
       }   
       try {
-        axios.post('http://127.0.0.1:7070/contact',(formData))
+        axios.post('https://rsphotography.onrender.com/contact',(formData))
         .then(()=>{
           alert("Thank you for reaching out! We'll get back to you shortly.");
           navigate("/home");
