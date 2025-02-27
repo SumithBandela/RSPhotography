@@ -95,8 +95,8 @@ export function AdminDashboard() {
             <div className="m-2 text-success justify-content-center d-flex rounded">
                 <span className="fs-3 p-2">{cookies["username"]} - Dashboard</span>
             </div>
-            <div className="overflow-scroll">
             <h3 className="text-center">Customer Details</h3>
+            <div className="overflow-scroll">
             <table className="table table-hover table-bordered m-2 p-2 ">
                 <thead>
                     <tr>
