@@ -42,7 +42,7 @@ export function AdminLogin() {
 
     return (
         <div className="d-flex justify-content-center admin-container m-5">
-            <form onSubmit={formik.handleSubmit} className="border border-2 p-4"  >
+            <form onSubmit={formik.handleSubmit} className="border border-3 p-4 " style={{width:'350px'}}  >
                 <h1 className="bi bi-person-fill"> Login</h1>
                 <dl>
                     <dt>Username</dt>

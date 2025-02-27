@@ -35,6 +35,9 @@
     padding-right: 0 !important;
     width: 100%;
   }
+  .nav-logo{
+    width: 120px;
+  }
 
   .navbar-nav {
     text-align: center;

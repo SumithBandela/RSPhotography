@@ -96,9 +96,11 @@ export function AdminDashboard() {
                 <span className="fs-3 p-2">{cookies["username"]} - Dashboard</span>
             </div>
             <div className="overflow-scroll">
-            <table className="table table-hover m-2 p-2 ">
+            <h3 className="text-center">Customer Details</h3>
+            <table className="table table-hover table-bordered m-2 p-2 ">
                 <thead>
                     <tr>
+                        <th>Sno</th>
                         <th onClick={()=>handleSort('date')}>Date {sortConfig.key === 'date' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : ' '}</th>
                         <th onClick={()=>handleSort('name')}>Name {sortConfig.key === 'name' ? (sortConfig.direction === 'asc' ? '▲' : '▼') : ' '} </th>
                         <th>Email</th>
@@ -107,8 +109,9 @@ export function AdminDashboard() {
                     </tr>
                 </thead>
                 <tbody>
-                    {sortedClientDetails.map(client => (
+                    {sortedClientDetails.map((client,index) => (
                         <tr key={client.id}>
+                            <td>{index+1}</td>
                             <td>{client.date}</td>
                             <td>{client.name}</td>
                             <td>{client.email}</td>
